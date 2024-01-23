@@ -5,21 +5,67 @@
   |============================
 */
 @import url('./reset.css');
-@import url('./vite-promo.css');
-@import url('./header.css');
 
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
 
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
-
+  background-color: #F6F6F6;
+  color: #1B1B1B;
+  
+  scroll-behavior: smooth;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --black-color: #1B1B1B;
+  --gray-color: #5F6560;
+  --light-gray-color: #7E847F;
+  --white-color: #FFFFFF;
+  --soft-white-color: #F6F6F6;
+  --gold-color: ##EEA10C;
+}
+
+.container {
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 20px 0 0 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+@media (min-width: 375px) {
+  .container {
+    width: 375px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+    padding: 0 16px;
+  }
+  .section {
+    padding: 16px 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    width: 1280px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    width: 1440px;
+  }
 }
