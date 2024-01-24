@@ -1,0 +1,87 @@
+.info__img {
+  border-radius: 30px;
+}
+.info__content {
+  display: flex;
+  gap: 16px;
+  border-radius: 30px;
+  padding: 40px 20px;
+  background-color: var(--black-color);
+}
+
+.info__icon-wrapper {
+  background-color: var(--gray-color);
+  padding: 6px;
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+}
+
+.info__icon {
+  fill: var(--soft-white-color);
+}
+
+.info__content-text {
+  color: var(--soft-white-color);
+}
+
+.info__title {
+  font-feature-settings: 'clig' off, 'liga' off;
+  line-height: 140%;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.info__subtitle {
+  margin-bottom: 14px;
+}
+
+.info__subtitle,
+.info__description {
+  font-size: 14px;
+  line-height: 128%;
+
+  color: rgba(246, 246, 246, 0.6);
+}
+
+@media (min-width: 768px) {
+  .info__img {
+    width: 736px;
+    height: 302px;
+  }
+  .info__content {
+    padding: 64px 96px 64px 64px;
+    gap: 18px;
+  }
+  .info__title {
+    font-size: 24px;
+    line-height: 133%;
+  }
+  .info__subtitle {
+    margin-bottom: 25px;
+  }
+  .info__description {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .info-container {
+    display: flex;
+  }
+  .info__img,
+  .info__content {
+    width: 704px;
+    height: 302px;
+  }
+  .info__content {
+    padding: 64px;
+  }
+  .info__subtitle {
+    margin-bottom: 25px;
+  }
+  .info__description {
+    line-height: 150%;
+  }
+}

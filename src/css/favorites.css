@@ -1,19 +1,126 @@
 @media (min-width: 375px) {
-    .favorites-container-card {
+    .favorites-card {
         border-radius: 30px;
         background: #E8E8E8;
-        width: 335px;
         height: 1644px;
         flex-shrink: 0;
   }
 
-  .favorites-container-title {
+    .favorites-title {
     color: #1B1B1B;
-    font-family: "DM Sans";
     font-size: 32px;
     font-weight: 400;
     line-height: 1;
     letter-spacing: 0.02em;
+    padding-top: 40px;
+    padding-left: 20px;
+    margin-bottom: 20px;
   }
+
+  .favorites-list {
+    /* display: flex;
+    justify-content: center; */
+    width: 295px;
+    height: 165px;       
+    border-radius: 15px;
+    background: #FFF;
+    margin: 0 auto;
+  }
+
+  .favorites-list-item{
+    padding-top: 16px;
+    padding-left: 16px;
+  }
+
+  .favorites-svg {
+    width: 76px;
+    height: 26px;
+    border-radius: 15px;
+  }
+
+  .favorites-svg-text {
+    fill: #F6F6F6;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .favorites-icon-svg {
+    stroke: #1B1B1B;
+    margin-left: 5px;
+  }
+
+  .favorites-list-button {
+    display: inline-block;
+    color: #1B1B1B;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.28;
+    border: none;
+    padding: 0;
+    background: none;
+    margin-left: 109px;
+  }
+
+  .favorites-list-button-icon {
+    display: inline-block;
+    margin-left: 8px; 
+}
+
+.favorites-list-container{
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.favorite-list-svg {
+    margin-right: 16px;
+}
+
+.favorites-list-text {
+    color: #1B1B1B;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.favorites-card-text {
+    margin-top: 18px;
+}
+
+.favorites-card-text-list {
+    padding: 0;
+}
+
+.favorites-card-text-item {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 16px;
+    row-gap: 8px;
+}
+
+.favorites-card-text-wrapper {
+    display: flex;
+    gap: 4px;
+}
+
+ .favorites-card-text-title {
+    color: rgba(27, 27, 27, 0.40);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5; 
+    margin-right: 4px;
+    margin: 0;
+ }
+
+ .favorites-card-text-block {
+    color: #1B1B1B;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+ }
 
 }
