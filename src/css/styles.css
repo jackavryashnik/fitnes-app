@@ -5,9 +5,10 @@
   |============================
 */
 @import url('./reset.css');
+@import url('./header.css');
 @import url('./info.css');
 @import url('./favorites.css');
-@import url('./header.css');
+@import url('./exercises.css');
 
 :root {
   font-family: 'DM Sans', sans-serif;
@@ -31,6 +32,7 @@
   --white-color: #ffffff;
   --soft-white-color: #f6f6f6;
   --gold-color: ##eea10c;
+  --cloud-gray-color: #e8e8e8;
 }
 
 .container {
