@@ -3,21 +3,34 @@
   position: absolute;
   left: 64px;
   top: 64px;
+  fill: var(--soft-white-color);
+
 }
 .quote-container-svg-commas{
   position: absolute;
   right: 64px;
   top: 32px;
+  fill: var(--soft-white-color);
 }
 .quote-container{
   position: relative;
   background-color: var(--light-gray-color);
   border-radius: 50px;
   padding: 64px 64px 64px 114px;
+  width: 704px;
+  height: 302px;
 }
 .quote-container-title{
   color: #F6F6F6;
   font-size: 24px;
   font-weight: 500;
   line-height: 1.333; 
+}
+.quote-img{
+  display: flex;
+  width: 704px;
+  height: 302px;
+}
+.quote .container{
+  display: flex;
 }
