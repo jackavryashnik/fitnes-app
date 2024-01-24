@@ -1,0 +1,143 @@
+.exercises-page-container {
+  background-color: var(--cloud-gray-color);
+  padding: 40px 20px;
+  border-radius: 30px;
+}
+.exercises-page-title {
+  color: var(--black-color);
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+.buttons-filter-container {
+  display: flex;
+  gap: 6px;
+  margin-top: 20px;
+}
+.buttons-filter-container button {
+  color: var(--black-color);
+  font-size: 14px;
+  line-height: 1.29;
+  border-radius: 30px;
+  background: var(--soft-white-color);
+  padding: 7px 14px;
+  border: none;
+}
+.buttons-filter-container button.active {
+  color: var(--soft-white-color);
+  background-color: var(--light-gray-color);
+}
+
+/* Exercises List */
+.exercises-list {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.exercises-list-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 232px;
+  border-radius: 12px;
+  border: 1px solid rgba(246, 246, 246, 0.3);
+}
+.exercise-card-desc-name {
+  text-transform: capitalize;
+  color: var(--soft-white-color);
+  text-align: center;
+  font-size: 20px;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+.exercise-card-desc-filter {
+  text-align: center;
+  color: rgba(246, 246, 246, 0.4);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Pagination Box */
+.pagination-exercises-box {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+.pagination-exercises-box button {
+  color: rgba(27, 27, 27, 0.4);
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+  border: none;
+  background-color: transparent;
+}
+.pagination-exercises-box button.active {
+  color: var(--black-color);
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 18px;
+  border: 1px solid var(--black-color);
+}
+
+/* Media */
+@media (min-width: 375px) and (max-width: 767px) {
+  .exercises-list-card {
+    width: 295px;
+  }
+}
+
+@media (max-width: 767px) {
+  .exercises-list-card:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .exercises-page-container {
+    padding: 64px 48px;
+    border-radius: 50px;
+  }
+  .exercises-page-title {
+    font-size: 44px;
+    line-height: 1.09;
+    letter-spacing: -0.06em;
+  }
+  .buttons-filter-container {
+    gap: 8px;
+    margin-top: 32px;
+  }
+  .buttons-filter-container button {
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 10px 20px;
+  }
+  .exercises-list {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  .exercises-list-card {
+    flex-basis: calc((100% - 14px) / 2);
+  }
+  .exercise-card-desc-name {
+    font-size: 24px;
+  }
+  .pagination-exercises-box button {
+    font-size: 24px;
+    line-height: 1.33;
+    letter-spacing: 0.06em;
+  }
+}
+
+@media (min-width: 1280px) {
+  .exercises-list {
+    column-gap: 20px;
+    row-gap: 40px;
+  }
+  .exercises-list-card {
+    flex-basis: calc((100% - 3 * 20px) / 4);
+  }
+}
