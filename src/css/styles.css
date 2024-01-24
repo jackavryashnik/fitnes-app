@@ -5,6 +5,7 @@
   |============================
 */
 @import url('./reset.css');
+@import url('./favorites.css');
 
 :root {
   font-family: 'DM Sans', sans-serif;
