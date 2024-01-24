@@ -6,7 +6,7 @@
 */
 @import url('./reset.css');
 @import url('./favorites.css');
-
+@import url('./quote.css');
 :root {
   font-family: 'DM Sans', sans-serif;
   font-size: 16px;

@@ -1,0 +1,23 @@
+.quote-container-svg-human{
+  background-color: #F6F6F6 10%;
+  position: absolute;
+  left: 64px;
+  top: 64px;
+}
+.quote-container-svg-commas{
+  position: absolute;
+  right: 64px;
+  top: 32px;
+}
+.quote-container{
+  position: relative;
+  background-color: var(--light-gray-color);
+  border-radius: 50px;
+  padding: 64px 64px 64px 114px;
+}
+.quote-container-title{
+  color: #F6F6F6;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.333; 
+}
