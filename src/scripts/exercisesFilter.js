@@ -1,10 +1,9 @@
-import {
-  buttonsFilterContainer,
-  exercisesList,
-  filterButtons,
-  exercisesPaginationBox,
-} from './refs';
 import { fetchData } from './api';
+
+const exercisesList = document.querySelector('.exercises-list'),
+  buttonsFilterContainer = document.querySelector('.buttons-filter-container'),
+  filterButtons = document.querySelectorAll('.buttons-filter-container button'),
+  exercisesPaginationBox = document.querySelector('.pagination-exercises-box');
 
 let limit = innerWidth < 768 ? 8 : 12;
 let currentPage = 1;
