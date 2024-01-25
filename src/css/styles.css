@@ -5,8 +5,12 @@
   |============================
 */
 @import url('./reset.css');
+@import url('./header.css');
+@import url('./hero.css');
 @import url('./info.css');
 @import url('./favorites.css');
+@import url('./exercises.css');
+@import url('./footer.css');
 @import url('./quote.css');
 :root {
   font-family: 'DM Sans', sans-serif;
@@ -14,9 +18,12 @@
   line-height: 24px;
   font-weight: 400;
 
-  background-color: #F6F6F6;
-  color: #1B1B1B;
-  
+  background-color: #f6f6f6;
+  color: #1b1b1b;
+
+  background-color: #f6f6f6;
+  color: #1b1b1b;
+
   scroll-behavior: smooth;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -24,12 +31,13 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
-  --black-color: #1B1B1B;
-  --gray-color: #5F6560;
-  --light-gray-color: #7E847F;
-  --white-color: #FFFFFF;
-  --soft-white-color: #F6F6F6;
-  --gold-color: ##EEA10C;
+  --black-color: #1b1b1b;
+  --gray-color: #5f6560;
+  --light-gray-color: #7e847f;
+  --white-color: #ffffff;
+  --soft-white-color: #f6f6f6;
+  --gold-color: ##eea10c;
+  --cloud-gray-color: #e8e8e8;
 }
 
 .container {
@@ -42,7 +50,6 @@
   margin-right: auto;
   margin-left: auto;
 }
-
 
 @media (min-width: 375px) {
   .container {
@@ -60,14 +67,9 @@
   }
 }
 
-@media (min-width: 1280px) {
-  .container {
-    width: 1280px;
-  }
-}
-
 @media (min-width: 1440px) {
   .container {
     width: 1440px;
   }
 }
+

@@ -49,9 +49,11 @@
   .info__img {
     width: 736px;
     height: 302px;
+    border-radius: 50px; 
   }
   .info__content {
     padding: 64px 96px 64px 64px;
+    border-radius: 50px; 
     gap: 18px;
   }
   .info__title {
