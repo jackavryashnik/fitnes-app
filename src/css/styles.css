@@ -9,6 +9,7 @@
 @import url('./info.css');
 @import url('./favorites.css');
 @import url('./exercises.css');
+@import url('./footer.css');
 
 :root {
   font-family: 'DM Sans', sans-serif;
