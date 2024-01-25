@@ -10,6 +10,7 @@
 @import url('./info.css');
 @import url('./favorites.css');
 @import url('./exercises.css');
+@import url('./footer.css');
 
 :root {
   font-family: 'DM Sans', sans-serif;
@@ -37,6 +38,8 @@
   --soft-white-color: #f6f6f6;
   --gold-color: ##eea10c;
   --cloud-gray-color: #e8e8e8;
+
+  --transition-animation: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .container {
@@ -69,12 +72,6 @@
     padding: 16px 0;
   }
 }
-
-/* @media (min-width: 1280px) {
-  .container {
-    width: 1280px;
-  }
-} */
 
 @media (min-width: 1440px) {
   .container {
