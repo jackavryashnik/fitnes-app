@@ -27,13 +27,16 @@
 }
 .quote-img{
   display: flex;
-  border-radius: 50px;
+  border-radius: 30px;
 }
 
 @media screen and (min-width: 768px) {
   .quote-container-svg-human{
     left: 80px;
     top: 64px;
+  }
+  .quote-img{
+    border-radius: 50px;
   }
   .quote-container-svg-commas{
     right: 80px;
