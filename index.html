@@ -20,7 +20,7 @@
     />
     
     <script type="module" crossorigin src="/fitnes-app/assets/vendor-a2e8d7fa.js"></script>
-    <script type="module" crossorigin src="/fitnes-app/assets/exercisesFilter-402b5cab.js"></script>
+    <script type="module" crossorigin src="/fitnes-app/assets/exercisesFilter-5e13c800.js"></script>
     <link rel="stylesheet" href="/fitnes-app/assets/exercisesFilter-5badd0ea.css">
   </head>
   <body>
@@ -149,11 +149,18 @@
   <div class="container">
     <div class="exercises-page-container">
       <h2 class="exercises-page-title">Exercises</h2>
-      <div class="buttons-filter-container">
-        <button class="active" data-filter="Muscles">Muscles</button>
-        <button data-filter="Body%20parts">Body parts</button>
-        <button data-filter="Equipment">Equipment</button>
-      </div>
+      <ul class="buttons-filter-container">
+        <li>
+          <button class="active" data-filter="Muscles">Muscles</button>
+        </li>
+
+        <li>
+          <button data-filter="Body%20parts">Body parts</button>
+        </li>
+        <li>
+          <button data-filter="Equipment">Equipment</button>
+        </li>
+      </ul>
       <ul class="exercises-list"></ul>
       <div class="pagination-exercises-box"></div>
     </div>
