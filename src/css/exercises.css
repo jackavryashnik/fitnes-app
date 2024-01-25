@@ -22,9 +22,9 @@
   background: var(--soft-white-color);
   padding: 7px 14px;
   border: none;
-  transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-    color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 0.25s var(--transition-animation),
+    color 0.25s var(--transition-animation),
+    transform 0.25s var(--transition-animation);
 }
 .buttons-filter-container button.active {
   color: var(--soft-white-color);
@@ -47,7 +47,7 @@
   height: 232px;
   border-radius: 12px;
   border: 1px solid rgba(246, 246, 246, 0.3);
-  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.25s var(--transition-animation);
 }
 .exercises-list-card:hover {
   transform: scale(0.95);
@@ -89,8 +89,8 @@
   justify-content: center;
   align-items: center;
   border-radius: 18px;
-  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 0.25s var(--transition-animation),
+    border-color 0.25s var(--transition-animation);
 }
 .pagination-exercises-box button.active {
   color: var(--black-color);
