@@ -1,35 +1,73 @@
 .quote-container-svg-human{
   position: absolute;
-  left: 64px;
-  top: 64px;
-  fill: var(--soft-white-color);
+  left: 20px;
+  top: 40px;
+  width: 34px;
+  height: 32px;
 }
 .quote-container-svg-commas{
   position: absolute;
-  right: 64px;
-  top: 32px;
-  fill: var(--soft-white-color);
+  right: 20px;
+  top: 40px;
+  width: 28px;
+  height: 28px;
 }
 .quote-container{
   position: relative;
   background-color: var(--light-gray-color);
   border-radius: 50px;
-  padding: 64px 64px 64px 114px;
-  width: 704px;
-  height: 302px;
+  padding: 42px 20px 40px 66px;
 }
 .quote-container-title{
+  font-feature-settings: 'clig' off, 'liga' off;
   color: #F6F6F6;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 500;
-  line-height: 1.333; 
+  line-height: 1.4; 
 }
 .quote-img{
   display: flex;
-  width: 704px;
-  height: 302px;
   border-radius: 50px;
 }
-.quote .container{
-  display: flex;
+
+@media screen and (min-width: 768px) {
+  .quote-container-svg-human{
+    left: 80px;
+    top: 64px;
+  }
+  .quote-container-svg-commas{
+    right: 80px;
+    top: 32px;
+    width: 48px;
+    height: 48px;
+  }
+  .quote-container{
+    padding: 64px 80px 64px 130px;
+  }
+  .quote-container-title{
+    font-size: 24px;
+    line-height: 1.333;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .quote-container-svg-human{
+    position: absolute;
+    left: 64px;
+    top: 64px;
+
+  }
+  .quote-container-svg-commas{
+    position: absolute;
+    right: 64px;
+    top: 32px;
+    fill: var(--soft-white-color);
+  }
+  .quote-container{
+    padding: 64px 64px 64px 114px;
+    width: 704px;
+    height: 302px;
+  }
+  .quote .container{
+    display: flex;
+  }
 }
