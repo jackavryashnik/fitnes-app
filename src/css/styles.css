@@ -6,6 +6,7 @@
 */
 @import url('./reset.css');
 @import url('./header.css');
+@import url('./hero.css');
 @import url('./info.css');
 @import url('./favorites.css');
 @import url('./exercises.css');
@@ -15,6 +16,9 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
+
+  background-color: #f6f6f6;
+  color: #1b1b1b;
 
   background-color: #f6f6f6;
   color: #1b1b1b;
@@ -62,14 +66,9 @@
   }
 }
 
-@media (min-width: 1280px) {
-  .container {
-    width: 1280px;
-  }
-}
-
 @media (min-width: 1440px) {
   .container {
     width: 1440px;
   }
 }
+
