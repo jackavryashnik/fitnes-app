@@ -1,0 +1,51 @@
+<section class="section info-section">
+  <div class="container info-container">
+    <picture>
+      <source
+        srcset="
+          ../images/desktop/section-three.jpg   1x,
+          ../images/desktop/section-three@2.jpg 2x
+        "
+        media="(min-width: 1440px)"
+      />
+      <source
+        srcset="
+          ../images/tablet/section-three.jpg   1x,
+          ../images/tablet/section-three@2.jpg 2x
+        "
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="
+          ../images/mobile/section-three.jpg   1x,
+          ../images/mobile/section-three@2.jpg 2x
+        "
+        media="(max-width: 375px)"
+      />
+      <img
+        class="info__img"
+        alt="fit confident woman"
+        src="../images/mobile/section-three.jpg"
+        width="335"
+        height="269"
+      />
+    </picture>
+    <div class="info__content">
+      <span class="info__icon-wrapper">
+        <svg class="info__icon" width="20" height="20">
+          <use href="../images/sprite.svg#icon-dumbbell" />
+        </svg>
+      </span>
+      <div class="info__content-text">
+        <h2 class="info__title">110 min</h2>
+        <p class="info__subtitle">Daily norm of sports</p>
+        <p class="info__description">
+          The World Health Organization recommends at least 150 minutes of
+          moderate-intensity aerobic physical activity throughout the week for
+          adults aged 18-64. However, what happens if we adjust that number to
+          110 minutes every day?
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
