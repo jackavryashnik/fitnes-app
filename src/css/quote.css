@@ -30,6 +30,7 @@
   display: flex;
   width: 704px;
   height: 302px;
+  border-radius: 50px;
 }
 .quote .container{
   display: flex;
