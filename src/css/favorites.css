@@ -16,15 +16,27 @@
     margin-bottom: 20px;
   }
 
+  .favorites-contanier-block {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    
+  }
+
   .favorites-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .favorites-list-item{
     width: 295px;
     height: 165px;       
     border-radius: 15px;
     background: #FFF;
-    margin: 0 auto;
-  }
-
-  .favorites-list-item{
     padding-top: 16px;
     padding-left: 16px;
   }
@@ -138,14 +150,9 @@
   flex-shrink: 0;
  }
 
- .svg-container {
-  background-color: lightgray url('../images/sprite.svg#icon-dumbbell') 50% / contain no-repeat;
-  width: 85px; /* ширина відповідає ширині SVG */
-  height: 52px; /* висота відповідає висоті SVG */
-}
-
  .message-info-svg {
-
+  width: 85px;
+  height: 52px;
  }
 
  .message-info-text {
@@ -158,6 +165,84 @@
   line-height: 1.28; 
  }
 
- @media (min-width: 768px) {
+ /* ------------TABLET----------------- */
 
+ @media (min-width: 768px) {
+  .favorites-card {
+    width: 736px;
+    height: 928px;
+  }
+
+  .favorites-contanier-block {
+    display: flex;
+    margin: 0;
+  }
+  
+  .favorites-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 14px;
+    row-gap: 20px;
+
+  }
+
+  .favorites-list-item {
+    width: 313px;
+  }
+
+  .message-info-svg {
+    width: 115px;
+    height: 71px;
+  }
+
+  .message-info-text {
+    width: 554px;
+    height: 72px;
+    font-size: 18px;
+    line-height: 1.33;
+  }
  }
+/* ------------------DESKTOP----------------------- */
+ @media (min-width: 1440px) {
+
+  .favorites-card {
+    width: 1408px;
+    height: 687px;
+  }
+
+  .favorites-contanier-block {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .favorites-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 20px;
+    row-gap: 28px;
+  }
+
+  .favorites-list-item{
+  width: calc((100% - 40px) / 3 - 20px);
+  box-sizing: border-box;
+  max-width: 424px;
+  height: 141px;
+  }
+
+  .favorites-card-text {
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+
+  .favorites-list-button {
+    margin-left: 231px;
+  }
+
+}
