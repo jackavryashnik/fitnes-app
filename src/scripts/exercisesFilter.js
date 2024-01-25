@@ -46,7 +46,9 @@ function createMarkup(data) {
     (html, { name, filter, imgUrl }) =>
       html +
       `
-  <li class="exercises-list-card" style="background: linear-gradient(0deg, rgba(16, 16, 16, 0.70) 0%, rgba(16, 16, 16, 0.70) 100%), url(${imgUrl});
+  <li data-filter="${
+    filter === 'Body parts' ? 'bodypart' : filter.toLowerCase()
+  }" data-name="${name}" class="exercises-list-card" style="background: linear-gradient(0deg, rgba(16, 16, 16, 0.70) 0%, rgba(16, 16, 16, 0.70) 100%), url(${imgUrl});
 background-size: cover;
 background-repeat: no-repeat;">
     <div class="exercise-card-desc">

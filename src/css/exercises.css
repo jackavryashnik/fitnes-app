@@ -16,11 +16,11 @@
 }
 .buttons-filter-container button {
   color: var(--black-color);
-  font-size: 14px;
+  font-size: 12px;
+  padding: 5px 10px;
   line-height: 1.29;
   border-radius: 30px;
   background: var(--soft-white-color);
-  padding: 7px 14px;
   border: none;
   transition: background-color 0.25s var(--transition-animation),
     color 0.25s var(--transition-animation),
@@ -98,6 +98,12 @@
 }
 
 /* Media */
+@media (min-width: 375px) {
+  .buttons-filter-container button {
+    font-size: 14px;
+    padding: 7px 14px;
+  }
+}
 @media (min-width: 375px) and (max-width: 767px) {
   .exercises-list-card {
     width: 295px;
