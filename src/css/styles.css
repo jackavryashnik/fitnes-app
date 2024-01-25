@@ -38,6 +38,8 @@
   --soft-white-color: #f6f6f6;
   --gold-color: ##eea10c;
   --cloud-gray-color: #e8e8e8;
+
+  --transition-animation: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .container {
@@ -72,4 +74,3 @@
     width: 1440px;
   }
 }
-
