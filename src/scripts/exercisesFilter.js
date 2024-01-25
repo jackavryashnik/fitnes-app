@@ -3,7 +3,8 @@ import { fetchData } from './api';
 const exercisesList = document.querySelector('.exercises-list'),
   buttonsFilterContainer = document.querySelector('.buttons-filter-container'),
   filterButtons = document.querySelectorAll('.buttons-filter-container button'),
-  exercisesPaginationBox = document.querySelector('.pagination-exercises-box');
+  exercisesPaginationBox = document.querySelector('.pagination-exercises-box'),
+  exercisesPageContainer = document.querySelector('.exercises-page-container');
 
 let limit = innerWidth < 768 ? 8 : 12;
 let currentPage = 1;
@@ -29,7 +30,6 @@ async function filterData(e) {
 
   filter = newFilter;
 
-  exercisesList.innerHTML = '';
   toggleButtonsState(filterButtons, e.target);
 
   try {
@@ -46,7 +46,9 @@ function createMarkup(data) {
     (html, { name, filter, imgUrl }) =>
       html +
       `
-  <li class="exercises-list-card" style="background: linear-gradient(0deg, rgba(16, 16, 16, 0.70) 0%, rgba(16, 16, 16, 0.70) 100%), url(${imgUrl});
+  <li data-filter="${
+    filter === 'Body parts' ? 'bodypart' : filter.toLowerCase()
+  }" data-name="${name}" class="exercises-list-card" style="background: linear-gradient(0deg, rgba(16, 16, 16, 0.70) 0%, rgba(16, 16, 16, 0.70) 100%), url(${imgUrl});
 background-size: cover;
 background-repeat: no-repeat;">
     <div class="exercise-card-desc">
@@ -90,7 +92,7 @@ function handlePagination(totalPages) {
 
 async function goToPage(page) {
   try {
-    console.log(filter);
+    exercisesPageContainer.scrollIntoView({ behavior: 'smooth' });
     const data = await fetchData(filter, { limit, page });
     createMarkup(data.results);
   } catch (error) {
