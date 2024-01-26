@@ -20,8 +20,8 @@
     />
     
     <script type="module" crossorigin src="/fitnes-app/assets/vendor-1b0a9daf.js"></script>
-    <script type="module" crossorigin src="/fitnes-app/assets/exercisesFilter-8f5478b7.js"></script>
-    <link rel="stylesheet" href="/fitnes-app/assets/exercisesFilter-ac6d4a4d.css">
+    <script type="module" crossorigin src="/fitnes-app/assets/exercisesFilter-7f4223a2.js"></script>
+    <link rel="stylesheet" href="/fitnes-app/assets/exercisesFilter-6657c279.css">
   </head>
   <body>
     <header>
@@ -209,88 +209,87 @@
       </ul>
 
       <form class="form-search-exercises visually-hidden">
-        <input
-          type="text"
-          class="form-search-exercises-input"
-          name="search"
-          autocomplete="on"
-          placeholder="Search"
-        />
-        <svg class="form-search-exercises-icon" width="18" height="18">
-          <use href="../images/sprite.svg#icon-search"></use>
-        </svg>
-      </form>
+                <div class="input-svg"><input
+                    type="text"
+                    class="form-search-exercises-input"
+                    name="search"
+                    autocomplete="on"
+                    placeholder="Search"
+                />
+                    <svg
+                    class="form-search-exercises-icon"
+                    width="18"
+                    height="18">
+                    <use href="../images/sprite.svg#icon-search"></use>
+                    </svg>
+                </div>
+                    
+            </form>
     </div>
   </div>
 
   <ul class="cards-workout-list">
-    <li class="card-workout-item">
-      <!--------- workout - rating - btn start -------->
+            <li class="card-workout-item">
 
-      <div class="card-workout-box">
-        <svg
-          class="workout-svg"
-          style="display: inline-block; vertical-align: middle"
-        >
-          <ellipse rx="100" ry="50" fill="#7E847F" cx="50%" cy="50%" />
-          <text
-            class="workout-svg-text"
-            x="50%"
-            y="50%"
-            text-anchor="middle"
-            dominant-baseline="middle"
-          >
-            <tspan dy="0.2em" x="50%">WORKOUT</tspan>
-          </text>
-        </svg>
-        <div class="card-workout-rating">
-          <p class="card-workout-rating-text">4.0</p>
-          <svg class="card-workout-rating-icon" width="18" height="18">
-            <use href="../images/sprite.svg#icon-Star-1"></use>
-          </svg>
-        </div>
+                <!--------- workout - rating - btn start -------->
+                <div class="card-menu">
+                    <div class="card-menu-box">
+                
+                        <div class="card-menu-workout">workout</div>
+                        <div class="card-workout-rating">
+                        <p class="card-workout-rating-text">4.0</p>
+                        <svg
+                            class="card-workout-rating-icon"
+                            width="18"
+                            height="18"
+                        >
+                            <use href="../images/sprite.svg#icon-Star-1"></use>
+                        </svg>
+                        </div>
+                    </div>
+                
+                        <button class="btn-start-workout" type="button">Start
+                            <svg class="card-workout-start-icon"
+                                width="16"
+                                height="16"
+                                >
+                                <use href="../images/sprite.svg#icon-arrow"></use>
+                            </svg>
+                        </button>
+                </div>
+                  
 
-        <div class="card-workout-start">
-          <button class="btn-start-workout">
-            <span class="btn-start-workout-text">Start</span>
-            <span class="btn-start-icon">
-              <svg class="card-workout-start-icon" width="16" height="16">
-                <use href="../images/sprite.svg#icon-arrow"></use>
-              </svg>
-            </span>
-          </button>
-        </div>
-      </div>
+                <!--------- cards - workout - title -------->
+                <div class="card-workout-title">
+                    <div class="card-workout-title-icon-box">
+                        <svg
+                        class="card-workout-title-icon"
+                        width="24"
+                        height="24">
+                        <use href="../images/sprite.svg#icon-human"></use>
+                        </svg>
+                    </div>
+                    <p class="card-title-text">Air bike</p>
+                </div>
+            
 
-      <!--------- cards - workout - title -------->
-      <div>
-        <div class="card-workout-title">
-          <div class="card-workout-title-icon-box">
-            <svg class="card-workout-title-icon" width="24" height="24">
-              <use href="../images/sprite.svg#icon-human"></use>
-            </svg>
-          </div>
-          <p class="card-title-text">Air bike</p>
-        </div>
-      </div>
-
-      <!-- info about calories - body part - target -->
-      <div class="card-workout-info">
-        <div class="card-workout-info-block">
-          <p class="card-workout-info-list">Burned calories:</p>
-          <div class="card-workout-info-data">312 / ...</div>
-        </div>
-        <div class="card-workout-info-block">
-          <p class="card-workout-info-list">Body part:</p>
-          <div class="card-workout-info-data">Waist</div>
-        </div>
-        <div class="card-workout-info-block">
-          <p class="card-workout-info-list">Target:</p>
-          <div class="card-workout-info-data">Abs</div>
-        </div>
-      </div>
-    </li>
-  </ul>
+                <!-- info about calories - body part - target -->
+                <div class="card-workout-info">
+                    <div class="card-workout-info-block">
+                        <p class="card-workout-info-list">Burned calories:</p>
+                        <p class="card-workout-info-data card-time">312 / 3 min</p>
+                    </div>
+                    <div class="card-workout-info-block">
+                        <p class="card-workout-info-list">Body part:</p>
+                        <p class="card-workout-info-data">Waist</p>
+                    </div>
+                    <div class="card-workout-info-block">
+                        <p class="card-workout-info-list">Target:</p>
+                        <p class="card-workout-info-data card-target">Abs</p>
+                    </div>
+                </div>
+            </li>
+        </ul> 
 </section>
 
       <section class="section info-section">
