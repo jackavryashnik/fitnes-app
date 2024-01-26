@@ -11,6 +11,8 @@
 @import url('./favorites.css');
 @import url('./exercises.css');
 @import url('./footer.css');
+@import url('./card.css');
+@import url('./exerciseModal.css');
 @import url('./quote.css');
 :root {
   font-family: 'DM Sans', sans-serif;
@@ -36,7 +38,7 @@
   --light-gray-color: #7e847f;
   --white-color: #ffffff;
   --soft-white-color: #f6f6f6;
-  --gold-color: ##eea10c;
+  --gold-color: #eea10c;
   --cloud-gray-color: #e8e8e8;
 
   --transition-animation: cubic-bezier(0.4, 0, 0.2, 1);
