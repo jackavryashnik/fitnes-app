@@ -8,4 +8,4 @@ background-repeat: no-repeat;">
     </div>
   </li>
   `,"");q(e)}function q(t){b.innerHTML=t}function y(t,e){t.forEach(o=>o.classList.remove("active")),e.classList.add("active")}function g(t){a.innerHTML="";for(let e=1;e<=t;e++){const o=document.createElement("button");o.textContent=e,e===1&&o.classList.add("active"),o.addEventListener("click",s=>{const r=a.querySelectorAll("button");y(r,s.target),w(e)}),a.appendChild(o)}}async function w(t){try{h.scrollIntoView({behavior:"smooth"});const e=await l(`filters?filter=${c}`,{limit:u,page:t});d(e.results)}catch(e){console.error(e)}}function k(){const t=document.querySelector(".foter-privacy-policy"),e=document.querySelector(".modal-overlay");t.addEventListener("click",()=>e.classList.add("is-open")),e.addEventListener("click",()=>e.classList.remove("is-open"))}k();
-//# sourceMappingURL=privacyPolicy-d2d74234.js.map
+//# sourceMappingURL=privacyPolicy-557a4e34.js.map
