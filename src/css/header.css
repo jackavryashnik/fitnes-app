@@ -108,9 +108,14 @@ div.header-container {
   background-color: var(--light-gray-color);
 }
 
-.link-active {
-  padding: 6px 26px;
+.mobile-nav-link {
+  display: block;
   border-radius: 30px;
+  line-height: 1.5;
+}
+
+.mobile-active-link {
+  padding: 6px 26px;
   color: var(--black-color);
   background-color: var(--white-color);
 }
@@ -163,6 +168,22 @@ div.header-container {
 
     color: var(--soft-white-color);
     background-color: var(--light-gray-color);
+  }
+
+  .nav-link {
+    display: block;
+    line-height: 1.5;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  .active-link {
+    padding-right: 26px;
+    padding-left: 26px;
+    border-radius: 30px;
+
+    color: var(--black-color);
+    background-color: var(--white-color);
   }
 
   .social-media-list {
