@@ -20,10 +20,22 @@
 }
 .quote-container-title{
   font-feature-settings: 'clig' off, 'liga' off;
-  color: #F6F6F6;
+  color: var(--soft-white-color);
   font-size: 20px;
   font-weight: 500;
   line-height: 1.4; 
+  margin-bottom: 14px;
+}
+.quote-container-text{
+  margin-bottom: 14px;
+  color: rgba(246, 246, 246, 0.60);
+  font-size: 14px;
+  line-height: 1.286;
+}
+.quote-container-author{
+  color: var(--soft-white-color);
+  font-weight: 500;
+  line-height: 1.5;
 }
 .quote-img{
   display: flex;
@@ -44,12 +56,19 @@
     width: 48px;
     height: 48px;
   }
+  .quote-container-text{
+    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
   .quote-container{
     padding: 64px 80px 64px 130px;
   }
   .quote-container-title{
     font-size: 24px;
     line-height: 1.333;
+    margin-bottom: 16px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -68,9 +87,13 @@
   .quote-container{
     padding: 64px 64px 64px 114px;
     width: 704px;
-    height: 302px;
   }
   .quote .container{
     display: flex;
   }
+}
+
+
+.qoutePlusInfo{
+  margin: 812px;
 }
