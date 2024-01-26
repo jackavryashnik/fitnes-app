@@ -16,7 +16,10 @@ window.addEventListener('load', loadInitialData);
 
 async function loadInitialData() {
   try {
-    const data = await fetchData(filter, { limit, page: currentPage });
+    const data = await fetchData(`filters?filter=${filter}`, {
+      limit,
+      page: currentPage,
+    });
     handlePagination(data.totalPages);
     createMarkup(data.results);
   } catch (error) {
@@ -33,7 +36,10 @@ async function filterData(e) {
   toggleButtonsState(filterButtons, e.target);
 
   try {
-    const data = await fetchData(filter, { limit, page: currentPage });
+    const data = await fetchData(`filters?filter=${filter}`, {
+      limit,
+      page: currentPage,
+    });
     handlePagination(data.totalPages);
     createMarkup(data.results);
   } catch (error) {
@@ -93,7 +99,10 @@ function handlePagination(totalPages) {
 async function goToPage(page) {
   try {
     exercisesPageContainer.scrollIntoView({ behavior: 'smooth' });
-    const data = await fetchData(filter, { limit, page });
+    const data = await fetchData(`filters?filter=${filter}`, {
+      limit,
+      page,
+    });
     createMarkup(data.results);
   } catch (error) {
     console.error(error);
