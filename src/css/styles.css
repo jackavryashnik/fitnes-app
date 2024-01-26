@@ -13,6 +13,7 @@
 @import url('./footer.css');
 @import url('./card.css');
 @import url('./exerciseModal.css');
+@import url('./privacyPolicy.css');
 
 :root {
   font-family: 'DM Sans', sans-serif;
