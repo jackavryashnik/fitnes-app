@@ -1,0 +1,211 @@
+/* form - search */
+/*------ exercises subcategories ---------*/
+.exercises-subtitle {
+  color: rgba(27, 27, 27, 0.50);
+font-family: "DM Sans";
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 1; /* 100% */
+letter-spacing: -0.02em;
+}
+
+.input-svg {
+  position: relative;
+  height: 42px;
+}
+.form-search-exercises {
+  
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 30px;
+  background-color: #F6F6F6;
+  width: 295px;
+  
+  min-height: 165px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-search-exercises-input  {
+  padding: 12px 0 12px 14px;
+  border-radius: 30px;
+  color: #1B1B1B;
+  font-size: 14px;
+  line-height: 1.28; 
+  border: none;
+  width: 295px;
+}
+
+.form-search-exercises-icon {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+/*  cards  */
+
+.cards-workout-list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card-workout-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 335px;
+  min-height: 141px;
+  border-radius: 16px;
+  background-color: #FFF;;
+  padding: 16px;
+
+}
+
+.card-menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-menu-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.card-menu-workout {
+  display: flex;
+  width: 76px;
+  height: 26px;
+  align-items: center;
+  justify-content: center;
+  color: #F6F6F6;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  background: #7E847F;
+  border-radius: 15px;
+  text-transform: uppercase;
+}
+
+.card-workout-rating {
+  display: flex;
+  gap: 2px;
+}
+.card-workout-rating-text {
+  color: #1B1B1B;
+  font-feature-settings: 'clig' off, 'liga' off;
+  line-height: 1.5; 
+}
+.card-workout-rating-icon {
+  fill: #EEA10C;
+}
+
+.btn-start-workout{
+  gap: 8px;
+  align-items: center;
+   display: inline-block;
+    color: #1B1B1B;
+    font-size: 14px;
+    line-height: 1.28;
+    border: none;
+    padding: 0;
+    background: none;
+}
+
+.card-workout-start-icon {
+  stroke: #1B1B1B;
+}
+
+.card-workout-title {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-top: 25px;
+  margin-bottom: 16px;
+}
+.card-workout-title-icon-box {
+  width: 24px;
+  height: 24px;
+  background-color: #7E847F;
+  border-radius: 50%;
+}
+
+.card-title-text {
+  color: #1B1B1B;
+  font-size: 20px;
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-workout-info {
+  display: flex;
+  width: 263px;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 6px 16px;
+  flex-wrap: wrap;
+  /* margin-bottom: 16px; */
+}
+
+.card-workout-info-block {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.card-workout-info-list {
+  color: rgba(27, 27, 27, 0.40);
+font-feature-settings: 'clig' off, 'liga' off;
+font-size: 12px;
+font-weight: 400;
+line-height: 1.5; /* 150% */
+}
+
+.card-workout-info-data {
+  color: #1B1B1B;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-size: 12px;
+  line-height: 1.5;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@media screen and (min-width: 768px) {
+  .cards-workout-list {
+    gap: 16px;
+  }
+
+  .card-workout-item {
+    width: 313px;
+  }
+
+  .btn-start-workout {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .card-workout-title {
+    margin-bottom: 8px;
+  }
+
+  .card-title-text {
+    font-size: 24px;
+    line-height: 1.33;
+  }
+
+  .card-info-about {
+    gap: 4px;
+  }
+}
+
+/* =================================== */
+@media screen and (min-width: 1440px) {
+  .card-workout-item {
+    width: 424px;
+    min-height: 141px;
+  }
+
+}
