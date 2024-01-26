@@ -78,3 +78,6 @@
     width: 1440px;
   }
 }
+.visually-hidden {
+  display: none;
+}
