@@ -22,7 +22,7 @@
   z-index: 4;
   max-height: 80vh;
   max-width: 80vw;
-  background-color: var(--color-white);
+  background-color: var(--white-color);
   color: black;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   overflow-y: auto;
@@ -38,7 +38,7 @@
   font-weight: 700;
   padding: 1.25rem 1.5rem;
   border-bottom: 1px solid rgba(34, 36, 38, 0.15);
-  background-color: var(--color-white);
+  background-color: var(--white-color);
 }
 
 .privacy__header div {
