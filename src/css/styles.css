@@ -52,12 +52,16 @@
   margin-right: auto;
   margin-left: auto;
 }
-
 @media (min-width: 375px) {
   .container {
     width: 375px;
   }
 }
+/* @media (max-width: 767px) {
+  .container {
+    width: 375px;
+  }
+} */
 
 @media (min-width: 768px) {
   .container {
