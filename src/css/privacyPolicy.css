@@ -1,3 +1,9 @@
+.modal-overlay.is-open {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .modal-overlay {
   position: fixed;
   top: 0;
