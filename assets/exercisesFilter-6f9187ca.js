@@ -8,4 +8,4 @@ background-repeat: no-repeat;">
     </div>
   </li>
   `,"");S(e)}function S(t){b.innerHTML=t}function p(t,e){t.forEach(n=>n.classList.remove("active")),e.classList.add("active")}function m(t){i.innerHTML="";for(let e=1;e<=t;e++){const n=document.createElement("button");n.textContent=e,e===1&&n.classList.add("active"),n.addEventListener("click",s=>{const r=i.querySelectorAll("button");p(r,s.target),q(e)}),i.appendChild(n)}}async function q(t){try{v.scrollIntoView({behavior:"smooth"});const e=await l(`filters?filter=${c}`,{limit:u,page:t});d(e.results)}catch(e){console.error(e)}}
-//# sourceMappingURL=exercisesFilter-8c843977.js.map
+//# sourceMappingURL=exercisesFilter-6f9187ca.js.map
