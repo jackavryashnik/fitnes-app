@@ -55,6 +55,12 @@ div.header-container {
   height: 100%;
   padding: 20px;
   margin: 0 auto;
+
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mobile-menu {
@@ -136,7 +142,9 @@ div.header-container {
 }
 
 .is-open {
-  display: none;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 @media screen and (min-width: 768px) {
