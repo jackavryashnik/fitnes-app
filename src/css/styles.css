@@ -11,6 +11,7 @@
 @import url('./favorites.css');
 @import url('./exercises.css');
 @import url('./footer.css');
+@import url('./card.css');
 
 :root {
   font-family: 'DM Sans', sans-serif;

@@ -159,13 +159,10 @@
     flex-basis: calc((100% - 3 * 20px) / 4);
   }
 }
-<<<<<<< Updated upstream
-=======
 
 .form-search-exercises-input  {
   padding:  12px 208px 12px 14px; 
   width: 273px;
-} */
 }
 
 
@@ -382,9 +379,3 @@ line-height: 1.5;
   }
 
 } */
-
-
-
-
-
->>>>>>> Stashed changes
