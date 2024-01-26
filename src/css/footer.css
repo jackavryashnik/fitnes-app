@@ -1,4 +1,8 @@
 .footer-container {
+  width: 280px;
+  margin-bottom: 20px;
+  padding-top: 40px;
+  padding-left: 20px;
   background: linear-gradient(
       0deg,
       rgba(27, 27, 27, 0.7) 0%,
@@ -22,9 +26,7 @@
 
 .footer-logo-link {
   display: block;
-  padding-top: 40px;
   padding-bottom: 9px;
-  margin-left: 20px;
   color: var(--soft-white-color);
   font-weight: 700;
   line-height: 1.12;
@@ -35,7 +37,7 @@
 .footer-social-media-list {
   display: flex;
   gap: 12px;
-  margin-left: 20px;
+  margin-bottom: 40px;
 }
 
 .footer-social-media-link {
@@ -53,8 +55,6 @@
 
 .footer-subheader {
   max-width: 279px;
-  margin-left: 20px;
-  margin-top: 40px;
   margin-bottom: 20px;
   color: var(--soft-white-color);
   font-size: 26px;
@@ -70,14 +70,13 @@
 }
 
 .footer-form {
-  max-width: 240px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 240px;
+  margin-bottom: 60px;
 }
 
 .footer-email-label {
-  max-width: 268px;
-
+  display: block;
+  margin-bottom: 20px;
   color: var(--soft-white-color);
   font-size: 12px;
   line-height: 1.28;
@@ -85,8 +84,8 @@
 
 #footer-email-input {
   width: 240px;
-  margin-top: 20px;
-  padding: 12px 12px 14px;
+  padding: 12px 14px 12px;
+  margin-bottom: 12px;
   border-radius: 30px;
   border: 1px solid var(--soft-white-color);
   background-color: transparent;
@@ -95,7 +94,6 @@
 
 .footer-form-btn {
   width: 240px;
-  margin-top: 12px;
   display: flex;
   padding: 12px 100px;
   justify-content: center;
@@ -111,8 +109,6 @@
 
 .footer-text {
   width: 188px;
-  margin-top: 60px;
-  margin-left: 20px;
   color: var(--soft-white-color);
   font-size: 12px;
   line-height: 0.83;
@@ -121,14 +117,11 @@
 
 .footer-links {
   display: flex;
-  padding-top: 10px;
   padding-bottom: 20px;
 }
 
 .foter-privacy-policy {
-  width: 188px;
   padding-top: 10px;
-  margin-left: 20px;
   color: var(--soft-white-color);
   font-size: 12px;
   line-height: 0.83;
@@ -153,14 +146,20 @@
   letter-spacing: -0.02em;
 }
 
+/* =====================375============================ */
+
 @media (min-width: 375px) {
+  .footer-container {
+    width: 335px;
+    height: 471px;
+  }
+
   .footer-subheader {
     font-size: 32px;
   }
 
   .footer-form {
-    max-width: 295px;
-    margin-left: auto;
+    width: 295px;
   }
 
   .footer-email-label {
@@ -169,10 +168,12 @@
 
   #footer-email-input {
     width: 295px;
+    height: 42px;
   }
 
   .footer-form-btn {
     width: 295px;
+    height: 42px;
     padding: 12px 130px;
   }
 }
@@ -181,38 +182,34 @@
 
 @media (min-width: 768px) {
   .footer-container {
+    width: 736px;
+    height: 576px;
+    padding-top: 66px;
+    padding-left: 48px;
+    margin-bottom: 0;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     column-gap: 139px;
-    row-gap: 110px;
+    row-gap: 120px;
     background: linear-gradient(
         0deg,
         rgba(27, 27, 27, 0.7) 0%,
         rgba(27, 27, 27, 0.7) 100%
       ),
       url('../images/tablet/footer-background.jpg') center/cover no-repeat;
-  }
-
-  .foter-link-and-social-div {
-    padding-top: 46px;
+    border-radius: 50px;
   }
 
   .footer-logo-link {
-    padding-top: 20px;
     padding-bottom: 30px;
-    margin-left: 48px;
     font-size: 28px;
-    line-height: 1;
+    line-height: 0.92;
   }
 
   .footer-logo-link:hover,
   .footer-logo-link:focus {
     color: var(--gray-color);
-  }
-
-  .footer-social-media-list {
-    margin-left: 48px;
   }
 
   .footer-social-media-link {
@@ -225,31 +222,34 @@
     fill: var(--gray-color);
   }
 
+  .footer-social-media-icon {
+    width: 28px;
+    height: 28px;
+  }
+
   .footer-subheader {
-    margin-top: 64px;
     margin-bottom: 32px;
-    margin-left: 0;
     max-width: 345px;
     font-size: 54px;
     line-height: 0.92;
   }
 
   .footer-form {
-    max-width: 352px;
+    width: 352px;
+    margin-bottom: 0;
   }
 
   .footer-email-label {
     font-size: 18px;
-    max-width: 345px;
   }
 
   #footer-email-input {
     width: 352px;
+    margin-bottom: 20px;
   }
 
   .footer-form-btn {
     width: 352px;
-    margin-top: 20px;
   }
 
   .footer-form-btn:hover,
@@ -314,7 +314,9 @@
 
 @media (min-width: 1440px) {
   .footer-container {
-    column-gap: 164px;
+    width: 1408px;
+    height: 454px;
+    column-gap: 156px;
     row-gap: 160px;
     background: linear-gradient(
         0deg,
@@ -335,9 +337,20 @@
   }
 
   .footer-form {
-    margin-top: 64px;
     font-size: 18px;
     margin-left: 160px;
+  }
+
+  .footer-links {
+    padding: 0 0 16px 0;
+  }
+
+  .foter-privacy-policy {
+    padding-bottom: 0;
+  }
+
+  .footer-terms-of-service {
+    padding: 0;
   }
 
   @media screen and (min-resolution: 192dpi) {
