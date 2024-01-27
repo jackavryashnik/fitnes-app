@@ -7,6 +7,7 @@ const footerForm = document.querySelector('.footer-form');
 footerForm.addEventListener('submit', function (event) {
   event.preventDefault();
   submitForm();
+  footerForm.reset();
 });
 
 async function submitForm() {
