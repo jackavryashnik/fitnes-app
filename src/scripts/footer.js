@@ -7,11 +7,6 @@ if (
   window.location.pathname === '/'
 ) {
   const footerForm = document.querySelector('.footer-form');
-  console.log(1);
-
-  console.log(2);
-  console.log(window.location.pathname);
-  console.log(3);
 
   footerForm.addEventListener('submit', function (event) {
     event.preventDefault();
