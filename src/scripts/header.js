@@ -27,11 +27,11 @@ function changeActiveLink() {
   window.addEventListener('load', () => {
     const currentPage = '.' + window.location.pathname; // на живій сторінці на гіті просто працює window.location.pathname
 
+    // на живій сторінці на гіті має спрацювати варіант: currentPage === '/fitnes-app/'
     if (currentPage === './') {
       links[0].classList.add('active-link');
     } else {
       links.forEach(link => {
-        // на живій сторінці на гіті має спрацювати варіант: currentPage === '/fitnes-app/'
         if (link.getAttribute('href') === currentPage) {
           link.classList.add('active-link');
         }
