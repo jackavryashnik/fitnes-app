@@ -19,9 +19,10 @@
       referrerpolicy="no-referrer"
     />
     
-    <script type="module" crossorigin src="/fitnes-app/assets/vendor-1b0a9daf.js"></script>
-    <script type="module" crossorigin src="/fitnes-app/assets/privacyPolicy-557a4e34.js"></script>
-    <link rel="stylesheet" href="/fitnes-app/assets/privacyPolicy-9ccb6d0d.css">
+    <script type="module" crossorigin src="/fitnes-app/assets/vendor-0a7943b3.js"></script>
+    <script type="module" crossorigin src="/fitnes-app/assets/privacyPolicy-a05c049f.js"></script>
+    <link rel="stylesheet" href="/fitnes-app/assets/privacyPolicy-7fa61a1b.css">
+    <link rel="stylesheet" href="/fitnes-app/assets/vendor-e5212ee8.css">
   </head>
   <body>
     <header>
@@ -383,7 +384,11 @@
           Transforming your
           <span class="footer-subheader-accent">body</span> shape with us
         </h2>
-        <form class="footer-form" action="/submit_email" method="post">
+        <form
+          class="footer-form"
+          action="https://energyflow.b.goit.study/api/subscription"
+          method="post"
+        >
           <label class="footer-email-label" for="footer-email-input"
             >Subscribe and learn about new exercises!</label
           >
@@ -395,7 +400,6 @@
             required
             pattern="^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$"
           />
-
           <button class="footer-form-btn" type="submit">Send</button>
         </form>
       </div>
