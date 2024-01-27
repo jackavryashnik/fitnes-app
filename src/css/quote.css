@@ -5,6 +5,12 @@
   width: 34px;
   height: 32px;
 }
+.quote-image{
+  background-repeat: no-repeat;
+  height: 272px;
+  background-image: url(../images/mobile/section-one.jpg);
+  border-radius: 30px;
+}
 .quote-container-svg-commas{
   position: absolute;
   right: 20px;
@@ -41,11 +47,21 @@
   display: flex;
   border-radius: 30px;
 }
-
+.qoutePlusInfo{
+  margin-top: 96px;
+}
 @media screen and (min-width: 768px) {
+  .quote-image{
+    height: 302px;
+    background-image: url(../images/tablet/section-one.jpg);
+    border-radius: 50px;
+  }
   .quote-container-svg-human{
     left: 80px;
     top: 64px;
+  }
+  .qoutePlusInfo{
+    margin-top: 180px;
   }
   .quote-img{
     border-radius: 50px;
@@ -72,11 +88,19 @@
   }
 }
 @media screen and (min-width: 1440px) {
+  .quote-image{
+    background-image: url(../images/desktop/section-one.jpg);
+    width: 704px;
+    border-radius: 50px;
+  }
   .quote-container-svg-human{
     position: absolute;
     left: 64px;
     top: 64px;
+  }
 
+  .qoutePlusInfo{
+    margin-top: 156px;
   }
   .quote-container-svg-commas{
     position: absolute;
@@ -87,13 +111,40 @@
   .quote-container{
     padding: 64px 64px 64px 114px;
     width: 704px;
+    
   }
   .quote .container{
     display: flex;
   }
+  .section.qoutePlusInfo .container{
+    display: flex;
+  }
+}
+@media screen and (min-resolution:192dpi) and (max-width:767px) ,
+screen and (min-resolution:2dppx) and (max-width:767px) ,
+screen and (min-device-pixel-ratio: 2) and (max-width:767px) {
+  .quote-image{
+    background-image: url(../images/mobile/section-one@2.jpg);
+    background-size: 335px;
+  }
+
+}
+@media screen and (min-resolution:192dpi) and (min-width:768px) and  (max-width:1439px),
+screen and (min-resolution:2dppx) and (min-width:768px) and (max-width:1439px),
+screen and (min-device-pixel-ratio: 2) and (min-width:768px) and (max-width:1439px){
+  .quote-image{
+    background-image: url(../images/tablet/section-one@2.jpg);
+    background-size: 736px;
+  }
+
+}
+@media screen and (min-resolution:192dpi) and (min-width:1440px) ,
+screen and (min-resolution:2dppx) and (min-width:1440px) ,
+screen and (min-device-pixel-ratio: 2) and (min-width:1440px) {
+  .quote-image{
+    background-image: url(../images/desktop/section-one@2.jpg);
+    background-size: 704px;
+  }
+
 }
 
-
-.qoutePlusInfo{
-  margin: 812px;
-}
