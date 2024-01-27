@@ -1,5 +1,4 @@
 const scrollBtn = document.querySelector('.scroll-top-btn');
-console.log(scrollBtn);
 
 function showScrollBtn() {
   if (window.scrollY > 700) {
