@@ -28,11 +28,21 @@ async function submitForm() {
       showSuccess();
     }
   } catch (error) {
-    console.error('Error:', error);
+    showError();
     if (error.response && error.response.status === 409) {
       showError409();
     }
   }
+}
+
+function showError() {
+  iziToast.error({
+    title: 'Error',
+    message: 'Bad request',
+    position: 'topRight',
+    timeout: 3500,
+    progressBar: false,
+  });
 }
 
 function showError409() {
