@@ -1,18 +1,28 @@
 import { fetchData } from './api';
 
-const exercisesList = document.querySelector('.exercises-list'),
-  buttonsFilterContainer = document.querySelector('.buttons-filter-container'),
-  filterButtons = document.querySelectorAll('.buttons-filter-container button'),
-  exercisesPaginationBox = document.querySelector('.pagination-exercises-box'),
+let exercisesList;
+let filterButtons;
+let exercisesPaginationBox;
+let exercisesPageContainer;
+let limit;
+let currentPage;
+let filter;
+
+if (window.location.pathname === '/index.html') {
+  const  buttonsFilterContainer = document.querySelector('.buttons-filter-container');
+  exercisesList = document.querySelector('.exercises-list');
+  filterButtons = document.querySelectorAll('.buttons-filter-container button');
+  exercisesPaginationBox = document.querySelector('.pagination-exercises-box');
   exercisesPageContainer = document.querySelector('.exercises-page-container');
-
-let limit = innerWidth < 768 ? 8 : 12;
-let currentPage = 1;
-let filter = 'Muscles';
-
-buttonsFilterContainer.addEventListener('click', filterData);
-
-window.addEventListener('load', loadInitialData);
+  
+  limit = innerWidth < 768 ? 8 : 12;
+  currentPage = 1;
+  filter = 'Muscles';
+  
+  buttonsFilterContainer.addEventListener('click', filterData);
+  
+  window.addEventListener('load', loadInitialData);
+}
 
 async function loadInitialData() {
   try {

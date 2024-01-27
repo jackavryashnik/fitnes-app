@@ -10,4 +10,6 @@ export default function privacyModal() {
   termsOverlay.addEventListener('click', () => termsOverlay.classList.remove('is-open'));
 }
 
-privacyModal();
+if (window.location.pathname === '/index.html') {
+  privacyModal();
+}
