@@ -8,19 +8,24 @@ let limit;
 let currentPage;
 let filter;
 
-if (window.location.pathname === '/index.html') {
-  const  buttonsFilterContainer = document.querySelector('.buttons-filter-container');
+if (
+  window.location.pathname === '/index.html' ||
+  window.location.pathname === '/'
+) {
+  const buttonsFilterContainer = document.querySelector(
+    '.buttons-filter-container'
+  );
   exercisesList = document.querySelector('.exercises-list');
   filterButtons = document.querySelectorAll('.buttons-filter-container button');
   exercisesPaginationBox = document.querySelector('.pagination-exercises-box');
   exercisesPageContainer = document.querySelector('.exercises-page-container');
-  
+
   limit = innerWidth < 768 ? 8 : 12;
   currentPage = 1;
   filter = 'Muscles';
-  
+
   buttonsFilterContainer.addEventListener('click', filterData);
-  
+
   window.addEventListener('load', loadInitialData);
 }
 

@@ -2,18 +2,24 @@ import axios from 'axios';
 import Swal from 'sweetalert2';
 import 'sweetalert2/src/sweetalert2.scss';
 
-// if (window.location.pathname === '/index.html') {
-console.log(1);
-const footerForm = document.querySelector('.footer-form');
+if (
+  window.location.pathname === '/index.html' ||
+  window.location.pathname === '/'
+) {
+  const footerForm = document.querySelector('.footer-form');
+  console.log(1);
 
-footerForm.addEventListener('submit', function (event) {
-  event.preventDefault();
-  submitForm();
-  footerForm.reset();
-});
-// }
+  console.log(2);
+  console.log(window.location.pathname);
+  console.log(3);
 
-console.log(1);
+  footerForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    submitForm();
+    footerForm.reset();
+  });
+}
+
 async function submitForm() {
   const footerForm = document.querySelector('.footer-form');
   const formData = new FormData(footerForm);
