@@ -27,7 +27,9 @@ async function submitForm() {
       showSuccess();
     }
   } catch (error) {
-    showError();
+    if (error.response && error.response.status !== 409) {
+      showError();
+    }
     if (error.response && error.response.status === 409) {
       showError409();
     }
