@@ -1,0 +1,197 @@
+.quote-container-svg-human{
+  position: absolute;
+  left: 20px;
+  top: 40px;
+  width: 34px;
+  height: 32px;
+}
+.quote-favorites-info-img{
+  border-radius: 30px;
+}
+.quote-image{
+  background-repeat: no-repeat;
+  height: 272px;
+  background-image: url(../images/mobile/section-one.jpg);
+  border-radius: 30px;
+}
+.quote-container-svg-commas{
+  position: absolute;
+  right: 20px;
+  top: 40px;
+  width: 28px;
+  height: 28px;
+}
+.quote-container{
+  position: relative;
+  background-color: var(--light-gray-color);
+  border-radius: 30px;
+  padding: 42px 20px 40px 66px;
+  min-height: 272px;
+}
+.quote-container-title{
+  font-feature-settings: 'clig' off, 'liga' off;
+  color: var(--soft-white-color);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4; 
+  margin-bottom: 14px;
+}
+.quote-container-text{
+  margin-bottom: 14px;
+  color: rgba(246, 246, 246, 0.60);
+  font-size: 14px;
+  line-height: 1.286;
+}
+.quote-container-author{
+  color: var(--soft-white-color);
+  font-weight: 500;
+  line-height: 1.5;
+}
+.quote-img{
+  display: flex;
+  border-radius: 30px;
+}
+.qoutePlusInfo{
+  margin-top: 96px;
+}
+.quote-favorites-info-containterInfo{
+  background-color: var(--white-color);
+  border-radius: 30px;
+  width: 335px;
+  padding: 96px 101px 97px 102px;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+.quote-favorites-info-containterInfo-title{
+  margin-bottom: 6px;
+  color: var(--black-color);
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1; 
+}
+.quote-favorites-info-containterInfo-text{
+  color: rgba(27, 27, 27, 0.60);
+  font-size: 14px;
+  line-height: 1.286;
+}
+@media screen and (min-width: 768px) {
+  .quote-favorites-info-containterInfo{
+    width: 368px;
+  }
+  .quote-favorites-info-img{
+    border-radius: 50px;
+  }
+  .quote-favorites-info{
+    display: flex;
+  }
+  .quote-image{
+    height: 302px;
+    background-image: url(../images/tablet/section-one.jpg);
+    border-radius: 50px;
+  }
+  .quote-container-svg-human{
+    left: 80px;
+    top: 64px;
+  }
+  .qoutePlusInfo{
+    margin-top: 180px;
+  }
+  .quote-img{
+    border-radius: 50px;
+  }
+  .quote-container-svg-commas{
+    right: 80px;
+    top: 32px;
+    width: 48px;
+    height: 48px;
+  }
+  .quote-container-text{
+    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .quote-container{
+    padding: 64px 80px 64px 130px;
+    border-radius: 50px;
+    min-height: 302px;
+  }
+  .quote-container-title{
+    font-size: 24px;
+    line-height: 1.333;
+    margin-bottom: 16px;
+  }
+  .quote-favorites-info-containterInfo-title{
+    font-size: 24px;
+    line-height: 1.333;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .qoutePlusInfo .container{
+    display: flex;
+  }
+  .quote-favorites-info-containterInfo{
+    width: 352px;
+  }
+  .quote-image{
+    background-image: url(../images/desktop/section-one.jpg);
+    width: 704px;
+    border-radius: 50px;
+  }
+  .quote-container-svg-human{
+    position: absolute;
+    left: 64px;
+    top: 64px;
+  }
+
+  .qoutePlusInfo{
+    margin-top: 156px;
+  }
+  .quote-container-svg-commas{
+    position: absolute;
+    right: 64px;
+    top: 32px;
+    fill: var(--soft-white-color);
+  }
+  .quote-container{
+    padding: 64px 64px 64px 114px;
+    width: 704px;
+    
+  }
+  .quote .container{
+    display: flex;
+  }
+  .section.qoutePlusInfo .container{
+    display: flex;
+  }
+}
+@media screen and (min-resolution:192dpi) and (max-width:767px) ,
+screen and (min-resolution:2dppx) and (max-width:767px) ,
+screen and (min-device-pixel-ratio: 2) and (max-width:767px) {
+  .quote-image{
+    background-image: url(../images/mobile/section-one@2.jpg);
+    background-size: 335px;
+  }
+
+}
+@media screen and (min-resolution:192dpi) and (min-width:768px) and  (max-width:1439px),
+screen and (min-resolution:2dppx) and (min-width:768px) and (max-width:1439px),
+screen and (min-device-pixel-ratio: 2) and (min-width:768px) and (max-width:1439px){
+  .quote-image{
+    background-image: url(../images/tablet/section-one@2.jpg);
+    background-size: 736px;
+  }
+
+}
+@media screen and (min-resolution:192dpi) and (min-width:1440px) ,
+screen and (min-resolution:2dppx) and (min-width:1440px) ,
+screen and (min-device-pixel-ratio: 2) and (min-width:1440px) {
+  .quote-image{
+    background-image: url(../images/desktop/section-one@2.jpg);
+    background-size: 704px;
+  }
+
+}
+
