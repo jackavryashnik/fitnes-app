@@ -29,20 +29,22 @@ function changeActiveLink() {
 
     if (currentPage === './') {
       links[0].classList.add('active-link');
-    }
+    } else {
+      links.forEach(link => {
+        // на живій сторінці на гіті має спрацювати варіант: currentPage === '/fitnes-app/'
+        if (link.getAttribute('href') === currentPage) {
+          link.classList.add('active-link');
+        }
 
-    links.forEach(link => {
-      // на живій сторінці на гіті має спрацювати варіант: currentPage === '/fitnes-app/'
-      if (link.getAttribute('href') === currentPage) {
-        link.classList.add('active-link');
-      }
-    });
+        // console.log test
+        console.log(link.getAttribute('href') === currentPage);
+      });
+    }
 
     // console.log test
     console.log(currentPage);
     console.log(window.location.pathname);
     console.log(currentPage === './');
-    console.log(link.getAttribute('href') === currentPage);
   });
 }
 
