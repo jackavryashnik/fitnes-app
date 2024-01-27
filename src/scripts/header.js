@@ -35,16 +35,8 @@ function changeActiveLink() {
         if (link.getAttribute('href') === currentPage) {
           link.classList.add('active-link');
         }
-
-        // console.log test
-        console.log(link.getAttribute('href') === currentPage);
       });
     }
-
-    // console.log test
-    console.log(currentPage);
-    console.log(window.location.pathname);
-    console.log(currentPage === './');
   });
 }
 
