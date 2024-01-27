@@ -1,9 +1,11 @@
+.privacy-modal-overlay.is-open,
 .modal-overlay.is-open {
   visibility: visible;
   opacity: 1;
   pointer-events: auto;
 }
 
+.privacy-modal-overlay,
 .modal-overlay {
   position: fixed;
   top: 0;
