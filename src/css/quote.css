@@ -11,7 +11,7 @@
 .quote-image{
   background-repeat: no-repeat;
   height: 272px;
-  background-image: url(../images/mobile/section-one.jpg);
+  background-image: url(./images/mobile/section-one.jpg);
   border-radius: 30px;
 }
 .quote-container-svg-commas{
@@ -88,7 +88,7 @@
   }
   .quote-image{
     height: 302px;
-    background-image: url(../images/tablet/section-one.jpg);
+    background-image: url(./images/tablet/section-one.jpg);
     border-radius: 50px;
   }
   .quote-container-svg-human{
@@ -136,7 +136,7 @@
     width: 352px;
   }
   .quote-image{
-    background-image: url(../images/desktop/section-one.jpg);
+    background-image: url(./images/desktop/section-one.jpg);
     width: 704px;
     border-radius: 50px;
   }
@@ -171,7 +171,7 @@
 screen and (min-resolution:2dppx) and (max-width:767px) ,
 screen and (min-device-pixel-ratio: 2) and (max-width:767px) {
   .quote-image{
-    background-image: url(../images/mobile/section-one@2.jpg);
+    background-image: url(./images/mobile/section-one@2.jpg);
     background-size: 335px;
   }
 
@@ -180,7 +180,7 @@ screen and (min-device-pixel-ratio: 2) and (max-width:767px) {
 screen and (min-resolution:2dppx) and (min-width:768px) and (max-width:1439px),
 screen and (min-device-pixel-ratio: 2) and (min-width:768px) and (max-width:1439px){
   .quote-image{
-    background-image: url(../images/tablet/section-one@2.jpg);
+    background-image: url(./images/tablet/section-one@2.jpg);
     background-size: 736px;
   }
 
@@ -189,7 +189,7 @@ screen and (min-device-pixel-ratio: 2) and (min-width:768px) and (max-width:1439
 screen and (min-resolution:2dppx) and (min-width:1440px) ,
 screen and (min-device-pixel-ratio: 2) and (min-width:1440px) {
   .quote-image{
-    background-image: url(../images/desktop/section-one@2.jpg);
+    background-image: url(./images/desktop/section-one@2.jpg);
     background-size: 704px;
   }
 
