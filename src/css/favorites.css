@@ -39,6 +39,11 @@
     padding: 16px;
   }
 
+  .favorites-list-item:hover,
+  .favorites-list-item:focus {
+    transform: scale(0.95);
+  }
+
   .favorites-card-header {
     display: inline-block;
   }
@@ -81,7 +86,11 @@
     background: none;
     box-sizing: border-box;
     vertical-align: middle;
+  }
 
+  .favorites-icon-svg:hover,
+  .favorites-icon-svg:focus {
+    transform: scale(0.95);
   }
 
   .favorites-list-button {
@@ -93,6 +102,12 @@
     padding: 0;
     background: none;
     margin-left: 100px;
+  }
+
+  .favorites-list-button:hover,
+  .favorites-list-button:focus {
+    transform: scale(0.95);
+
   }
 
   .favorites-list-button-icon {
