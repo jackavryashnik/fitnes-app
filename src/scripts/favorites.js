@@ -1,15 +1,21 @@
-const favoritesList = document.querySelector('.favorites-list');
-const paginationButtons = document.querySelectorAll('.favorites-pagination-block button');
+let favoritesList;
+let paginationButtons;
 
 const itemsPerPage = 6;
-showPage(1);
-
-paginationButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const pageNumber = parseInt(button.textContent);
-    showPage(pageNumber);
+if (window.location.pathname === '/page-2.html') {
+  favoritesList = document.querySelector('.favorites-list');
+  paginationButtons = document.querySelectorAll(
+    '.favorites-pagination-block button'
+  );
+  showPage(1);
+  
+  paginationButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const pageNumber = parseInt(button.textContent);
+      showPage(pageNumber);
+    });
   });
-});
+}
 
 function showPage(pageNumber) {
   const startIndex = (pageNumber - 1) * itemsPerPage;
