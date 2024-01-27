@@ -28,24 +28,22 @@ function changeActiveLink() {
   window.addEventListener('load', () => {
     const currentPage = '.' + window.location.pathname; // на живій сторінці на гіті просто працює window.location.pathname
 
+    if (currentPage === './') {
+      links[0].classList.add('active-link');
+    }
+
     links.forEach(link => {
       // на живій сторінці на гіті має спрацювати варіант: currentPage === '/fitnes-app/'
-      if (currentPage === './') {
-        homeLinks.forEach(link => {
-          link.classList.add('active-link');
-        });
-      } else {
-        if (link.getAttribute('href') === currentPage) {
-          link.classList.add('active-link');
-        }
+      if (link.getAttribute('href') === currentPage) {
+        link.classList.add('active-link');
       }
-
-      // console.log test
-      console.log(currentPage);
-      console.log(window.location.pathname);
-      console.log(currentPage === './');
-      console.log(link.getAttribute('href') === currentPage);
     });
+
+    // console.log test
+    console.log(currentPage);
+    console.log(window.location.pathname);
+    console.log(currentPage === './');
+    console.log(link.getAttribute('href') === currentPage);
   });
 }
 
