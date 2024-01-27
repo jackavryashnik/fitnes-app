@@ -43,7 +43,11 @@
           Transforming your
           <span class="footer-subheader-accent">body</span> shape with us
         </h2>
-        <form class="footer-form" action="/submit_email" method="post">
+        <form
+          class="footer-form"
+          action="https://energyflow.b.goit.study/api/subscription"
+          method="post"
+        >
           <label class="footer-email-label" for="footer-email-input"
             >Subscribe and learn about new exercises!</label
           >
@@ -53,9 +57,8 @@
             name="email"
             placeholder="Email"
             required
-            pattern="^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$"
+            pattern="^[\w\-]+(\.[\w\-]+)*@([\w\-]+\.)+[a-zA-Z]{2,7}$"
           />
-
           <button class="footer-form-btn" type="submit">Send</button>
         </form>
       </div>
@@ -64,12 +67,10 @@
 
         <ul class="footer-links">
           <li>
-            <a class="foter-privacy-policy" href="index.html">Privacy Policy</a>
+            <span class="foter-privacy-policy">Privacy Policy</span>
           </li>
           <li>
-            <a class="footer-terms-of-service" href="index.html"
-              >Terms of Service</a
-            >
+            <span class="footer-terms-of-service">Terms of Service</span>
           </li>
         </ul>
       </div>
