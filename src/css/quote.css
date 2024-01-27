@@ -26,6 +26,7 @@
   background-color: var(--light-gray-color);
   border-radius: 30px;
   padding: 42px 20px 40px 66px;
+  min-height: 272px;
 }
 .quote-container-title{
   font-feature-settings: 'clig' off, 'liga' off;
@@ -115,6 +116,7 @@
   .quote-container{
     padding: 64px 80px 64px 130px;
     border-radius: 50px;
+    min-height: 302px;
   }
   .quote-container-title{
     font-size: 24px;
