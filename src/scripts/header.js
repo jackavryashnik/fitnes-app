@@ -25,17 +25,14 @@ function changeActiveLink() {
   const links = document.querySelectorAll('.nav-link');
 
   window.addEventListener('load', () => {
-    const currentPage = '.' + window.location.pathname; // на живій сторінці на гіті просто працює window.location.pathname
+    const currentPage = window.location.pathname;
 
-    // на живій сторінці на гіті має спрацювати варіант: currentPage === '/fitnes-app/'
-    if (currentPage === './') {
+    if (currentPage.includes('index.html') || currentPage == '/fitnes-app/') {
       links[0].classList.add('active-link');
-    } else {
-      links.forEach(link => {
-        if (link.getAttribute('href') === currentPage) {
-          link.classList.add('active-link');
-        }
-      });
+      links[2].classList.add('active-link');
+    } else if (currentPage.includes('page-2.html')) {
+      links[1].classList.add('active-link');
+      links[3].classList.add('active-link');
     }
   });
 }
