@@ -14,8 +14,6 @@ async function submitForm() {
   const emailValue = formData.get('email');
   const formattedData = { email: emailValue };
 
-  console.log(formattedData);
-
   try {
     const response = await axios.post(footerForm.action, formattedData, {
       headers: {
