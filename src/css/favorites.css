@@ -39,16 +39,18 @@
     padding: 16px;
   }
 
+ 
+
   .favorites-card-header {
     display: inline-block;
   }
 
   .favorites-oval {
     display: inline-block;
-    width: 75px; /* задайте ширину */
-    height: 25px; /* задайте висоту (половина ширини) */
-    background-color: #7E847F; /* колір заливки */
-    border-radius: 15px; /* встановіть радіус */
+    width: 75px; 
+    height: 25px; 
+    background-color: #7E847F; 
+    border-radius: 15px;
   }
 
   .favorites-oval span {
@@ -81,7 +83,11 @@
     background: none;
     box-sizing: border-box;
     vertical-align: middle;
+  }
 
+  .favorites-icon-svg:hover,
+  .favorites-icon-svg:focus {
+    transform: scale(0.95);
   }
 
   .favorites-list-button {
@@ -93,6 +99,12 @@
     padding: 0;
     background: none;
     margin-left: 100px;
+  }
+
+  .favorites-list-button:hover,
+  .favorites-list-button:focus {
+    transform: scale(0.95);
+
   }
 
   .favorites-list-button-icon {
@@ -157,6 +169,14 @@
     margin: 0;
  }
 
+ .message-info {
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  background: #E8E8E8;
+  width: 335px;
+ }
+
  .message-info-block {
   display: flex;
   flex-direction: column;
@@ -165,15 +185,6 @@
   margin-top: 80px;
   gap: 28px;
 }
- 
-
- .message-info {
-  border-radius: 30px;
-  background: #E8E8E8;
-  width: 335px;
-  height: 450px;
-  flex-shrink: 0;
- }
 
  .message-info-svg {
   width: 85px;
@@ -189,6 +200,49 @@
   font-weight: 400;
   line-height: 1.28; 
  }
+
+  /* <!----------- PAGINATION FOR MOBILE------------------> */
+
+  .favorites-pagination-block {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .favorites-pagination-block button {
+    color: rgba(27, 27, 27, 0.4);
+    font-size: 20px;
+    line-height: 1.6;
+    letter-spacing: 0.04em;
+    padding: 0;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+
+.favorites-pagination-block button.active-btn {
+  color: var(--black-color);
+  border-color: var(--black-color);
+}
+
+  .active-btn {
+    color: #1B1B1B;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+    border: 1px solid #1B1B1B;
+    transition: color 0.25s var(--transition-animation),
+    border-color 0.25s var(--transition-animation);
+  }
+
+
+
+
+
 
  /* ------------TABLET----------------- */
 
@@ -218,6 +272,16 @@
     width: 313px;
   }
 
+  .favorites-list-item:hover,
+  .favorites-list-item:focus {
+    transform: scale(0.95);
+  }
+
+  .message-info {
+    margin: 0 auto;
+  }
+
+
   .message-info-svg {
     width: 115px;
     height: 71px;
@@ -229,13 +293,18 @@
     font-size: 18px;
     line-height: 1.33;
   }
+
+  .favorites-pagination-block {
+    display: none;
  }
+ 
+ }
+
 /* ------------------DESKTOP----------------------- */
  @media (min-width: 1440px) {
 
   .favorites-card {
     width: 1408px;
-    height: 687px;
   }
 
   .favorites-contanier-block {
