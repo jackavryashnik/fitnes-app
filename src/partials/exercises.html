@@ -1,20 +1,37 @@
 <section class="exercises-page-section section">
     <div class="container">
     <div class="exercises-page-container">
-      <h2 class="exercises-page-title">Exercises</h2>
-      <ul class="buttons-filter-container">
-        <li>
-          <button class="active" data-filter="Muscles">Muscles</button>
-        </li>
-
-        <li>
-          <button data-filter="Body%20parts">Body parts</button>
-        </li>
-        <li>
-          <button data-filter="Equipment">Equipment</button>
-        </li>
-      </ul>
+      <div class="exercises-page-title-container">
+        <h2 class="exercises-page-title">Exercises <span class="slash is-hidden">/</h2>
+        <p class="exercises-subtitle is-hidden">Waist</p>
+      </div>
+        <div class="exercises-filter-container">
+          <ul class="buttons-filter-container">
+            <li>
+              <button class="active" data-filter="Muscles">Muscles</button>
+            </li>
+    
+            <li>
+              <button data-filter="Body%20parts">Body parts</button>
+            </li>
+            <li>
+              <button data-filter="Equipment">Equipment</button>
+            </li>
+          </ul>
+            <form class="form-search-exercises is-hidden">
+              <label class="form-search-exercises-label">
+                <input class="form-search-exercises-input" type="search" placeholder="Search" />
+                <button class="search-exercises-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                      <path d="M8.25 14.25C11.5637 14.25 14.25 11.5637 14.25 8.25C14.25 4.93629 11.5637 2.25 8.25 2.25C4.93629 2.25 2.25 4.93629 2.25 8.25C2.25 11.5637 4.93629 14.25 8.25 14.25Z" stroke="#1B1B1B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M15.7498 15.75L12.4873 12.4875" stroke="#1B1B1B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+              </label>
+            </form>
+        </div>
       <ul class="exercises-list"></ul>
+      <ul class="cards-workout-list"></ul>
       <div class="pagination-exercises-box"></div>
 </section>
 
