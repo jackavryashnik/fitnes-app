@@ -1,6 +1,6 @@
 import axios from 'axios';
-import iziToast from 'izitoast';
-import 'izitoast/dist/css/iziToast.min.css';
+import Swal from 'sweetalert2';
+import 'sweetalert2/src/sweetalert2.scss';
 
 const footerForm = document.querySelector('.footer-form');
 
@@ -36,33 +36,25 @@ async function submitForm() {
 }
 
 function showError() {
-  iziToast.error({
-    title: 'Error',
-    message: 'Bad request',
-    position: 'topRight',
-    timeout: 3500,
-    progressBar: false,
+  Swal.fire({
+    title: 'Bad request',
+    text: 'Something went wrong.',
+    icon: 'error',
   });
 }
 
 function showError409() {
-  iziToast.error({
-    title: 'Error',
-    message: 'Subscription already exists',
-    position: 'topRight',
-    timeout: 3500,
-    progressBar: false,
+  Swal.fire({
+    title: 'Warning!',
+    text: 'Subscription already exists',
+    icon: 'warning',
   });
 }
 
 function showSuccess() {
-  iziToast.warning({
-    title: 'Caution',
-    message:
-      "We're excited to have you on board! 🎉 Thank you for subscribing to new exercises on Energy Flow. You've just taken a significant step towards improving your fitness and well-being.",
-    position: 'topRight',
-    timeout: 3500,
-    progressBar: false,
-    color: 'blue',
+  Swal.fire({
+    title: 'Good job!',
+    text: "We're excited to have you on board! 🎉 Thank you for subscribing to new exercises on Energy Flow. You've just taken a significant step towards improving your fitness and well-being.",
+    icon: 'success',
   });
 }
