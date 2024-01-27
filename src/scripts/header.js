@@ -23,7 +23,6 @@ openMenu();
 
 function changeActiveLink() {
   const links = document.querySelectorAll('.nav-link');
-  const homeLinks = document.querySelectorAll('.home');
 
   window.addEventListener('load', () => {
     const currentPage = '.' + window.location.pathname; // на живій сторінці на гіті просто працює window.location.pathname
