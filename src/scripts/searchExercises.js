@@ -3,7 +3,7 @@ import {
   name,
   currentPage,
   renderWorkoutCards,
-  limit,
+  detailedExercisesLimit,
 } from './exercisesFilter';
 import { fetchData } from './api';
 
@@ -33,7 +33,7 @@ async function searchExercises(e) {
   try {
     const data = await fetchData(`exercises?${filter}=${name}`, {
       page: currentPage,
-      limit,
+      limit: detailedExercisesLimit,
       keyword: searchInput.value,
     });
     renderWorkoutCards(data.results);

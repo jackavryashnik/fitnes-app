@@ -123,6 +123,12 @@
   line-height: 1.5;
 }
 
+/* Detailed exercises */
+.cards-workout-list {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
 /* Pagination Box */
 .pagination-exercises-box,
 .pagination-cards-workout-box {
@@ -219,6 +225,11 @@
     flex-wrap: wrap;
     gap: 14px;
   }
+  .cards-workout-list {
+    margin-top: 55px;
+    margin-bottom: 32px;
+  }
+
   .exercises-list-card {
     flex-basis: calc((100% - 14px) / 2);
   }
@@ -237,6 +248,10 @@
     width: 273px;
   }
 
+  .cards-workout-list {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
   .exercises-list {
     column-gap: 20px;
     row-gap: 40px;
@@ -249,6 +264,8 @@
 /* toggle elements */
 .exercises-subtitle.is-hidden,
 .slash.is-hidden,
-.form-search-exercises.is-hidden {
+.form-search-exercises.is-hidden,
+.exercises-list.is-hidden,
+.cards-workout-list.is-hidden {
   display: none;
 }
