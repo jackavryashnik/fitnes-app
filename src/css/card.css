@@ -49,6 +49,7 @@ letter-spacing: -0.02em;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  width: 295px;
 }
 
 .card-workout-item {
@@ -121,6 +122,11 @@ letter-spacing: -0.02em;
   display: flex;
   gap: 16px;
   align-items: center;
+  display: -webkit-box;
+  width: 216px;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
   margin-top: 25px;
   margin-bottom: 16px;
 }
@@ -173,9 +179,12 @@ letter-spacing: -0.02em;
 }
 
 @media screen and (min-width: 768px) {
-  .cards-workout-list {
-    gap: 16px;
-  }
+ .cards-workout-list {
+  gap: 16px;
+  flex-wrap: wrap;
+  column-gap: 14px;
+  row-gap: 20px;
+}
 
   .card-workout-item {
     width: 313px;
@@ -187,7 +196,11 @@ letter-spacing: -0.02em;
   }
 
   .card-workout-title {
-    margin-bottom: 8px;
+  gap: 16px;
+  width: 218px;
+  font-size: 24px;
+  line-height: 1.33;
+  margin-bottom: 8px;
   }
 
   .card-title-text {
@@ -206,4 +219,8 @@ letter-spacing: -0.02em;
     width: 424px;
     min-height: 141px;
   }
+}
+
+.visually-hidden {
+  display: none;
 }
