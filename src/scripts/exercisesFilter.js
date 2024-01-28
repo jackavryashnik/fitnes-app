@@ -13,10 +13,12 @@ let hiddenElmenets;
 let exercisesList;
 let exercisesPaginationBox;
 let exercisesPageContainer;
-export let limit;
+let limit;
 export let currentPage;
 export let filter;
 export let name;
+
+export let detailedExercisesLimit;
 
 const fullUrl = window.location.pathname;
 const lastSlashIndex = fullUrl.lastIndexOf('/');
@@ -34,9 +36,15 @@ if (result === '/index.html' || result === '/') {
   exercisesList = document.querySelector('.exercises-list');
   exercisesPaginationBox = document.querySelector('.pagination-exercises-box');
   exercisesPageContainer = document.querySelector('.exercises-page-container');
-  hiddenElmenets = [slashElem, exercisesSubtitle, searchExercisesForm];
+  hiddenElmenets = [
+    slashElem,
+    exercisesSubtitle,
+    searchExercisesForm,
+    cardsWorkoutList,
+  ];
 
   limit = innerWidth < 768 ? 8 : 12;
+  detailedExercisesLimit = innerWidth < 1440 ? 8 : 9;
   currentPage = 1;
   filter = 'Muscles';
 
@@ -66,6 +74,7 @@ async function filterData(e) {
   currentPage = 1;
   toggleButtonsState(buttonsFilterContainer, e.target);
   hideElements(hiddenElmenets);
+  showElements([exercisesList]);
 
   try {
     const data = await fetchData(`filters?filter=${filter}`, {
@@ -106,7 +115,7 @@ function handlePagination(totalPages) {
   exercisesPaginationBox.innerHTML = '';
 
   for (let i = 1; i <= totalPages; i++) {
-    // if (i > 3) break;
+    if (i > 3) break;
     const button = document.createElement('button');
     button.textContent = i;
     if (i === 1) {
@@ -145,10 +154,11 @@ async function changeList(e) {
   name = newName;
   currentPage = 1;
   exercisesPageContainer.scrollIntoView({ behavior: 'smooth' });
+  hideElements([exercisesList]);
   showElements(hiddenElmenets);
   try {
     const data = await fetchData(`exercises?${filter}=${name}`, {
-      limit,
+      limit: detailedExercisesLimit,
       page: currentPage,
     });
     exercisesList.innerHTML = '';
@@ -177,7 +187,7 @@ export function renderWorkoutCards(exercises) {
                             width="18"
                             height="18"
                         >
-                            <use href="../images/sprite.svg#icon-Star-1"></use>
+                            <use href="./images/sprite.svg#icon-Star-1"></use>
                         </svg>
                         </div>
                     </div>
@@ -249,7 +259,7 @@ async function goToPage2(page) {
   try {
     exercisesPageContainer.scrollIntoView({ behavior: 'smooth' });
     const data = await fetchData(`exercises?${filter}=${name}`, {
-      limit,
+      limit: detailedExercisesLimit,
       page: currentPage,
     });
     renderWorkoutCards(data.results);
