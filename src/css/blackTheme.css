@@ -1,0 +1,128 @@
+body[theme='dark'] {
+  background-color: var(--black-color);
+}
+
+.logo[theme='dark'] {
+  color: var(--white-color);
+}
+
+body[theme='dark'] .info__content {
+  background-color: var(--gray-color);
+}
+
+body[theme='dark'] .exercises-page-container {
+  background-color: var(--gray-color);
+}
+
+body[theme='dark'] .pagination-exercises-box > button.active {
+  color: var(--white-color);
+  border-color: var(--white-color);
+}
+
+body[theme='dark'] .hero-text-container {
+  background-color: var(--gray-color);
+}
+
+body[theme='dark'] .hero-text-container span {
+  color: var(--white-color);
+}
+
+body[theme='dark'] .social-media-link {
+  border-color: var(--white-color);
+  stroke: var(--white-color);
+  fill: var(--white-color);
+}
+
+body[theme='dark'] .social-media-link:hover,
+body[theme='dark'] .social-media-link:focus {
+  border-color: var(--light-gray-color);
+  stroke: var(--light-gray-color);
+  fill: var(--light-gray-color);
+}
+
+body {
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.togle-container {
+  display: flex;
+}
+
+.mobile-menu .togle-container {
+  justify-content: center;
+}
+
+#hybrid {
+  visibility: hidden;
+}
+
+#theme-toggle {
+  visibility: hidden;
+}
+
+#theme-toggle + label {
+  content: '';
+  display: inline-block;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+#theme-toggle:not(:checked) + label {
+  background-color: gold;
+}
+
+#theme-toggle:checked + label {
+  background-color: transparent;
+  box-shadow: inset -8px -7px 1px 1px #fff;
+}
+/*  */
+#mobile-theme-toggle {
+  visibility: hidden;
+}
+
+#mobile-theme-toggle + label {
+  content: '';
+  display: inline-block;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+#mobile-theme-toggle:not(:checked) + label {
+  background-color: gold;
+}
+
+#mobile-theme-toggle:checked + label {
+  background-color: transparent;
+  box-shadow: inset -8px -7px 1px 1px #fff;
+}
+
+
+.intro-text {
+  top: 180px;
+  font-size: 1.6em;
+  font-family: monospace;
+}
+
+body[theme='dark'] {
+  .text-sun {
+    color: #222;
+  }
+  .text-moon {
+    color: #fff;
+  }
+}
+
+body[theme='light'] {
+  .text-sun {
+    color: #000;
+  }
+  .text-moon {
+    color: #ddd;
+  }
+}
