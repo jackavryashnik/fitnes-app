@@ -175,6 +175,7 @@ div.header-container {
 
   .social-media-list {
     display: flex;
+    align-items: center;
     gap: 12px;
   }
 
