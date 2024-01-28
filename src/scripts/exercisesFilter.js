@@ -8,8 +8,14 @@ let limit;
 let currentPage;
 let filter;
 
-if (window.location.pathname === '/index.html') {
-  const  buttonsFilterContainer = document.querySelector('.buttons-filter-container');
+const fullUrl = window.location.pathname;
+const lastSlashIndex = fullUrl.lastIndexOf('/');
+const result = fullUrl.substring(lastSlashIndex);
+
+if (result === '/index.html' || result === '/') {
+  const buttonsFilterContainer = document.querySelector(
+    '.buttons-filter-container'
+  );
   exercisesList = document.querySelector('.exercises-list');
   filterButtons = document.querySelectorAll('.buttons-filter-container button');
   exercisesPaginationBox = document.querySelector('.pagination-exercises-box');

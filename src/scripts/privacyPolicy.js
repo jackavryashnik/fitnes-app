@@ -10,6 +10,10 @@ export default function privacyModal() {
   termsOverlay.addEventListener('click', () => termsOverlay.classList.remove('is-open'));
 }
 
-if (window.location.pathname === '/index.html') {
+const fullUrl = window.location.pathname;
+const lastSlashIndex = fullUrl.lastIndexOf('/');
+const result = fullUrl.substring(lastSlashIndex);
+
+if (result === '/index.html' || result === '/') {
   privacyModal();
 }
