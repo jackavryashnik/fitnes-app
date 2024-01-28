@@ -22,13 +22,6 @@
   letter-spacing: -0.025em;
 }
 
-/* toggle elements */
-.exercises-subtitle.is-hidden,
-.slash.is-hidden,
-.form-search-exercises.is-hidden {
-  display: none;
-}
-
 .exercises-filter-container {
   margin-top: 20px;
 }
@@ -131,12 +124,14 @@
 }
 
 /* Pagination Box */
-.pagination-exercises-box {
+.pagination-exercises-box,
+.pagination-cards-workout-box {
   display: flex;
   gap: 8px;
   justify-content: center;
 }
-.pagination-exercises-box button {
+.pagination-exercises-box button,
+.pagination-cards-workout-box button {
   color: rgba(27, 27, 27, 0.4);
   font-size: 20px;
   line-height: 1.6;
@@ -153,7 +148,8 @@
   transition: color 0.25s var(--transition-animation),
     border-color 0.25s var(--transition-animation);
 }
-.pagination-exercises-box button.active {
+.pagination-exercises-box button.active,
+.pagination-cards-workout-box button.active {
   color: var(--black-color);
   border-color: var(--black-color);
 }
@@ -248,4 +244,11 @@
   .exercises-list-card {
     flex-basis: calc((100% - 3 * 20px) / 4);
   }
+}
+
+/* toggle elements */
+.exercises-subtitle.is-hidden,
+.slash.is-hidden,
+.form-search-exercises.is-hidden {
+  display: none;
 }
