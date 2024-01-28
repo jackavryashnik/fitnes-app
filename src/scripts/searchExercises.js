@@ -7,14 +7,24 @@ import {
 } from './exercisesFilter';
 import { fetchData } from './api';
 
-const searchExercisesForm = document.querySelector('.form-search-exercises');
-const cardsWorkoutList = document.querySelector('.cards-workout-list');
-const cardsWorkoutPaginationBox = document.querySelector(
-  '.pagination-cards-workout-box'
-);
-const searchInput = searchExercisesForm.elements.search;
+const fullUrl = window.location.pathname;
+const lastSlashIndex = fullUrl.lastIndexOf('/');
+const result = fullUrl.substring(lastSlashIndex);
 
-searchExercisesForm.addEventListener('submit', searchExercises);
+let searchExercisesForm;
+let cardsWorkoutList;
+let cardsWorkoutPaginationBox;
+let searchInput;
+
+if (result === '/index.html' || result === '/') {
+  searchExercisesForm = document.querySelector('.form-search-exercises');
+  cardsWorkoutList = document.querySelector('.cards-workout-list');
+  cardsWorkoutPaginationBox = document.querySelector(
+    '.pagination-cards-workout-box'
+  );
+  searchInput = searchExercisesForm.elements.search;
+  searchExercisesForm.addEventListener('submit', searchExercises);
+}
 
 async function searchExercises(e) {
   cardsWorkoutList.innerHTML = '';

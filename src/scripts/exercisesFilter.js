@@ -1,34 +1,50 @@
 import { fetchData } from './api';
 import { toggleButtonsState, hideElements, showElements } from './utils';
 
-const exercisesList = document.querySelector('.exercises-list');
-const buttonsFilterContainer = document.querySelector(
-  '.buttons-filter-container'
-);
-const exercisesPaginationBox = document.querySelector(
-  '.pagination-exercises-box'
-);
-const exercisesPageContainer = document.querySelector(
-  '.exercises-page-container'
-);
-const cardsWorkoutList = document.querySelector('.cards-workout-list');
-const cardsWorkoutPaginationBox = document.querySelector(
-  '.pagination-cards-workout-box'
-);
-const slashElem = document.querySelector('.slash');
-const exercisesSubtitle = document.querySelector('.exercises-subtitle');
-const searchExercisesForm = document.querySelector('.form-search-exercises');
+let buttonsFilterContainer;
 
-const hiddenElmenets = [slashElem, exercisesSubtitle, searchExercisesForm];
+let cardsWorkoutList;
+let cardsWorkoutPaginationBox;
+let slashElem;
+let exercisesSubtitle;
+let searchExercisesForm;
 
-export const limit = innerWidth < 768 ? 8 : 12;
-export let currentPage = 1;
-export let filter = 'Muscles';
+let hiddenElmenets;
+let exercisesList;
+let exercisesPaginationBox;
+let exercisesPageContainer;
+export let limit;
+export let currentPage;
+export let filter;
 export let name;
 
-buttonsFilterContainer.addEventListener('click', filterData);
+const fullUrl = window.location.pathname;
+const lastSlashIndex = fullUrl.lastIndexOf('/');
+const result = fullUrl.substring(lastSlashIndex);
 
-window.addEventListener('load', loadInitialData);
+if (result === '/index.html' || result === '/') {
+  buttonsFilterContainer = document.querySelector('.buttons-filter-container');
+  cardsWorkoutList = document.querySelector('.cards-workout-list');
+  cardsWorkoutPaginationBox = document.querySelector(
+    '.pagination-cards-workout-box'
+  );
+  slashElem = document.querySelector('.slash');
+  exercisesSubtitle = document.querySelector('.exercises-subtitle');
+  searchExercisesForm = document.querySelector('.form-search-exercises');
+  exercisesList = document.querySelector('.exercises-list');
+  exercisesPaginationBox = document.querySelector('.pagination-exercises-box');
+  exercisesPageContainer = document.querySelector('.exercises-page-container');
+  hiddenElmenets = [slashElem, exercisesSubtitle, searchExercisesForm];
+
+  limit = innerWidth < 768 ? 8 : 12;
+  currentPage = 1;
+  filter = 'Muscles';
+
+  buttonsFilterContainer.addEventListener('click', filterData);
+  exercisesList.addEventListener('click', changeList);
+
+  window.addEventListener('load', loadInitialData);
+}
 
 async function loadInitialData() {
   try {
@@ -119,8 +135,6 @@ async function goToPage(page) {
 }
 
 // detailed exercises
-
-exercisesList.addEventListener('click', changeList);
 
 async function changeList(e) {
   const newFilter = e.target.dataset.filter;
