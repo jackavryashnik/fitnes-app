@@ -52,7 +52,7 @@
   border-radius: 30px;
 }
 .qoutePlusInfo{
-  margin-top: 96px;
+  padding-top: 96px;
 }
 .quote-favorites-info-containterInfo{
   background-color: var(--white-color);
@@ -96,7 +96,7 @@
     top: 64px;
   }
   .qoutePlusInfo{
-    margin-top: 180px;
+    padding-top: 180px;
   }
   .quote-img{
     border-radius: 50px;
@@ -147,7 +147,7 @@
   }
 
   .qoutePlusInfo{
-    margin-top: 156px;
+    padding-top: 156px;
   }
   .quote-container-svg-commas{
     position: absolute;

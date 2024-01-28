@@ -16,6 +16,7 @@
 @import url('./privacyPolicy.css');
 @import url('./quote.css');
 @import url('./scrolTopBtn.css');
+@import url('./blackTheme.css');
 
 :root {
   font-family: 'DM Sans', sans-serif;
@@ -62,11 +63,6 @@
     width: 375px;
   }
 }
-/* @media (max-width: 767px) {
-  .container {
-    width: 375px;
-  }
-} */
 
 @media (min-width: 768px) {
   .container {

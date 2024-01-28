@@ -1,0 +1,41 @@
+body.dark-mod {
+  background-color: var(--black-color);
+}
+
+.logo.dark-mod {
+  color: var(--white-color);
+}
+
+body.dark-mod .info__content {
+  background-color: var(--gray-color);
+}
+
+body.dark-mod .exercises-page-container {
+  background-color: var(--gray-color);
+}
+
+body.dark-mod .pagination-exercises-box > button.active {
+  color: var(--white-color);
+  border-color: var(--white-color);
+}
+
+body.dark-mod .hero-text-container {
+  background-color: var(--gray-color);
+}
+
+body.dark-mod .hero-text-container span {
+  color: var(--white-color);
+}
+
+body.dark-mod .social-media-link {
+  border-color: var(--white-color);
+  stroke: var(--white-color);
+  fill: var(--white-color);
+}
+
+body.dark-mod .social-media-link:hover,
+body.dark-mod .social-media-link:focus {
+  border-color: var(--light-gray-color);
+  stroke: var(--light-gray-color);
+  fill: var(--light-gray-color);
+}
