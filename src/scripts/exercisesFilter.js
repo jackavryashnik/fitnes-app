@@ -197,7 +197,7 @@ export function renderWorkoutCards(exercises) {
                                 width="16"
                                 height="16"
                                 >
-                                <use href="../images/sprite.svg#icon-arrow"></use>
+                                <use href="./images/sprite.svg#icon-arrow"></use>
                             </svg>
                         </button>
                 </div>
@@ -208,7 +208,7 @@ export function renderWorkoutCards(exercises) {
                         class="card-workout-title-icon"
                         width="24"
                         height="24">
-                        <use href="../images/sprite.svg#icon-human-quo"></use>
+                        <use href="./images/sprite.svg#icon-human-quo"></use>
                         </svg>
                     </div>
                     <p class="card-title-text">${name}</p>
