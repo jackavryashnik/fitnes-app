@@ -19,6 +19,11 @@ body[theme='dark'] .pagination-exercises-box > button.active {
   border-color: var(--white-color);
 }
 
+body[theme='dark'] .pagination-cards-workout-box > button.active {
+  color: var(--white-color);
+  border-color: var(--white-color);
+}
+
 body[theme='dark'] .hero-text-container {
   background-color: var(--gray-color);
 }
