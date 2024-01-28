@@ -208,7 +208,7 @@ export function renderWorkoutCards(exercises) {
                         class="card-workout-title-icon"
                         width="24"
                         height="24">
-                        <use href="./images/sprite.svg#icon-human-quo"></use>
+                        <use href="./images/sprite.svg#icon-human-ex"></use>
                         </svg>
                     </div>
                     <p class="card-title-text">${name}</p>
