@@ -1,5 +1,6 @@
 import { fetchData } from './api';
 import { toggleButtonsState, hideElements, showElements } from './utils';
+import sprite from '../images/sprite.svg'
 
 let buttonsFilterContainer;
 
@@ -187,7 +188,7 @@ export function renderWorkoutCards(exercises) {
                             width="18"
                             height="18"
                         >
-                            <use href="./images/sprite.svg#icon-Star-1"></use>
+                            <use href="${sprite}#icon-Star-1"></use>
                         </svg>
                         </div>
                     </div>
@@ -197,7 +198,7 @@ export function renderWorkoutCards(exercises) {
                                 width="16"
                                 height="16"
                                 >
-                                <use href="./images/sprite.svg#icon-arrow"></use>
+                                <use href="${sprite}#icon-arrow"></use>
                             </svg>
                         </button>
                 </div>
@@ -208,7 +209,7 @@ export function renderWorkoutCards(exercises) {
                         class="card-workout-title-icon"
                         width="24"
                         height="24">
-                        <use href="./images/sprite.svg#icon-human-ex"></use>
+                        <use href="${sprite}#icon-human-ex"></use>
                         </svg>
                     </div>
                     <p class="card-title-text">${name}</p>

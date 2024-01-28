@@ -55,7 +55,7 @@ letter-spacing: -0.02em;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 335px;
+  width: 295px;
   min-height: 141px;
   border-radius: 16px;
   background-color: #fff;
@@ -174,7 +174,7 @@ letter-spacing: -0.02em;
 
 @media screen and (min-width: 768px) {
   .cards-workout-list {
-    gap: 16px;
+    gap: 20px 14px;
   }
 
   .card-workout-item {
