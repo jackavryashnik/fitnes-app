@@ -15,6 +15,8 @@
 @import url('./exerciseModal.css');
 @import url('./privacyPolicy.css');
 @import url('./quote.css');
+@import url('./scrolTopBtn.css');
+
 :root {
   font-family: 'DM Sans', sans-serif;
   font-size: 16px;

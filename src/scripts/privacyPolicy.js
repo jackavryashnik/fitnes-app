@@ -16,9 +16,11 @@ export default function privacyModal() {
   );
 }
 
-if (
-  window.location.pathname === '/index.html' ||
-  window.location.pathname === '/'
-) {
+const fullUrl = window.location.pathname;
+const lastSlashIndex = fullUrl.lastIndexOf('/');
+const result = fullUrl.substring(lastSlashIndex);
+
+if (result === '/index.html' || result === '/') {
+
   privacyModal();
 }

@@ -5,3 +5,5 @@ import './scripts/privacyPolicy';
 import './scripts/favorites';
 import './scripts/quote';
 import './scripts/searchExercises';
+import './scripts/scrollTopBtn';
+
