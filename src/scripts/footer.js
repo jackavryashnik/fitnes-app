@@ -1,8 +1,11 @@
 import axios from 'axios';
 import Swal from 'sweetalert2';
 import 'sweetalert2/src/sweetalert2.scss';
+const fullUrl = window.location.pathname;
+const lastSlashIndex = fullUrl.lastIndexOf('/');
+const result = fullUrl.substring(lastSlashIndex);
 
-if (window.location.pathname === '/index.html') {
+if (result === '/index.html' || result === '/') {
   const footerForm = document.querySelector('.footer-form');
 
   footerForm.addEventListener('submit', function (event) {

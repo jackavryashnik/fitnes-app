@@ -13,6 +13,7 @@ const lastSlashIndex = fullUrl.lastIndexOf('/');
 const result = fullUrl.substring(lastSlashIndex);
 
 if (result === '/index.html' || result === '/') {
+
   const buttonsFilterContainer = document.querySelector(
     '.buttons-filter-container'
   );
@@ -20,13 +21,13 @@ if (result === '/index.html' || result === '/') {
   filterButtons = document.querySelectorAll('.buttons-filter-container button');
   exercisesPaginationBox = document.querySelector('.pagination-exercises-box');
   exercisesPageContainer = document.querySelector('.exercises-page-container');
-  
+
   limit = innerWidth < 768 ? 8 : 12;
   currentPage = 1;
   filter = 'Muscles';
-  
+
   buttonsFilterContainer.addEventListener('click', filterData);
-  
+
   window.addEventListener('load', loadInitialData);
 }
 
