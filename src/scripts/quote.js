@@ -9,8 +9,8 @@ const author = document.querySelector(".quote-container-author")
 const today = new Date()
 const date = {date: today.getDate(), month:today.getMonth(), year: today.getFullYear()}
 
-if(!localStorage.getItem(storage) || (date.date !=storageItem.date.date && 
-  date.month !=storageItem.date.month && date.year !=storageItem.date.year)){
+if(!localStorage.getItem(storage) || (date.date !=storageItem.date.date || 
+  date.month !=storageItem.date.month || date.year !=storageItem.date.year)){
   localStorage.removeItem(storage);
   fetchData("quote")
   .then(result=>{
