@@ -7,8 +7,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Function to show pagination based on screen width
     function togglePagination() {
-        if (window.innerWidth <= 767 && isFavoritesListVisible()) {
-            // Show pagination for small screens
+        const currentPage = window.location.pathname; // Get current page path
+
+        // Check if current page is '/page-2.html' and screen width is less than or equal to 767px
+        if (currentPage === '/page-2.html' && window.innerWidth <= 767 && isFavoritesListVisible()) {
+            // Show pagination for small screens on page 2
             paginationBlock.style.display = 'flex';
         } else {
             // Hide pagination for larger screens or if favorites list is not visible
