@@ -63,13 +63,6 @@
   fill: rgba(27, 27, 27, 0.2);
 }
 
-.rating-label-clicked {
-  fill: #eea10c;
-}
-
-.rating-star1-icon {
-}
-
 .rating-email-field {
   border-radius: 30px;
   border: 1px solid rgba(27, 27, 27, 0.4);
