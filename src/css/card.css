@@ -129,12 +129,6 @@
   text-overflow: ellipsis;
 }
 
-@media (max-width: 374px) {
-.card-workout-info {
-  display: block;
-
-}
-}
 @media screen and (min-width: 768px) {
   .cards-workout-list {
     gap: 16px;
