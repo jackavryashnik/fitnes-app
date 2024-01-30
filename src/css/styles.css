@@ -17,6 +17,7 @@
 @import url('./quote.css');
 @import url('./scrolTopBtn.css');
 @import url('./blackTheme.css');
+@import url('./ratingModal.css');
 
 :root {
   font-family: 'DM Sans', sans-serif;

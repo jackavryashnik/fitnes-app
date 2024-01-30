@@ -1,23 +1,31 @@
 .exercises-page-container {
+  position: relative;
   background-color: var(--cloud-gray-color);
   padding: 40px 20px;
   border-radius: 30px;
+  min-height: 760px;
 }
 .exercises-page-title-container {
   display: flex;
-  align-items: center;
+  align-items: baseline;
 }
 .exercises-page-title {
+  display: flex;
+  gap: 6px;
   color: var(--black-color);
-  font-size: 32px;
+  font-size: 28px;
   line-height: 1;
   letter-spacing: -0.04em;
 }
 
 .exercises-subtitle {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-transform: capitalize;
   margin-left: 8px;
   color: rgba(27, 27, 27, 0.5);
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1;
   letter-spacing: -0.025em;
 }
@@ -88,10 +96,26 @@
   line-height: 0;
 }
 
+.search-info-message {
+  min-width: 240px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--black-color);
+  line-height: 1.28;
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: -0.009em;
+}
+.search-info-message-accent-color {
+  color: var(--light-gray-color);
+}
+
 /* Exercises List */
 .exercises-list {
   margin-top: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 92px;
 }
 .exercises-list-card {
   background-color: var(--black-color);
@@ -126,12 +150,16 @@
 /* Detailed exercises */
 .cards-workout-list {
   margin-top: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 92px;
 }
 
 /* Pagination Box */
 .pagination-exercises-box,
 .pagination-cards-workout-box {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   gap: 8px;
   justify-content: center;
@@ -162,9 +190,18 @@
 
 /* Media */
 @media (min-width: 375px) {
+  .exercises-page-title {
+    font-size: 32px;
+  }
+  .exercises-subtitle {
+    font-size: 20px;
+  }
   .buttons-filter-container button {
     font-size: 14px;
     padding: 7px 14px;
+  }
+  .search-info-message {
+    min-width: 295px;
   }
 }
 @media (min-width: 375px) and (max-width: 767px) {
@@ -186,6 +223,7 @@
   .exercises-page-container {
     padding: 64px 48px;
     border-radius: 50px;
+    min-height: 1091px;
   }
   .exercises-page-title {
     font-size: 44px;
@@ -218,16 +256,22 @@
     font-size: 16px;
     line-height: 1.5;
   }
+  .search-info-message {
+    min-width: 536px;
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: -0.011em;
+  }
   .exercises-list {
     margin-top: 32px;
-    margin-bottom: 32px;
+    margin-bottom: 128px;
     display: flex;
     flex-wrap: wrap;
     gap: 14px;
   }
   .cards-workout-list {
     margin-top: 55px;
-    margin-bottom: 32px;
+    margin-bottom: 128px;
   }
 
   .exercises-list-card {
@@ -235,6 +279,10 @@
   }
   .exercise-card-desc-name {
     font-size: 24px;
+  }
+  .pagination-exercises-box,
+  .pagination-cards-workout-box {
+    bottom: 64px;
   }
   .pagination-exercises-box button {
     font-size: 24px;
@@ -244,10 +292,16 @@
 }
 
 @media (min-width: 1440px) {
+  .exercises-page-container {
+    min-height: 827px;
+  }
   .form-search-exercises {
     width: 273px;
   }
 
+  .search-info-message {
+    min-width: 684px;
+  }
   .cards-workout-list {
     margin-top: 32px;
     margin-bottom: 32px;
@@ -266,6 +320,7 @@
 .slash.is-hidden,
 .form-search-exercises.is-hidden,
 .exercises-list.is-hidden,
-.cards-workout-list.is-hidden {
+.cards-workout-list.is-hidden,
+.search-info-message.is-hidden {
   display: none;
 }

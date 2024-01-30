@@ -6,6 +6,10 @@ body[theme='dark'] {
   color: var(--white-color);
 }
 
+body[theme='dark'] .search-info-message-accent-color {
+  color: var(--white-color);
+}
+
 body[theme='dark'] .info__content {
   background-color: var(--gray-color);
 }
@@ -106,7 +110,6 @@ body {
   background-color: transparent;
   box-shadow: inset -8px -7px 1px 1px #fff;
 }
-
 
 .intro-text {
   top: 180px;
