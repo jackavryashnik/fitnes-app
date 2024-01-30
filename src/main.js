@@ -7,3 +7,4 @@ import './scripts/quote';
 import './scripts/searchExercises';
 import './scripts/scrollTopBtn';
 
+import './scripts/cardModal';
