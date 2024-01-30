@@ -6,4 +6,4 @@ import './scripts/favorites';
 import './scripts/quote';
 import './scripts/searchExercises';
 import './scripts/scrollTopBtn';
-
+import './scripts/ratingModal';
