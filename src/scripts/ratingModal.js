@@ -6,8 +6,8 @@ const toggleModal = () => {
   contactModal.classList.toggle('active');
 };
 
-document.getElementById('contact_us').addEventListener('click', toggleModal);
-document.getElementById('close_modal').addEventListener('click', toggleModal);
+// document.getElementById('contact_us').addEventListener('click', toggleModal);
+// document.getElementById('close_modal').addEventListener('click', toggleModal);
 
 ratingButtons.forEach((button, index) => {
   button.addEventListener('change', function () {

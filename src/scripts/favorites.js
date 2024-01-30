@@ -1,3 +1,8 @@
+const fullUrl = window.location.pathname;
+const lastSlashIndex = fullUrl.lastIndexOf('/');
+const result = fullUrl.substring(lastSlashIndex);
+
+if (result === '/page-2.html') {
 document.addEventListener("DOMContentLoaded", function() {
     // Get the favorites list, pagination block, and message info
     const favoritesList = document.querySelector('.favorites-list');
@@ -115,4 +120,4 @@ document.addEventListener("DOMContentLoaded", function() {
     if (isFavoritesListVisible() && favoritesList.children.length >= 6) {
         paginate();
     }
-});
+})};
