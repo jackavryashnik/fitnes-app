@@ -1,0 +1,64 @@
+import{a as F,S as A}from"./vendor-cd480503.js";(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const n of document.querySelectorAll('link[rel="modulepreload"]'))r(n);new MutationObserver(n=>{for(const s of n)if(s.type==="childList")for(const l of s.addedNodes)l.tagName==="LINK"&&l.rel==="modulepreload"&&r(l)}).observe(document,{childList:!0,subtree:!0});function o(n){const s={};return n.integrity&&(s.integrity=n.integrity),n.referrerpolicy&&(s.referrerPolicy=n.referrerpolicy),n.crossorigin==="use-credentials"?s.credentials="include":n.crossorigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function r(n){if(n.ep)return;n.ep=!0;const s=o(n);fetch(n.href,s)}})();const X=window.location.pathname,ue=X.lastIndexOf("/"),Z=X.substring(ue),me=e=>{localStorage.setItem("theme-preference",e)},fe=()=>localStorage.getItem("theme-preference")||"light";let u=fe()==="dark";const Y=document.querySelectorAll(".theme-toggle");Y.forEach(e=>{e.checked=u,e.addEventListener("change",()=>{u=e.checked,Y.forEach(t=>{t!==e&&(t.checked=u)}),document.body.setAttribute("theme",u?"dark":"light"),Z==="/page-2.html"&&document.querySelector(".logo").setAttribute("theme",u?"dark":"light"),me(u?"dark":"light")})});document.addEventListener("DOMContentLoaded",()=>{document.body.setAttribute("theme",u?"dark":"light"),Z==="/page-2.html"&&document.querySelector(".logo").setAttribute("theme",u?"dark":"light")});function he(){const e=document.querySelector(".mobile-menu-wrapper"),t=document.querySelectorAll(".nav-link"),o=document.querySelector(".burger-menu"),r=document.querySelector(".burger-menu-close");o.addEventListener("click",()=>{e.classList.toggle("is-open")}),r.addEventListener("click",()=>{e.classList.toggle("is-open")}),t.forEach(n=>n.addEventListener("click",()=>{e.classList.remove("is-open")}))}he();function ge(){const e=document.querySelectorAll(".nav-link");window.addEventListener("load",()=>{const t=window.location.pathname;t.includes("index.html")||t=="/fitnes-app/"?(e[0].classList.add("active-link"),e[2].classList.add("active-link")):t.includes("page-2.html")&&(e[1].classList.add("active-link"),e[3].classList.add("active-link"))})}ge();F.defaults.baseURL="https://energyflow.b.goit.study/api";async function m(e,t={}){try{return(await F.get(`/${e}`,{params:t})).data}catch(o){console.error(o)}}function H(e,t){e.querySelectorAll("button").forEach(o=>o.classList.remove("active")),t.classList.add("active")}function ee(e=[]){e.forEach(t=>t.classList.add("is-hidden"))}function te(e=[]){e.forEach(t=>t.classList.remove("is-hidden"))}const P="/fitnes-app/assets/sprite-31c6263f.svg";let O,L,p,j,z,J,W,h,y,S,E,a,c,x,q;const oe=window.location.pathname,pe=oe.lastIndexOf("/"),R=oe.substring(pe);(R==="/index.html"||R==="/")&&(O=document.querySelector(".buttons-filter-container"),L=document.querySelector(".cards-workout-list"),p=document.querySelector(".pagination-cards-workout-box"),j=document.querySelector(".slash"),z=document.querySelector(".exercises-subtitle"),J=document.querySelector(".form-search-exercises"),h=document.querySelector(".exercises-list"),y=document.querySelector(".pagination-exercises-box"),S=document.querySelector(".exercises-page-container"),W=[j,z,J,L],E=innerWidth<768?8:12,q=innerWidth<1440?8:9,a=1,c="Muscles",O.addEventListener("click",ve),h.addEventListener("click",ke),window.addEventListener("load",ye));async function ye(){try{const e=await m(`filters?filter=${c}`,{limit:E,page:a});ne(e.totalPages),N(e.results)}catch(e){console.error(e)}}async function ve(e){const t=e.target.dataset.filter;if(t){c=t,a=1,H(O,e.target),ee(W),te([h]);try{const o=await m(`filters?filter=${c}`,{limit:E,page:a});L.innerHTML="",p.innerHTML="",N(o.results),ne(o.totalPages)}catch(o){console.error(o)}}}function N(e){const t=e.reduce((o,{name:r,filter:n,imgUrl:s})=>o+`
+  <li data-filter="${n==="Body parts"?"bodypart":n.toLowerCase()}" data-name="${r}" class="exercises-list-card" style="background: linear-gradient(0deg, rgba(16, 16, 16, 0.70) 0%, rgba(16, 16, 16, 0.70) 100%), url(${s});
+background-size: cover;
+background-repeat: no-repeat;">
+    <div class="exercise-card-desc">
+      <h2 class="exercise-card-desc-name">${r}</h2>
+      <p class="exercise-card-desc-filter">${n}</p>
+    </div>
+  </li>
+  `,"");h.innerHTML=t}function ne(e){y.innerHTML="";for(let t=1;t<=e&&!(t>3);t++){const o=document.createElement("button");o.textContent=t,t===1&&o.classList.add("active"),o.addEventListener("click",r=>{H(y,r.target),we(t)}),y.appendChild(o)}}async function we(e){a=e;try{S.scrollIntoView({behavior:"smooth"});const t=await m(`filters?filter=${c}`,{limit:E,page:a});N(t.results)}catch(t){console.error(t)}}async function ke(e){const t=e.target.dataset.filter,o=e.target.dataset.name;if(t){c=t,x=o,a=1,S.scrollIntoView({behavior:"smooth"}),ee([h]),te(W);try{const r=await m(`exercises?${c}=${x}`,{limit:q,page:a});h.innerHTML="",y.innerHTML="",U(r.results),be(r.totalPages)}catch(r){console.log(r)}}}function U(e){const t=e.reduce((o,{rating:r,target:n,bodyPart:s,burnedCalories:l,name:v,_id:f})=>(o+=`<li class="card-workout-item" id=${f}>
+                <div class="card-menu">
+                    <div class="card-menu-box">
+                
+                        <div class="card-menu-workout">workout</div>
+                        <div class="card-workout-rating">
+                        <p class="card-workout-rating-text">${Math.round(r)}.0</p>
+                        <svg
+                            class="card-workout-rating-icon"
+                            width="18"
+                            height="18"
+                        >
+                            <use href="${P}#icon-Star-1"></use>
+                        </svg>
+                        </div>
+                    </div>
+                
+                        <button class="btn-start-workout" type="button">Start
+                            <svg class="card-workout-start-icon"
+                                width="16"
+                                height="16"
+                                >
+                                <use href="${P}#icon-arrow"></use>
+                            </svg>
+                        </button>
+                </div>
+                  
+                <div class="card-workout-title">
+                    <div class="card-workout-title-icon-box">
+                        <svg
+                        class="card-workout-title-icon"
+                        width="24"
+                        height="24">
+                        <use href="${P}#icon-human-ex"></use>
+                        </svg>
+                    </div>
+                    <p class="card-title-text">${v}</p>
+                </div>
+            
+                <div class="card-workout-info">
+                    <div class="card-workout-info-block">
+                        <p class="card-workout-info-list">Burned calories:</p>
+                        <p class="card-workout-info-data card-time">${l} / 3 min</p>
+                    </div>
+                    <div class="card-workout-info-block">
+                        <p class="card-workout-info-list">Body part:</p>
+                        <p class="card-workout-info-data">${s}</p>
+                    </div>
+                    <div class="card-workout-info-block">
+                        <p class="card-workout-info-list">Target:</p>
+                        <p class="card-workout-info-data card-target">${n}</p>
+                    </div>
+                </div>
+            </li>`,o),"");L.innerHTML=t}function be(e){p.innerHTML="";for(let t=1;t<=e&&!(t>3);t++){const o=document.createElement("button");o.textContent=t,t===1&&o.classList.add("active"),o.addEventListener("click",r=>{H(p,r.target),Le(t)}),p.appendChild(o)}}async function Le(e){a=e;try{S.scrollIntoView({behavior:"smooth"});const t=await m(`exercises?${c}=${x}`,{limit:q,page:a});U(t.results)}catch(t){console.error(t)}}const re=window.location.pathname,xe=re.lastIndexOf("/"),_=re.substring(xe);if(_==="/index.html"||_==="/"){const e=document.querySelector(".footer-form");e.addEventListener("submit",function(t){t.preventDefault(),Se(),e.reset()})}async function Se(){const e=document.querySelector(".footer-form"),r={email:new FormData(e).get("email")};try{const s=(await F.post(e.action,r,{headers:{"Content-Type":"application/json"}})).data;s&&s.message&&$e()}catch(n){n.response&&n.response.status!==409&&Ee(),n.response&&n.response.status===409&&qe()}}function Ee(){A.fire({title:"Bad request",text:"Something went wrong.",icon:"error"})}function qe(){A.fire({title:"Warning!",text:"Subscription already exists",icon:"warning"})}function $e(){A.fire({title:"Good job!",text:"We're excited to have you on board! 🎉 Thank you for subscribing to new exercises on Energy Flow. You've just taken a significant step towards improving your fitness and well-being.",icon:"success"})}function Ie(){const e=document.querySelector(".foter-privacy-policy"),t=document.querySelector(".footer-terms-of-service"),o=document.querySelector(".modal-overlay"),r=document.querySelector(".privacy-modal-overlay");e.addEventListener("click",()=>r.classList.add("is-open")),t.addEventListener("click",()=>o.classList.add("is-open")),r.addEventListener("click",()=>r.classList.remove("is-open")),o.addEventListener("click",()=>o.classList.remove("is-open"))}const se=window.location.pathname,Me=se.lastIndexOf("/"),G=se.substring(Me);(G==="/index.html"||G==="/")&&Ie();document.addEventListener("DOMContentLoaded",function(){const e=document.querySelector(".favorites-list"),t=document.querySelector(".favorites-pagination-block"),o=document.querySelector(".message-info"),r=document.querySelector(".favorites-contanier-block");function n(){window.location.pathname==="/page-2.html"&&window.innerWidth<=767&&s()?t.style.display="flex":t.style.display="none"}function s(){return e&&e.offsetParent!==null}function l(){const f=window.innerWidth<=767&&s()?6:e.children.length;if(window.innerWidth>767&&s()){for(let i=0;i<e.children.length;i++)e.children[i].style.display="block";return}Math.ceil(e.children.length/f);let $=1;function V(i){const I=(i-1)*f,M=I+f;for(let d=0;d<e.children.length;d++)e.children[d].style.display="none";for(let d=I;d<M&&d<e.children.length;d++)e.children[d].style.display="block"}V($),t.addEventListener("click",function(i){i.target.tagName==="BUTTON"&&(t.querySelectorAll("button").forEach(M=>M.classList.remove("active-btn")),i.target.classList.add("active-btn"),$=parseInt(i.target.textContent),V($))})}s()?o.style.display="none":o.style.display="block";function v(){window.matchMedia("(min-width: 768px)").matches?r.style.overflowY="scroll":r.style.overflowY="visible",window.matchMedia("(min-width: 1440px)").matches?r.style.maxHeight="480px":r.style.maxHeight="none"}v(),n(),window.addEventListener("resize",function(){n(),l(),v()}),s()&&e.children.length>=6&&l()});const b="quoteDay",g=JSON.parse(localStorage.getItem(b)),C=document.querySelector(".quote-container-text"),K=document.querySelector(".quote-container-author"),T=new Date,w={date:T.getDate(),month:T.getMonth(),year:T.getFullYear()};!localStorage.getItem(b)||w.date!=g.date.date||w.month!=g.date.month||w.year!=g.date.year?(localStorage.removeItem(b),m("quote").then(e=>{C.textContent=e.quote,K.textContent=e.author,localStorage.setItem(b,JSON.stringify({author:e.author,quote:e.quote,date:w}))}).catch(e=>{console.log(e),C.textContent="Sorry, there was an error on the server"})):(C.textContent=g.quote,K.textContent=g.author);const ae=window.location.pathname,Pe=ae.lastIndexOf("/"),Q=ae.substring(Pe);let B,ie,ce,le;(Q==="/index.html"||Q==="/")&&(B=document.querySelector(".form-search-exercises"),ie=document.querySelector(".cards-workout-list"),ce=document.querySelector(".pagination-cards-workout-box"),le=B.elements.search,B.addEventListener("submit",Ce));async function Ce(e){ie.innerHTML="",ce.innerHTML="",e.preventDefault();try{const t=await m(`exercises?${c}=${x}`,{page:a,limit:q,keyword:le.value});U(t.results)}catch(t){console.log(t)}}const D=document.querySelector(".scroll-top-btn");function Te(){window.scrollY>700?D.classList.remove("is-hidden"):window.scrollY<700&&D.classList.add("is-hidden")}window.onscroll=Te;D.onclick=()=>window.scrollTo(0,0);const Be=document.getElementById("rating-contact-modal"),k=document.querySelectorAll(".rating-button"),Oe=document.getElementById("rating-value"),de=()=>{Be.classList.toggle("active")};document.getElementById("contact_us").addEventListener("click",de);document.getElementById("close_modal").addEventListener("click",de);k.forEach((e,t)=>{e.addEventListener("change",function(){Oe.textContent=e.value,e.classList.add("active");for(let o=0;o<t;o++)k[o].classList.add("active");for(let o=t+1;o<k.length;o++)k[o].classList.remove("active")})});
+//# sourceMappingURL=ratingModal-36e6a1b9.js.map
