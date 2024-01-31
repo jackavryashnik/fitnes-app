@@ -178,7 +178,7 @@ async function changeList(e) {
 export function renderWorkoutCards(exercises) {
   const markup = exercises.reduce(
     (acc, { rating, target, bodyPart, burnedCalories, name, _id }) => {
-      acc += `<li class="card-workout-item" data-id=${_id}>
+      acc += `<li class="card-workout-item" id=${_id}>
                 <div class="card-menu">
                     <div class="card-menu-box">
                 

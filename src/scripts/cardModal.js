@@ -1,11 +1,6 @@
-import { fetchData } from "./api";
+import {fetchData} from "./api";
 
-const fullUrl = window.location.pathname;
-const lastSlashIndex = fullUrl.lastIndexOf('/');
-const result = fullUrl.substring(lastSlashIndex);
-
-if (result === '/index.html' || result === '/') {
-const activeColor = `#eea10c`;
+const activeColor = '#eea10c';
 const noActiveColor = '#e8e8e8';
 let id, ratingStar;
 let storage = "favorites";
@@ -15,7 +10,6 @@ if (!storageItem) {
 } else {
     storageItem = JSON.parse(storageItem);
 }
-
 
 
 const stars = document.querySelectorAll('.ex-rate-icon');
@@ -33,11 +27,10 @@ const burnedCalories = document.querySelector(".ex-burned-calories");
 const description = document.querySelector(".ex-description");
 
 list.addEventListener("click", async event =>{
-  if(event. target.classList.contains ("btn-start-workout") | event.target.classList. contains ("card-workout-start-icon")){
+  if(event.target.classList.contains("btn-start-workout") ||  event.target.classList.contains("card-workout-start-icon")){
     id = event.target.closest('.card-workout-item').id;
     await fetchData(`exercises/${id}`)
     .then(result => {
-   
       gif.src = result.gifUrl;
       name.textContent = result.name;
       rating.textContent = result.rating;
@@ -47,7 +40,6 @@ list.addEventListener("click", async event =>{
       equipment.textContent = result.equipment;
       burnedCalories.textContent = `${result.burnedCalories} / ${result.time}min`;
       description.textContent = result.description;
-      
       ratingStar = Math.round(rating.textContent);
 
 
@@ -90,18 +82,15 @@ favorites.addEventListener("click", element=>{
     const index = storageItem.findIndex(item =>item.id == id);
     storageItem.splice(index, 1);
     localStorage.setItem(storage, JSON.stringify(storageItem));
-    favorites.textContent = "Add to favorities"
+    favorites.textContent = "Add to favorities";
   }
 })
-
 exModal.addEventListener("click", elem => {
-  if(elem.target == exModal || elem.target.classList.contains("ex-close-btn-icon")  || elem.target.classList.contains("ex-close-btn") ){
+  if(elem.target == exModal ||  elem.target.classList.contains("ex-close-btn-icon") ||  elem.target.classList.contains("ex-close-btn") ){
     exModal.classList.remove("is-open");}
 })
-
 document.addEventListener('keydown',event=> {
   if (event.key === 'Escape') {
       exModal.classList.remove('is-open');
   }
 });
-}
