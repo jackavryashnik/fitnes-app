@@ -159,8 +159,12 @@
     margin: 0;
   }
 
-  .message-info {
+  .message-info.is-open-message-info {
     display: flex;
+  }
+
+  .message-info {
+    display: none;
     flex-direction: column;
     border-radius: 30px;
     margin-top: 80px;
@@ -375,8 +379,12 @@
     margin: 0;
   }
 
-  .message-info {
+  .message-info.is-open-message-info {
     display: flex;
+  }
+
+  .message-info {
+    display: none;
     flex-direction: column;
     border-radius: 30px;
   }

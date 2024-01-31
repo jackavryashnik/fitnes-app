@@ -1,15 +1,20 @@
-const btnAddToFavorites = document.querySelector('.ex-add-favorities');
+const fullUrl = window.location.pathname;
+const lastSlashIndex = fullUrl.lastIndexOf('/');
+const result = fullUrl.substring(lastSlashIndex);
 
-const favoritesList = document.querySelector('.favorites-list');
+const messageInfo = document.querySelector('.message-info');
 
-let storage = 'favorites';
-let storageItem = localStorage.getItem(storage);
+if (result === '/page-2.html') {
+  const favoritesList = document.querySelector('.favorites-list');
 
-if (storageItem) {
-  try {
-    const parsedItem = JSON.parse(storageItem);
-    parsedItem.forEach(elem => {
-      const markup = `<li class="favorites-list-item id=${elem.id}">
+  let storage = 'favorites';
+  let storageItem = localStorage.getItem(storage);
+
+  if (storageItem) {
+    try {
+      const parsedItem = JSON.parse(storageItem);
+      parsedItem.forEach(elem => {
+        const markup = `<li class="favorites-list-item id=${elem.id}">
             <div class="favorites-card-header">
                 <div class="favorites-oval">
                     <span>WORKOUT</span>
@@ -55,10 +60,13 @@ if (storageItem) {
             </div>
         </li>`;
 
-      favoritesList.insertAdjacentHTML('beforeend', markup);
-    });
-  } catch (error) {
-    console.log(error.name);
-    console.log(error.message);
+        favoritesList.insertAdjacentHTML('beforeend', markup);
+      });
+    } catch (error) {
+      console.log(error.name);
+      console.log(error.message);
+    }
+  } else if (!storageItem || parsedItem == []) {
+    messageInfo.classList.add('is-open-message-info');
   }
 }
