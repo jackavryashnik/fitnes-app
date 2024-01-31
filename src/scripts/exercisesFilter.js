@@ -105,8 +105,12 @@ function renderExercises(data) {
 background-size: cover;
 background-repeat: no-repeat;">
     <div class="exercise-card-desc">
-      <h2 class="exercise-card-desc-name">${name}</h2>
-      <p class="exercise-card-desc-filter">${filter}</p>
+      <h2 data-filter="${
+        filter === 'Body parts' ? 'bodypart' : filter.toLowerCase()
+      }" data-name="${name}"  class="exercise-card-desc-name">${name}</h2>
+      <p data-filter="${
+        filter === 'Body parts' ? 'bodypart' : filter.toLowerCase()
+      }" data-name="${name}"  class="exercise-card-desc-filter">${filter}</p>
     </div>
   </li>
   `,

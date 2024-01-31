@@ -1,3 +1,5 @@
+import sprite from '../images/sprite.svg'
+
 const fullUrl = window.location.pathname;
 const lastSlashIndex = fullUrl.lastIndexOf('/');
 const result = fullUrl.substring(lastSlashIndex);
@@ -21,7 +23,7 @@ if (result === '/page-2.html') {
                 </div>
                 <button class="favorites-icon-svg" aria-label="trash" type="button">
                     <svg class="favorites-icon-svg-delete" width="16" height="16" fill="none">
-                        <use href="./images/sprite.svg#icon-trash"></use>
+                        <use href="${sprite}#icon-trash"></use>
                     </svg>
                 </button>
                 <button
@@ -30,13 +32,13 @@ if (result === '/page-2.html') {
                     aria-label="start"
                     type="button">Start
                         <svg class="favorites-list-button-icon" width="14" height="14" stroke="#1B1B1B">
-                            <use href="./images/sprite.svg#icon-arrow"></use>
+                            <use href="${sprite}#icon-arrow"></use>
                         </svg>
                 </button>
                 </div>
                 <div class="favorites-list-container">
                     <svg class="favorite-list-svg" width="24" height="24">
-                        <use href="./images/sprite.svg#icon-human-ex"></use>
+                        <use href="${sprite}#icon-human-ex"></use>
                     </svg>
                     <h3 class="favorites-list-text">${elem.name}</h3>
                 </div>
@@ -66,7 +68,7 @@ if (result === '/page-2.html') {
       console.log(error.name);
       console.log(error.message);
     }
-  } else if (!storageItem || parsedItem == []) {
+  } else if (!storageItem || storageItem == []) {
     messageInfo.classList.add('is-open-message-info');
   }
 }

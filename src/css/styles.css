@@ -18,6 +18,7 @@
 @import url('./scrolTopBtn.css');
 @import url('./blackTheme.css');
 @import url('./ratingModal.css');
+@import url('./loader.css');
 
 :root {
   font-family: 'DM Sans', sans-serif;
