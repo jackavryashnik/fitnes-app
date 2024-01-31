@@ -2,17 +2,15 @@
     <div class="rating-modal-overlay"></div>
     <div class="rating-modal-window">
       <div class="rating-modal-header">
-        <div class="rating-close-modal" id="close-modal">
+        <button class="rating-close-modal" id="close-modal">
           <svg class="rating-close-icon" width="28" height="28">
             <use href="./images/sprite.svg#icon-close"></use>
           </svg>
-        </div>
+        </button>
       </div>
       <div class="rating-modal-content">
         <form
           class="rating-form"
-          action="https://energyflow.b.goit.study/api/subscription"
-          method="post"
         >
           <div class="rating-txt">Rating</div>
           <div class="rate-wrapper">
@@ -91,9 +89,9 @@
             class="rating-text-field"
             placeholder="Your comment"
           ></textarea>
-          <button type="submit" class="rating-send-button">Send</button>
+          <button type="submit" class="rating-send-button" aria-label="Send button">Send</button>
         </form>
       </div>
     </div>
   </div>
-</div>
+

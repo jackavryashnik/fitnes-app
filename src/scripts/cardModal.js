@@ -1,5 +1,11 @@
 import {fetchData} from "./api";
+import { patchRating } from './ratingModal';
+ 
+const fullUrl = window.location.pathname;
+const lastSlashIndex = fullUrl.lastIndexOf('/');
+const result = fullUrl.substring(lastSlashIndex);
 
+if (result === '/index.html' || result === '/') {
 const activeColor = '#eea10c';
 const noActiveColor = '#e8e8e8';
 let id, ratingStar;
@@ -11,7 +17,14 @@ if (!storageItem) {
     storageItem = JSON.parse(storageItem);
 }
 
+const ratingForm = document.querySelector('.rating-form');
+const rateStars = document.querySelector('.rate-wrapper');
 
+
+
+const closeButtonRating = document.querySelector('.rating-close-modal');
+const ratingModal = document.querySelector('.rating-modal');
+const addRatingButton = document.querySelector('.ex-rating-button');
 const stars = document.querySelectorAll('.ex-rate-icon');
 const favorites = document.querySelector(".ex-add-favorities");
 const list = document.querySelector(".cards-workout-list");
@@ -91,6 +104,31 @@ exModal.addEventListener("click", elem => {
 })
 document.addEventListener('keydown',event=> {
   if (event.key === 'Escape') {
+    if(exModal.classList.contains('is-open')){
       exModal.classList.remove('is-open');
+    }
+    else if (ratingModal.classList.contains('active')){
+      ratingModal.classList.remove('active');
+      exModal.classList.add('is-open');
+      rateStars.removeEventListener("click");
+      ratingForm.removeEventListener("submit");
+    }
   }
 });
+addRatingButton.addEventListener("click", ()=>{
+  ratingModal.classList.add('active');
+  patchRating();
+  exModal.classList.remove('is-open');
+
+})
+
+closeButtonRating.addEventListener("click", ()=>{
+  ratingModal.classList.remove('active');
+  exModal.classList.add('is-open');
+  rateStars.removeEventListener("click");
+  ratingForm.removeEventListener("submit");
+})
+
+}
+
+

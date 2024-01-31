@@ -115,9 +115,10 @@
 /* Exercises List */
 .exercises-list {
   margin-top: 40px;
-  margin-bottom: 92px;
+  margin-bottom: 52px;
 }
 .exercises-list-card {
+  cursor: pointer;
   background-color: var(--black-color);
   display: flex;
   align-items: center;
@@ -145,12 +146,6 @@
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
-}
-
-/* Detailed exercises */
-.cards-workout-list {
-  margin-top: 40px;
-  margin-bottom: 92px;
 }
 
 /* Pagination Box */
@@ -264,14 +259,10 @@
   }
   .exercises-list {
     margin-top: 32px;
-    margin-bottom: 128px;
+    margin-bottom: 64px;
     display: flex;
     flex-wrap: wrap;
     gap: 14px;
-  }
-  .cards-workout-list {
-    margin-top: 55px;
-    margin-bottom: 128px;
   }
 
   .exercises-list-card {
@@ -302,10 +293,7 @@
   .search-info-message {
     min-width: 684px;
   }
-  .cards-workout-list {
-    margin-top: 32px;
-    margin-bottom: 32px;
-  }
+
   .exercises-list {
     column-gap: 20px;
     row-gap: 40px;
@@ -320,7 +308,6 @@
 .slash.is-hidden,
 .form-search-exercises.is-hidden,
 .exercises-list.is-hidden,
-.cards-workout-list.is-hidden,
 .search-info-message.is-hidden {
   display: none;
 }

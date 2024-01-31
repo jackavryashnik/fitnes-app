@@ -1,45 +1,60 @@
-const contactModal = document.getElementById("contact_modal");
-const ratingButtons = document.querySelectorAll(".rating_button");
-const selectedRatingDiv = document.getElementById("rating_value");
-const email = document.getElementById("email");
-const texField = document.getElementById("text_fieldl");
-const emailPattern = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
-const ratingInputs = document.getElementsByName('rate');
+import { patchData } from './api';
+import Swal from 'sweetalert2';
 
+export function patchRating() {
+  const ratingButtons = document.querySelectorAll('.rating-button');
+  const selectedRatingDiv = document.getElementById('rating-value');
+  const email = document.querySelector('.rating-email-field');
+  const texField = document.querySelector('.rating-text-field');
+  const ratingForm = document.querySelector('.rating-form');
 
-const submitBtn = document.getElementById("submit_btn");
-const toggleModal = () => {
-    contactModal.classList.toggle("active");
-};
+  const rateStars = document.querySelector('.rate-wrapper');
+  
+  const colorStars = event => {
+    const targetValue = event.target.value;
+    selectedRatingDiv.textContent = targetValue + '.0';
 
-document.getElementById("contact_us").addEventListener("click", toggleModal);
-document.getElementById("close_modal").addEventListener("click", toggleModal);
-
-ratingButtons.forEach((button, index) => {
-    button.addEventListener("change", function () {
-        selectedRatingDiv.textContent = button.value;
-        button.classList.add("active");
-        for (let i = 0; i < index; i++) {
-            ratingButtons[i].classList.add("active");
-        }
-        for (let i = index + 1; i < ratingButtons.length; i++) {
-            ratingButtons[i].classList.remove("active");
-        }
+    ratingButtons.forEach(button => {
+      if (button.value <= targetValue) {
+        button.classList.add('active');
+      } else {
+        button.classList.remove('active');
+      }
     });
-});
+  };
+  
+  rateStars.addEventListener('click', colorStars);
 
-submitBtn.addEventListener("click", e => {
-    e.preventDefault()
-    if (!emailPattern.test(email.value)) return alert('Incorrect email value')
+  const sendRequest = event => {
+    event.preventDefault();
+    ratingModal.classList.remove('active');
+    const path = `exercises/${event.id}/rating`;
+    const params = {
+      rate: targetValue,
+      email: email.value,
+      review: texField.value,
+    };
 
-    axios.post('https://energyflow.b.goit.study/api/', {
-        rate: ratingInputs.value,
-        email: email.value,
-        review: texField.value
-    })
-        .then(r =>{
-        })
-        .catch(r => {
-        })
+    patchData(path, params)
+      .then(succsses => {
+        Swal.fire({
+          title: 'Success!',
+          text: 'Feedback sent successfully.',
+          icon: 'success',
+        });
+      })
+      .catch(error => {
+        Swal.fire({
+          title: 'Bad request',
+          text: error.body,
+          icon: 'error',
+        });
+      });
 
-});
+    ratingForm.reset();
+    ratingForm.removeEventListener('submit', sendRequest);
+    rateStars.removeEventListener('click', colorStars);
+  };
+  
+  ratingForm.addEventListener('submit', sendRequest);
+}
