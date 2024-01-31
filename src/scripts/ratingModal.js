@@ -9,8 +9,7 @@ export function patchRating() {
   const ratingForm = document.querySelector('.rating-form');
 
   const rateStars = document.querySelector('.rate-wrapper');
-  rateStars.addEventListener('click', colorStars);
-
+  
   const colorStars = event => {
     const targetValue = event.target.value;
     selectedRatingDiv.textContent = targetValue + '.0';
@@ -23,8 +22,8 @@ export function patchRating() {
       }
     });
   };
-
-  ratingForm.addEventListener('submit', sendRequest);
+  
+  rateStars.addEventListener('click', colorStars);
 
   const sendRequest = event => {
     event.preventDefault();
@@ -56,4 +55,6 @@ export function patchRating() {
     ratingForm.removeEventListener('submit', sendRequest);
     rateStars.removeEventListener('click', colorStars);
   };
+  
+  ratingForm.addEventListener('submit', sendRequest);
 }
