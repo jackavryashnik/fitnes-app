@@ -1,8 +1,9 @@
 const fullUrl = window.location.pathname;
 const lastSlashIndex = fullUrl.lastIndexOf('/');
 const result = fullUrl.substring(lastSlashIndex);
+import { showScrollBtn } from './scrollTopBtn';
 
-export let infWrapper;
+let infWrapper;
 let wrapperText;
 let wrapperSpan;
 if (result === '/index.html' || result === '/') {
@@ -16,6 +17,16 @@ if (result === '/index.html' || result === '/') {
       infWrapper.classList.add('is-hidden');
     }
   });
+  function hideIfWrapper() {
+    if (window.scrollY > 700) {
+      infWrapper.classList.add('is-hidden');
+    }
+  }
+  function hideAndShow() {
+    hideIfWrapper();
+    showScrollBtn();
+  }
+  window.onscroll = hideAndShow;
 }
 
 function addtextContent(event) {
