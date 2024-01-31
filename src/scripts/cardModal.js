@@ -1,6 +1,10 @@
-import iziToast from "izitoast";
 import { fetchData } from "./api";
 
+const fullUrl = window.location.pathname;
+const lastSlashIndex = fullUrl.lastIndexOf('/');
+const result = fullUrl.substring(lastSlashIndex);
+
+if (result === '/index.html' || result === '/') {
 const activeColor = `#eea10c`;
 const noActiveColor = '#e8e8e8';
 let id, ratingStar;
@@ -48,7 +52,6 @@ list.addEventListener("click", async event =>{
 
 
       stars.forEach((star, index) => {
-        console.log(ratingStar)
         if (index < ratingStar) {
             star.style.fill = activeColor;
         } else {
@@ -67,7 +70,7 @@ list.addEventListener("click", async event =>{
   }
 })
 favorites.addEventListener("click", element=>{
-  if(favorites.textContent.trim()==="Add to favorities"){
+  if(favorites.textContent.trim()=="Add to favorities"){
     storageItem.push( {
     id: id, 
     gifUrl:gif.src,
@@ -101,3 +104,4 @@ document.addEventListener('keydown',event=> {
       exModal.classList.remove('is-open');
   }
 });
+}
