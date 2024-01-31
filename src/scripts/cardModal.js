@@ -123,8 +123,8 @@ addRatingButton.addEventListener("click", ()=>{
 closeButtonRating.addEventListener("click", ()=>{
   ratingModal.classList.remove('active');
   exModal.classList.add('is-open');
-  rateStars.removeEventListener();
-  ratingForm.removeEventListener();
+  rateStars.removeEventListener("click");
+  ratingForm.removeEventListener("submit");
 })
 
 }
