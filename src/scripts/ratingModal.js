@@ -48,7 +48,7 @@ export function patchRating() {
   ratingForm.addEventListener('submit', event => {
     event.preventDefault();
     ratingModal.classList.remove('active');
-    const path = `exercises/${e.id}/rating`;
+    const path = `exercises/${event.id}/rating`;
     const params = {
       rate: targetValue,
       email: email.value,
