@@ -104,5 +104,5 @@ background-repeat: no-repeat;">
                     </li>
                 </ul>
             </div>
-        </li>`;e.insertAdjacentHTML("beforeend",s)})}catch(r){console.log(r.name),console.log(r.message)}else(!o||parsedItem==[])&&nt.classList.add("is-open-message-info")}
-//# sourceMappingURL=addToFavorites-77447652.js.map
+        </li>`;e.insertAdjacentHTML("beforeend",s)})}catch(r){console.log(r.name),console.log(r.message)}else(!o||o==[])&&nt.classList.add("is-open-message-info")}
+//# sourceMappingURL=addToFavorites-6036001b.js.map
