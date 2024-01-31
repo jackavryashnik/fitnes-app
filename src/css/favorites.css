@@ -3,14 +3,13 @@
     width: 335px;
     min-height: 450px;
     border-radius: 30px;
-    background: #E8E8E8;
+    background: #e8e8e8;
     padding: 40px 20px;
     margin: 0 auto;
   }
 
-
-    .favorites-title {
-    color: #1B1B1B;
+  .favorites-title {
+    color: #1b1b1b;
     font-size: 32px;
     font-weight: 400;
     line-height: 1;
@@ -25,7 +24,6 @@
     align-items: center;
     flex-wrap: nowrap;
     margin-top: 20px;
-    
   }
 
   .favorites-list {
@@ -36,220 +34,12 @@
     margin-bottom: 20px;
   }
 
-  .favorites-list-item{
-    width: 295px;
-    height: 165px;       
-    border-radius: 15px;
-    background: #FFF;
-    padding: 16px;
-  }
-
-  .favorites-card-header {
-    display: inline-block;
-  }
-
-  .favorites-oval {
-    display: inline-block;
-    width: 75px; 
-    height: 25px; 
-    background-color: #7E847F; 
-    border-radius: 15px;
-  }
-
-  .favorites-oval span {
-    color: #F6F6F6;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 0.2em;
-    padding: 5px 8px;
-    margin: 0 auto;
-  }
-
-  .favorites-svg {
-    width: 76px;
-    height: 26px;
-    border-radius: 15px;
-  }
-
-  .favorites-svg-text {
-    fill: #F6F6F6;
-    font-size: 12px;
-    font-weight: 500;
-  }
-
-  .favorites-icon-svg {
-    display: inline-block;
-    stroke: #1B1B1B;
-    margin-left: 5px;
-    border: none;
-    padding: 0;
-    background: none;
-    box-sizing: border-box;
-    vertical-align: middle;
-  }
-
-  .favorites-list-button {
-    color: #1B1B1B;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.28;
-    border: none;
-    padding: 0;
-    background: none;
-    margin-left: 100px;
-  }
-
-  .favorites-list-button-icon {
-    display: inline-block;
-    margin-left: 8px; 
-  }
-
-  .favorites-list-container{
-      display: flex;
-      align-items: center;
-      margin-top: 25px;
-  }
-
-  .favorite-list-svg {
-      margin-right: 16px;
-  }
-
-  .favorites-list-text {
-      color: #1B1B1B;
-      font-feature-settings: 'clig' off, 'liga' off;
-      font-size: 20px;
-      font-weight: 400;
-      line-height: 1;
-  }
-
-  .favorites-card-text {
-      margin-top: 18px;
-  }
-
-  .favorites-card-text-list {
-      padding: 0;
-  }
-
-  .favorites-card-text-item {
-      display: flex;
-      flex-wrap: wrap;
-      column-gap: 16px;
-      row-gap: 8px;
-  }
-
-  .favorites-card-text-wrapper {
-      display: flex;
-      gap: 4px;
-  }
-
- .favorites-card-text-title {
-    color: rgba(27, 27, 27, 0.40);
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 1.5; 
-    margin-right: 4px;
-    margin: 0;
-  }
-
- .favorites-card-text-block {
-    color: #1B1B1B;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 1.5;
-    margin: 0;
-  }
-
- .message-info {
-    display: flex;
-    flex-direction: column;
-    border-radius: 30px;
-    margin-top: 80px;
-  }
-
- .message-info-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 28px;
-  }
-
- .message-info-svg {
-    width: 85px;
-    height: 52px;
-  }
-
- .message-info-text {
-    width: 247px;
-    height: 90px;
-    color: #1B1B1B;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.28; 
-  }
-}
-
- /* ------------TABLET----------------- */
-
- @media (min-width: 768px) {
-  .favorites-card-container {
-    width: 736px;
-    height: 928px;
-    border-radius: 30px;
-    background: #E8E8E8;
-    padding: 0 20px;
-    margin: 0 auto;
-  }
-
-  .favorites-title {
-    color: #1B1B1B;
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 1;
-    letter-spacing: 0.02em;
-    padding-top: 40px;
-    padding-left: 20px;
-  }
-
-  .favorites-contanier-block {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: nowrap;
-    margin-top: 32px;
-
-   
-  }
-  
-  .favorites-list {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    column-gap: 14px;
-    row-gap: 20px;
-    max-height: 740px;
-    overflow-y: scroll;
-
-  
-  }
-
   .favorites-list-item {
-    width: 313px;
+    width: 295px;
+    height: 165px;
     border-radius: 15px;
-    background: #FFF;
+    background: #fff;
     padding: 16px;
-  }
-
-  .favorites-list-item:hover,
-  .favorites-list-item:focus {
-    transform: scale(0.95);
-    transition: transform 0.25s var(--transition-animation);
   }
 
   .favorites-card-header {
@@ -258,14 +48,14 @@
 
   .favorites-oval {
     display: inline-block;
-    width: 75px; 
-    height: 25px; 
-    background-color: #7E847F; 
+    width: 75px;
+    height: 25px;
+    background-color: #7e847f;
     border-radius: 15px;
   }
 
   .favorites-oval span {
-    color: #F6F6F6;
+    color: #f6f6f6;
     font-size: 12px;
     font-weight: 500;
     line-height: 0.2em;
@@ -280,14 +70,14 @@
   }
 
   .favorites-svg-text {
-    fill: #F6F6F6;
+    fill: #f6f6f6;
     font-size: 12px;
     font-weight: 500;
   }
 
   .favorites-icon-svg {
     display: inline-block;
-    stroke: #1B1B1B;
+    stroke: #1b1b1b;
     margin-left: 5px;
     border: none;
     padding: 0;
@@ -296,14 +86,8 @@
     vertical-align: middle;
   }
 
-  .favorites-icon-svg:hover,
-  .favorites-icon-svg:focus {
-    transform: scale(0.95);
-    transition: transform 0.25s var(--transition-animation);
-  }
-
   .favorites-list-button {
-    color: #1B1B1B;
+    color: #1b1b1b;
     font-size: 14px;
     font-weight: 400;
     line-height: 1.28;
@@ -313,15 +97,9 @@
     margin-left: 100px;
   }
 
-  .favorites-list-button:hover,
-  .favorites-list-button:focus {
-    transform: scale(0.95); 
-    transition: transform 0.25s var(--transition-animation);
-  }
-
   .favorites-list-button-icon {
     display: inline-block;
-    margin-left: 8px; 
+    margin-left: 8px;
   }
 
   .favorites-list-container {
@@ -335,7 +113,7 @@
   }
 
   .favorites-list-text {
-    color: #1B1B1B;
+    color: #1b1b1b;
     font-feature-settings: 'clig' off, 'liga' off;
     font-size: 20px;
     font-weight: 400;
@@ -362,24 +140,240 @@
     gap: 4px;
   }
 
- .favorites-card-text-title {
-    color: rgba(27, 27, 27, 0.40);
+  .favorites-card-text-title {
+    color: rgba(27, 27, 27, 0.4);
     font-feature-settings: 'clig' off, 'liga' off;
     font-size: 12px;
     font-weight: 400;
-    line-height: 1.5; 
+    line-height: 1.5;
     margin-right: 4px;
     margin: 0;
- }
+  }
 
- .favorites-card-text-block {
-    color: #1B1B1B;
+  .favorites-card-text-block {
+    color: #1b1b1b;
     font-feature-settings: 'clig' off, 'liga' off;
     font-size: 12px;
     font-weight: 400;
     line-height: 1.5;
     margin: 0;
- }
+  }
+
+  .message-info {
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    margin-top: 80px;
+  }
+
+  .message-info-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .message-info-svg {
+    width: 85px;
+    height: 52px;
+  }
+
+  .message-info-text {
+    width: 247px;
+    height: 90px;
+    color: #1b1b1b;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.28;
+  }
+}
+
+/* ------------TABLET----------------- */
+
+@media (min-width: 768px) {
+  .favorites-card-container {
+    width: 736px;
+    height: 928px;
+    border-radius: 30px;
+    background: #e8e8e8;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+
+  .favorites-title {
+    color: #1b1b1b;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    padding-top: 40px;
+    padding-left: 20px;
+  }
+
+  .favorites-contanier-block {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-top: 32px;
+  }
+
+  .favorites-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 14px;
+    row-gap: 20px;
+    max-height: 740px;
+    /* overflow-y: scroll; */
+  }
+
+  .favorites-list-item {
+    width: 313px;
+    border-radius: 15px;
+    background: #fff;
+    padding: 16px;
+  }
+
+  .favorites-list-item:hover,
+  .favorites-list-item:focus {
+    transform: scale(0.95);
+    transition: transform 0.25s var(--transition-animation);
+  }
+
+  .favorites-card-header {
+    display: inline-block;
+  }
+
+  .favorites-oval {
+    display: inline-block;
+    width: 75px;
+    height: 25px;
+    background-color: #7e847f;
+    border-radius: 15px;
+  }
+
+  .favorites-oval span {
+    color: #f6f6f6;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 0.2em;
+    padding: 5px 8px;
+    margin: 0 auto;
+  }
+
+  .favorites-svg {
+    width: 76px;
+    height: 26px;
+    border-radius: 15px;
+  }
+
+  .favorites-svg-text {
+    fill: #f6f6f6;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .favorites-icon-svg {
+    display: inline-block;
+    stroke: #1b1b1b;
+    margin-left: 5px;
+    border: none;
+    padding: 0;
+    background: none;
+    box-sizing: border-box;
+    vertical-align: middle;
+  }
+
+  .favorites-icon-svg:hover,
+  .favorites-icon-svg:focus {
+    transform: scale(0.95);
+    transition: transform 0.25s var(--transition-animation);
+  }
+
+  .favorites-list-button {
+    color: #1b1b1b;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.28;
+    border: none;
+    padding: 0;
+    background: none;
+    margin-left: 100px;
+  }
+
+  .favorites-list-button:hover,
+  .favorites-list-button:focus {
+    transform: scale(0.95);
+    transition: transform 0.25s var(--transition-animation);
+  }
+
+  .favorites-list-button-icon {
+    display: inline-block;
+    margin-left: 8px;
+  }
+
+  .favorites-list-container {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+  }
+
+  .favorite-list-svg {
+    margin-right: 16px;
+  }
+
+  .favorites-list-text {
+    color: #1b1b1b;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  .favorites-card-text {
+    margin-top: 18px;
+  }
+
+  .favorites-card-text-list {
+    padding: 0;
+  }
+
+  .favorites-card-text-item {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 16px;
+    row-gap: 8px;
+  }
+
+  .favorites-card-text-wrapper {
+    display: flex;
+    gap: 4px;
+  }
+
+  .favorites-card-text-title {
+    color: rgba(27, 27, 27, 0.4);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-right: 4px;
+    margin: 0;
+  }
+
+  .favorites-card-text-block {
+    color: #1b1b1b;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+  }
 
   .message-info {
     display: flex;
@@ -404,17 +398,15 @@
   .message-info-text {
     width: 554px;
     height: 72px;
-    color: #1B1B1B;
-    text-align: center;  
+    color: #1b1b1b;
+    text-align: center;
     font-size: 18px;
     line-height: 1.33;
   }
-
 }
 
 /* ------------------DESKTOP----------------------- */
- @media (min-width: 1440px) {
-
+@media (min-width: 1440px) {
   .favorites-card-container {
     width: 1408px;
     height: 687px;
@@ -426,7 +418,6 @@
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
-
   }
 
   .favorites-list {
@@ -437,7 +428,7 @@
     row-gap: 28px;
   }
 
-  .favorites-list-item{
+  .favorites-list-item {
     box-sizing: border-box;
     width: 424px;
     height: 141px;
@@ -453,39 +444,39 @@
   }
 }
 
-  /* <!----------- PAGINATION FOR MOBILE------------------> */
+/* <!----------- PAGINATION FOR MOBILE------------------> */
 
-  .favorites-pagination-block {
-    display: flex;
-    gap: 8px;
-    justify-content: center;
-    margin-top: 20px;
-  }
-
-  .favorites-pagination-block button {
-    color: rgba(27, 27, 27, 0.4);
-    font-size: 20px;
-    line-height: 1.6;
-    letter-spacing: 0.04em;
-    padding: 0;
-    background-color: transparent;
-    border: 1px solid transparent;
+.favorites-pagination-block {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-  .favorites-pagination-block button.active-btn {
-    color: var(--black-color);
-    border-color: var(--black-color);
-  }
+.favorites-pagination-block button {
+  color: rgba(27, 27, 27, 0.4);
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  padding: 0;
+  background-color: transparent;
+  border: 1px solid transparent;
+}
 
-  .active-btn {
-    color: #1B1B1B;
-    width: 32px;
-    height: 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 18px;
-    border: 1px solid #1B1B1B;
-    transition: color 0.25s var(--transition-animation),
+.favorites-pagination-block button.active-btn {
+  color: var(--black-color);
+  border-color: var(--black-color);
+}
+
+.active-btn {
+  color: #1b1b1b;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 18px;
+  border: 1px solid #1b1b1b;
+  transition: color 0.25s var(--transition-animation),
     border-color 0.25s var(--transition-animation);
-  }
+}
