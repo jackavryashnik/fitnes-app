@@ -50,6 +50,7 @@
 
 .rating-close-icon {
   stroke: var(--black-color);
+  transition: stroke 0.25s var(--transition-animation);
 }
 
 .rating-email-field {
@@ -139,4 +140,10 @@
 .rating-button.active + label > svg {
   fill: #eea10c;
   fill-opacity: 1;
+}
+@media screen {
+  .rating-close-icon:hover,
+  .rating-close-icon:focus {
+    stroke: var(--light-gray-color);
+  }
 }
