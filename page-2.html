@@ -22,9 +22,9 @@
     
     
     <script type="module" crossorigin src="/fitnes-app/assets/vendor-9a5feb6b.js"></script>
-    <script type="module" crossorigin src="/fitnes-app/assets/cardModal-e93ddd5c.js"></script>
+    <script type="module" crossorigin src="/fitnes-app/assets/addToFavorites-d38ef23d.js"></script>
     <link rel="stylesheet" href="/fitnes-app/assets/vendor-db400b5b.css">
-    <link rel="stylesheet" href="/fitnes-app/assets/cardModal-b3abee23.css">
+    <link rel="stylesheet" href="/fitnes-app/assets/addToFavorites-733f24a9.css">
   </head>
   <body>
     <header>
@@ -212,427 +212,162 @@
   </div>
 </section>
       <section class="section">
-    <div class="favorites-card-container">
-        <h2 class="favorites-title">Favorites</h2>
-        <div class="favorites-contanier-block">
-            <!----------- IF NOT FAVORITES EXERCISE -------------->
-            <div class="message-info">
-                <div class="message-info-block">
-                    <img class="message-info-svg" src="/fitnes-app/assets/dumbbell-eb25f45b.png" 
-                    alt="dumbbell" />
-                    <p class="message-info-text">
-                        It appears that you haven't added any 
-                        exercises to your favorites yet. To get 
-                        started, you can add exercises that 
-                        you like to your favorites for easier
-                        access in the future.
-                    </p>    
-                </div>
-            </div>
-            <!---------- Favorite Card ------------>
-             <ul class="favorites-list">
-                 <li class="favorites-list-item">
-                    <div class="favorites-card-header">
-                        <div class="favorites-oval">
-                            <span>WORKOUT</span> </div>
-                            <button class="favorites-icon-svg" aria-label="trash" type="button">
-                                <svg width="16" height="16" fill="none">
-                                    <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-trash"></use>
-                                </svg>
-                            </button>
-                            <button class="favorites-list-button" aria-label="start" type="button">Start
-                                <svg class="favorites-list-button-icon" width="14" height="14" stroke="#1B1B1B">
-                                    <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-arrow"></use>
-                                </svg>
-                            </button>
-                    </div>
-                    <div class="favorites-list-container">
-                        <svg class="favorite-list-svg" width="24" height="24">
-                            <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-human-ex"></use>
-                        </svg>
-                        <h3 class="favorites-list-text">Air bike</h3>
-                    </div>
-                    <div class="favorites-card-text">
-                        <ul class="favorites-card-text-list">
-                            <li class="favorites-card-text-item">
-                                <div class="favorites-card-text-wrapper">
-                                    <h4 class="favorites-card-text-title">Burned calories:</h4>
-                                    <p class="favorites-card-text-block">312/3 min</p>
-                                </div>
-                                <div class="favorites-card-text-wrapper">
-                                    <h4 class="favorites-card-text-title">Body part:</h4>
-                                    <p class="favorites-card-text-block">Waist</p>
-                                </div>
-                                <div class="favorites-card-text-wrapper">
-                                    <h4 class="favorites-card-text-title">Target:</h4>
-                                    <p class="favorites-card-text-block">Abs</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </li> 
-                <li class="favorites-list-item">
-                    <div class="favorites-oval">
-                        <span>WORKOUT</span> </div>
-                        <button class="favorites-icon-svg" aria-label="trash" type="button">
-                            <svg width="16" height="16" fill="none">
-                                <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-trash"></use>
-                            </svg>
-                        <button class="favorites-list-button" aria-label="start" type="button">Start
-                        <svg class="favorites-list-button-icon" width="14" height="14" stroke="#1B1B1B">
-                        <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-arrow"></use>
-                        </svg>
-                        </button>
-                    <div class="favorites-list-container">
-                        <svg class="favorite-list-svg" width="24" height="24">
-                            <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-human-ex"></use>
-                        </svg>
-                        <h3 class="favorites-list-text">Air bike</h3>
-                    </div>
-                    <div class="favorites-card-text">
-                        <ul class="favorites-card-text-list">
-                            <li class="favorites-card-text-item">
-                                <div class="favorites-card-text-wrapper">
-                                    <h4 class="favorites-card-text-title">Burned calories:</h4>
-                                    <p class="favorites-card-text-block">312/3 min</p>
-                                </div>
-                                <div class="favorites-card-text-wrapper">
-                                    <h4 class="favorites-card-text-title">Body part:</h4>
-                                    <p class="favorites-card-text-block">Waist</p>
-                                </div>
-                                <div class="favorites-card-text-wrapper">
-                                    <h4 class="favorites-card-text-title">Target:</h4>
-                                    <p class="favorites-card-text-block">Abs</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="favorites-list-item">
-                    <div class="favorites-oval">
-                        <span>WORKOUT</span> </div>
-                        <button class="favorites-icon-svg" aria-label="trash" type="button">
-                            <svg width="16" height="16" fill="none">
-                                <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-trash"></use>
-                            </svg>
-                        <button class="favorites-list-button" aria-label="start" type="button">Start
-                            <svg class="favorites-list-button-icon" width="14" height="14" stroke="#1B1B1B">
-                            <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-arrow"></use>
-                            </svg>
-                        </button>
-                    <div class="favorites-list-container">
-                        <svg class="favorite-list-svg" width="24" height="24">
-                            <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-human-ex"></use>
-                        </svg>
-                        <h3 class="favorites-list-text">Air bike</h3>
-                    </div>
-                    <div class="favorites-card-text">
-                        <ul class="favorites-card-text-list">
-                            <li class="favorites-card-text-item">
-                                <div class="favorites-card-text-wrapper">
-                                    <h4 class="favorites-card-text-title">Burned calories:</h4>
-                                    <p class="favorites-card-text-block">312/3 min</p>
-                                </div>
-                                <div class="favorites-card-text-wrapper">
-                                    <h4 class="favorites-card-text-title">Body part:</h4>
-                                    <p class="favorites-card-text-block">Waist</p>
-                                </div>
-                                <div class="favorites-card-text-wrapper">
-                                    <h4 class="favorites-card-text-title">Target:</h4>
-                                    <p class="favorites-card-text-block">Abs</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="favorites-list-item">
-                    <div class="favorites-oval">
-                        <span>WORKOUT</span> </div>
-                        <button class="favorites-icon-svg" aria-label="trash" type="button">
-                            <svg width="16" height="16" fill="none">
-                                <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-trash"></use>
-                            </svg>
-                        <button class="favorites-list-button" aria-label="start" type="button">Start
-                            <svg class="favorites-list-button-icon" width="14" height="14" stroke="#1B1B1B">
-                            <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-arrow"></use>
-                            </svg>
-                        </button>
-                    <div class="favorites-list-container">
-                        <svg class="favorite-list-svg" width="24" height="24">
-                            <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-human-ex"></use>
-                        </svg>
-                        <h3 class="favorites-list-text">Air bike</h3>
-                    </div>
-                    <div class="favorites-card-text">
-                        <ul class="favorites-card-text-list">
-                            <li class="favorites-card-text-item">
-                                <div class="favorites-card-text-wrapper">
-                                    <h4 class="favorites-card-text-title">Burned calories:</h4>
-                                    <p class="favorites-card-text-block">312/3 min</p>
-                                </div>
-                                <div class="favorites-card-text-wrapper">
-                                    <h4 class="favorites-card-text-title">Body part:</h4>
-                                    <p class="favorites-card-text-block">Waist</p>
-                                </div>
-                                <div class="favorites-card-text-wrapper">
-                                    <h4 class="favorites-card-text-title">Target:</h4>
-                                    <p class="favorites-card-text-block">Abs</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </li> 
-                 <li class="favorites-list-item">
-                    <div class="favorites-card-header">
-                        <div class="favorites-oval">
-                            <span>WORKOUT</span> </div>
-                            <button class="favorites-icon-svg" aria-label="trash" type="button">
-                                <svg width="16" height="16" fill="none">
-                                    <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-trash"></use>
-                                </svg>
-                            </button>
-                            <button class="favorites-list-button" aria-label="start" type="button">Start
-                                <svg class="favorites-list-button-icon" width="14" height="14" stroke="#1B1B1B">
-                                    <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-arrow"></use>
-                                </svg>
-                            </button>
-                    </div>
-                    <div class="favorites-list-container">
-                        <svg class="favorite-list-svg" width="24" height="24">
-                            <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-human-ex"></use>
-                        </svg>
-                        <h3 class="favorites-list-text">Air bike</h3>
-                    </div>
-                    <div class="favorites-card-text">
-                        <ul class="favorites-card-text-list">
-                            <li class="favorites-card-text-item">
-                                <div class="favorites-card-text-wrapper">
-                                    <h4 class="favorites-card-text-title">Burned calories:</h4>
-                                    <p class="favorites-card-text-block">312/3 min</p>
-                                </div>
-                                <div class="favorites-card-text-wrapper">
-                                    <h4 class="favorites-card-text-title">Body part:</h4>
-                                    <p class="favorites-card-text-block">Waist</p>
-                                </div>
-                                <div class="favorites-card-text-wrapper">
-                                    <h4 class="favorites-card-text-title">Target:</h4>
-                                    <p class="favorites-card-text-block">Abs</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </li> 
-                <li class="favorites-list-item">
-                    <div class="favorites-card-header">
-                        <div class="favorites-oval">
-                            <span>WORKOUT</span> </div>
-                            <button class="favorites-icon-svg" aria-label="trash" type="button">
-                                <svg width="16" height="16" fill="none">
-                                    <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-trash"></use>
-                                </svg>
-                            </button>
-                            <button class="favorites-list-button" aria-label="start" type="button">Start
-                                <svg class="favorites-list-button-icon" width="14" height="14" stroke="#1B1B1B">
-                                    <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-arrow"></use>
-                                </svg>
-                            </button>
-                    </div>
-                    <div class="favorites-list-container">
-                        <svg class="favorite-list-svg" width="24" height="24">
-                            <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-human-ex"></use>
-                        </svg>
-                        <h3 class="favorites-list-text">Air bike</h3>
-                    </div>
-                    <div class="favorites-card-text">
-                        <ul class="favorites-card-text-list">
-                            <li class="favorites-card-text-item">
-                                <div class="favorites-card-text-wrapper">
-                                    <h4 class="favorites-card-text-title">Burned calories:</h4>
-                                    <p class="favorites-card-text-block">312/3 min</p>
-                                </div>
-                                <div class="favorites-card-text-wrapper">
-                                    <h4 class="favorites-card-text-title">Body part:</h4>
-                                    <p class="favorites-card-text-block">Waist</p>
-                                </div>
-                                <div class="favorites-card-text-wrapper">
-                                    <h4 class="favorites-card-text-title">Target:</h4>
-                                    <p class="favorites-card-text-block">Abs</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </li> 
-                <li class="favorites-list-item">
-                    <div class="favorites-card-header">
-                        <div class="favorites-oval">
-                            <span>WORKOUT</span> </div>
-                            <button class="favorites-icon-svg" aria-label="trash" type="button">
-                                <svg width="16" height="16" fill="none">
-                                    <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-trash"></use>
-                                </svg>
-                            </button>
-                            <button class="favorites-list-button" aria-label="start" type="button">Start
-                                <svg class="favorites-list-button-icon" width="14" height="14" stroke="#1B1B1B">
-                                    <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-arrow"></use>
-                                </svg>
-                            </button>
-                    </div>
-                    <div class="favorites-list-container">
-                        <svg class="favorite-list-svg" width="24" height="24">
-                            <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-human-ex"></use>
-                        </svg>
-                        <h3 class="favorites-list-text">Air bike</h3>
-                    </div>
-                    <div class="favorites-card-text">
-                        <ul class="favorites-card-text-list">
-                            <li class="favorites-card-text-item">
-                                <div class="favorites-card-text-wrapper">
-                                    <h4 class="favorites-card-text-title">Burned calories:</h4>
-                                    <p class="favorites-card-text-block">312/3 min</p>
-                                </div>
-                                <div class="favorites-card-text-wrapper">
-                                    <h4 class="favorites-card-text-title">Body part:</h4>
-                                    <p class="favorites-card-text-block">Waist</p>
-                                </div>
-                                <div class="favorites-card-text-wrapper">
-                                    <h4 class="favorites-card-text-title">Target:</h4>
-                                    <p class="favorites-card-text-block">Abs</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                 <li class="favorites-list-item">
-                    <div class="favorites-card-header">
-                        <div class="favorites-oval">
-                            <span>WORKOUT</span> </div>
-                            <button class="favorites-icon-svg" aria-label="trash" type="button">
-                                <svg width="16" height="16" fill="none">
-                                    <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-trash"></use>
-                                </svg>
-                            </button>
-                            <button class="favorites-list-button" aria-label="start" type="button">Start
-                                <svg class="favorites-list-button-icon" width="14" height="14" stroke="#1B1B1B">
-                                    <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-arrow"></use>
-                                </svg>
-                            </button>
-                    </div>
-                    <div class="favorites-list-container">
-                        <svg class="favorite-list-svg" width="24" height="24">
-                            <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-human-ex"></use>
-                        </svg>
-                        <h3 class="favorites-list-text">Air bike</h3>
-                    </div>
-                    <div class="favorites-card-text">
-                        <ul class="favorites-card-text-list">
-                            <li class="favorites-card-text-item">
-                                <div class="favorites-card-text-wrapper">
-                                    <h4 class="favorites-card-text-title">Burned calories:</h4>
-                                    <p class="favorites-card-text-block">312/3 min</p>
-                                </div>
-                                <div class="favorites-card-text-wrapper">
-                                    <h4 class="favorites-card-text-title">Body part:</h4>
-                                    <p class="favorites-card-text-block">Waist</p>
-                                </div>
-                                <div class="favorites-card-text-wrapper">
-                                    <h4 class="favorites-card-text-title">Target:</h4>
-                                    <p class="favorites-card-text-block">Abs</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="favorites-list-item">
-                    <div class="favorites-card-header">
-                        <div class="favorites-oval">
-                            <span>WORKOUT</span> </div>
-                            <button class="favorites-icon-svg" aria-label="trash" type="button">
-                                <svg width="16" height="16" fill="none">
-                                    <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-trash"></use>
-                                </svg>
-                            </button>
-                            <button class="favorites-list-button" aria-label="start" type="button">Start
-                                <svg class="favorites-list-button-icon" width="14" height="14" stroke="#1B1B1B">
-                                    <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-arrow"></use>
-                                </svg>
-                            </button>
-                    </div>
-                    <div class="favorites-list-container">
-                        <svg class="favorite-list-svg" width="24" height="24">
-                            <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-human-ex"></use>
-                        </svg>
-                        <h3 class="favorites-list-text">Air bike</h3>
-                    </div>
-                    <div class="favorites-card-text">
-                        <ul class="favorites-card-text-list">
-                            <li class="favorites-card-text-item">
-                                <div class="favorites-card-text-wrapper">
-                                    <h4 class="favorites-card-text-title">Burned calories:</h4>
-                                    <p class="favorites-card-text-block">312/3 min</p>
-                                </div>
-                                <div class="favorites-card-text-wrapper">
-                                    <h4 class="favorites-card-text-title">Body part:</h4>
-                                    <p class="favorites-card-text-block">Waist</p>
-                                </div>
-                                <div class="favorites-card-text-wrapper">
-                                    <h4 class="favorites-card-text-title">Target:</h4>
-                                    <p class="favorites-card-text-block">Abs</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="favorites-list-item">
-                    <div class="favorites-card-header">
-                        <div class="favorites-oval">
-                            <span>WORKOUT</span> </div>
-                            <button class="favorites-icon-svg" aria-label="trash" type="button">
-                                <svg width="16" height="16" fill="none">
-                                    <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-trash"></use>
-                                </svg>
-                            </button>
-                            <button class="favorites-list-button" aria-label="start" type="button">Start
-                                <svg class="favorites-list-button-icon" width="14" height="14" stroke="#1B1B1B">
-                                    <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-arrow"></use>
-                                </svg>
-                            </button>
-                    </div>
-                    <div class="favorites-list-container">
-                        <svg class="favorite-list-svg" width="24" height="24">
-                            <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-human-ex"></use>
-                        </svg>
-                        <h3 class="favorites-list-text">Air bike</h3>
-                    </div>
-                    <div class="favorites-card-text">
-                        <ul class="favorites-card-text-list">
-                            <li class="favorites-card-text-item">
-                                <div class="favorites-card-text-wrapper">
-                                    <h4 class="favorites-card-text-title">Burned calories:</h4>
-                                    <p class="favorites-card-text-block">312/3 min</p>
-                                </div>
-                                <div class="favorites-card-text-wrapper">
-                                    <h4 class="favorites-card-text-title">Body part:</h4>
-                                    <p class="favorites-card-text-block">Waist</p>
-                                </div>
-                                <div class="favorites-card-text-wrapper">
-                                    <h4 class="favorites-card-text-title">Target:</h4>
-                                    <p class="favorites-card-text-block">Abs</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-            </ul> 
-        
-            <!----------- PAGINATION FOR MOBILE------------------>
-            <div class="favorites-pagination-block">
-                <button class="active-btn" aria-label="first-page" type="button">1</button>
-                <button aria-label="second-page" type="button">2</button>
-                <button aria-label="third-page" type="button">3</button>
-            </div>
-        </div>   
+  <div class="favorites-card-container">
+    <h2 class="favorites-title">Favorites</h2>
+    <div class="favorites-contanier-block">
+      <!----------- IF NOT FAVORITES EXERCISE -------------->
+      <div class="message-info">
+        <div class="message-info-block">
+          <img
+            class="message-info-svg"
+            src="/fitnes-app/assets/dumbbell-eb25f45b.png"
+            alt="dumbbell"
+          />
+          <p class="message-info-text">
+            It appears that you haven't added any exercises to your favorites
+            yet. To get started, you can add exercises that you like to your
+            favorites for easier access in the future.
+          </p>
+        </div>
+      </div>
+      <!---------- Favorite Card ------------>
+      <ul class="favorites-list"></ul>
+
+      <!----------- PAGINATION FOR MOBILE------------------>
+      <div class="favorites-pagination-block">
+        <button class="active-btn" aria-label="first-page" type="button">
+          1
+        </button>
+        <button aria-label="second-page" type="button">2</button>
+        <button aria-label="third-page" type="button">3</button>
+      </div>
     </div>
+  </div>
 </section>
+
+      <div class="ex-backdrop">
+  <div class="ex-modal">
+    <button class="ex-close-btn">
+      <svg
+        class="ex-close-btn-icon"
+        width="24"
+        height="24"
+        aria-label="close icon"
+      >
+        <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-close"></use>
+      </svg>
+    </button>
+    <div class="exercise-gif">
+      <img src="" class="gif-ex" width="295" height="258" alt="show exercise" />
+    </div>
+    <div class="ex-content-container">
+      <h2 class="exercise-name">Air bake</h2>
+      <p class="ex-current-rating">4.0</p>
+      <ul class="ex-stars-list">
+        <li>
+          <svg
+            class="ex-rate-icon"
+            width="18"
+            height="18"
+            aria-label="rating icon"
+          >
+            <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-Star-1"></use>
+          </svg>
+        </li>
+        <li>
+          <svg
+            class="ex-rate-icon"
+            width="18"
+            height="18"
+            aria-label="rating icon"
+          >
+            <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-Star-1"></use>
+          </svg>
+        </li>
+        <li>
+          <svg
+            class="ex-rate-icon"
+            width="18"
+            height="18"
+            aria-label="rating icon"
+          >
+            <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-Star-1"></use>
+          </svg>
+        </li>
+        <li>
+          <svg
+            class="ex-rate-icon"
+            width="18"
+            height="18"
+            aria-label="rating icon"
+          >
+            <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-Star-1"></use>
+          </svg>
+        </li>
+        <li>
+          <svg
+            class="ex-rate-icon"
+            width="18"
+            height="18"
+            aria-label="rating icon"
+          >
+            <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-Star-1"></use>
+          </svg>
+        </li>
+      </ul>
+
+      <hr class="decorate-line" />
+
+      <div class="ex-information">
+        <div class="ex-block">
+          <span class="ex-value">Targer</span>
+          <span class="ex-label ex-target">Abs</span>
+        </div>
+        <div class="ex-block">
+          <span class="ex-value">Body part</span>
+          <span class="ex-label ex-body-part">Waist</span>
+        </div>
+        <div class="ex-block">
+          <span class="ex-value">Equipment</span>
+          <span class="ex-label ex-equipment">Body weight</span>
+        </div>
+        <div class="ex-block">
+          <span class="ex-value">Popular</span>
+          <span class="ex-label ex-popular">150</span>
+        </div>
+        <div class="ex-block">
+          <span class="ex-value">Burned Calories</span>
+          <span class="ex-label ex-burned-calories">323/ 3min</span>
+        </div>
+
+        <hr class="decorate-line" />
+
+        <p class="ex-description">
+          This refers to your core muscles, which include the rectus abdominis,
+          obliques, and transverse abdominis. They're essential for maintaining
+          posture, stability, and generating force in many movements. Exercises
+          that target the abs include crunches, leg raises, and planks.
+        </p>
+
+        <div class="ex-buttons-container">
+          <button class="ex-add-favorities">
+            Add to favorities
+            <svg
+              class="heart-svg"
+              width="18"
+              height="18"
+              aria-label="favorites icon"
+            >
+              <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-heart"></use>
+            </svg>
+          </button>
+
+          <button class="ex-rating-button">Give a rating</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
       <button class="scroll-top-btn is-hidden" type="button">
     <svg class="scroll-top-icon">
