@@ -154,7 +154,8 @@
 /* =====================375============================ */
 
 @media (max-width: 768px) {
-  .section.footer {
+  .section.footer,
+  .section.favorites-section {
     padding-bottom: 20px;
   }
 }
