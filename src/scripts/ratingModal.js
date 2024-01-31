@@ -1,7 +1,7 @@
 import { patchData } from './api';
 import Swal from 'sweetalert2';
 
-export function patchRating() {
+export function patchRating(id) {
   const ratingModal = document.querySelector('.rating-modal');
   const ratingButtons = document.querySelectorAll('.rating-button');
   const selectedRatingDiv = document.getElementById('rating-value');
@@ -29,14 +29,18 @@ export function patchRating() {
   const sendRequest = event => {
     event.preventDefault();
     ratingModal.classList.remove('active');
-    const path = `exercises/${event.id}/rating`;
+    const path = `exercises/${id}/rating`;
     const params = {
       rate: targetValue,
       email: email.value,
       review: texField.value,
     };
 
-    patchData(path, params)
+    patchData(path, params, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
       .then(succsses => {
         Swal.fire({
           title: 'Success!',
@@ -47,7 +51,7 @@ export function patchRating() {
       .catch(error => {
         Swal.fire({
           title: 'Bad request',
-          text: error.body,
+          text: error.message,
           icon: 'error',
         });
       });

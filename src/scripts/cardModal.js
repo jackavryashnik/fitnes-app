@@ -116,7 +116,7 @@ document.addEventListener('keydown',event=> {
 });
 addRatingButton.addEventListener("click", ()=>{
   ratingModal.classList.add('active');
-  patchRating();
+  patchRating(id);
   exModal.classList.remove('is-open');
 
 })
