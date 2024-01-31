@@ -1,6 +1,6 @@
-.rating-modal {
+/* .rating-modal {
     display: none;
-}
+} */
 
 .rating-modal.active {
     display: block;
@@ -109,6 +109,7 @@
 .rate {
   display: flex;
   gap: 5px;
+  fill: rgba(27, 27, 27, 0.20);
 }
 
 .rating-button {
