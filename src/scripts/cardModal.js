@@ -1,5 +1,10 @@
 import {fetchData} from "./api";
 
+const fullUrl = window.location.pathname;
+const lastSlashIndex = fullUrl.lastIndexOf('/');
+const result = fullUrl.substring(lastSlashIndex);
+
+if (result === '/index.html' || result === '/') {
 const activeColor = '#eea10c';
 const noActiveColor = '#e8e8e8';
 let id, ratingStar;
@@ -94,3 +99,4 @@ document.addEventListener('keydown',event=> {
       exModal.classList.remove('is-open');
   }
 });
+}
