@@ -12,7 +12,7 @@ export function patchRating() {
   
   const colorStars = event => {
     const targetValue = event.target.value;
-    selectedRatingDiv.textContent = targetValue + '.0';
+    if (!isNaN(targetValue))  selectedRatingDiv.textContent = targetValue + '.0';
 
     ratingButtons.forEach(button => {
       if (button.value <= targetValue) {
