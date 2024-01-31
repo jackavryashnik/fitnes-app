@@ -1,6 +1,9 @@
-import {fetchData} from "./api";
+import iziToast from "izitoast";
+import { fetchData } from "./api";
 
-let id;
+const activeColor = `#eea10c`;
+const noActiveColor = '#e8e8e8';
+let id, ratingStar;
 let storage = "favorites";
 let storageItem = localStorage.getItem(storage);
 if (!storageItem) {
@@ -9,6 +12,9 @@ if (!storageItem) {
     storageItem = JSON.parse(storageItem);
 }
 
+
+
+const stars = document.querySelectorAll('.ex-rate-icon');
 const favorites = document.querySelector(".ex-add-favorities");
 const list = document.querySelector(".cards-workout-list");
 const exModal = document.querySelector(".ex-backdrop");
@@ -23,10 +29,11 @@ const burnedCalories = document.querySelector(".ex-burned-calories");
 const description = document.querySelector(".ex-description");
 
 list.addEventListener("click", async event =>{
-  if(event.target.classList.contains("btn-start-workout") || event.target.classList.contains("card-workout-start-icon")){
+  if(event. target.classList.contains ("btn-start-workout") | event.target.classList. contains ("card-workout-start-icon")){
     id = event.target.closest('.card-workout-item').id;
     await fetchData(`exercises/${id}`)
     .then(result => {
+   
       gif.src = result.gifUrl;
       name.textContent = result.name;
       rating.textContent = result.rating;
@@ -36,6 +43,18 @@ list.addEventListener("click", async event =>{
       equipment.textContent = result.equipment;
       burnedCalories.textContent = `${result.burnedCalories} / ${result.time}min`;
       description.textContent = result.description;
+      
+      ratingStar = Math.round(rating.textContent);
+
+
+      stars.forEach((star, index) => {
+        console.log(ratingStar)
+        if (index < ratingStar) {
+            star.style.fill = activeColor;
+        } else {
+            star.style.fill = noActiveColor; 
+        }
+    });
     })
     const existingItem = storageItem.find(item => item.id === id);
     if (existingItem) {
@@ -71,10 +90,12 @@ favorites.addEventListener("click", element=>{
     favorites.textContent = "Add to favorities"
   }
 })
+
 exModal.addEventListener("click", elem => {
-  if(elem.target == exModal || elem.target.classList.contains("ex-close-btn-icon") || elem.target.classList.contains("ex-close-btn") ){
+  if(elem.target == exModal || elem.target.classList.contains("ex-close-btn-icon")  || elem.target.classList.contains("ex-close-btn") ){
     exModal.classList.remove("is-open");}
 })
+
 document.addEventListener('keydown',event=> {
   if (event.key === 'Escape') {
       exModal.classList.remove('is-open');
