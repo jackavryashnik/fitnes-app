@@ -67,7 +67,7 @@ list.addEventListener("click", async event =>{
   }
 })
 favorites.addEventListener("click", element=>{
-  if(favorites.textContent.trim()=="Add to favorities"){
+  if(favorites.textContent.trim()==="Add to favorities"){
     storageItem.push( {
     id: id, 
     gifUrl:gif.src,
