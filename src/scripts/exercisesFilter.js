@@ -1,5 +1,9 @@
+import Swal from 'sweetalert2';
+import 'sweetalert2/src/sweetalert2.scss';
 import { fetchData } from './api';
 import { toggleButtonsState, hideElements, showElements } from './utils';
+import { searchInfoMessage } from './searchExercises';
+import sprite from '../images/sprite.svg';
 
 let buttonsFilterContainer;
 
@@ -63,7 +67,7 @@ async function loadInitialData() {
     handlePagination(data.totalPages);
     renderExercises(data.results);
   } catch (error) {
-    console.error(error);
+    showError();
   }
 }
 
@@ -73,7 +77,7 @@ async function filterData(e) {
   filter = newFilter;
   currentPage = 1;
   toggleButtonsState(buttonsFilterContainer, e.target);
-  hideElements(hiddenElmenets);
+  hideElements([...hiddenElmenets, searchInfoMessage]);
   showElements([exercisesList]);
 
   try {
@@ -86,7 +90,7 @@ async function filterData(e) {
     renderExercises(data.results);
     handlePagination(data.totalPages);
   } catch (error) {
-    console.error(error);
+    showError();
   }
 }
 
@@ -139,7 +143,7 @@ async function goToPage(page) {
     });
     renderExercises(data.results);
   } catch (error) {
-    console.error(error);
+    showError();
   }
 }
 
@@ -155,6 +159,7 @@ async function changeList(e) {
   currentPage = 1;
   exercisesPageContainer.scrollIntoView({ behavior: 'smooth' });
   hideElements([exercisesList]);
+  exercisesSubtitle.textContent = name;
   showElements(hiddenElmenets);
   try {
     const data = await fetchData(`exercises?${filter}=${name}`, {
@@ -166,14 +171,14 @@ async function changeList(e) {
     renderWorkoutCards(data.results);
     handlePagination2(data.totalPages);
   } catch (error) {
-    console.log(error);
+    showError();
   }
 }
 
 export function renderWorkoutCards(exercises) {
   const markup = exercises.reduce(
     (acc, { rating, target, bodyPart, burnedCalories, name, _id }) => {
-      acc += `<li class="card-workout-item" id=${_id}>
+      acc += `<li class="card-workout-item" data-id=${_id}>
                 <div class="card-menu">
                     <div class="card-menu-box">
                 
@@ -187,17 +192,17 @@ export function renderWorkoutCards(exercises) {
                             width="18"
                             height="18"
                         >
-                            <use href="./images/sprite.svg#icon-Star-1"></use>
+                            <use href="${sprite}#icon-Star-1"></use>
                         </svg>
                         </div>
                     </div>
                 
-                        <button class="btn-start-workout" type="button">Start
+                        <button data-id=${_id} class="btn-start-workout" type="button">Start
                             <svg class="card-workout-start-icon"
                                 width="16"
                                 height="16"
                                 >
-                                <use href="../images/sprite.svg#icon-arrow"></use>
+                                <use href="${sprite}#icon-arrow"></use>
                             </svg>
                         </button>
                 </div>
@@ -208,7 +213,7 @@ export function renderWorkoutCards(exercises) {
                         class="card-workout-title-icon"
                         width="24"
                         height="24">
-                        <use href="../images/sprite.svg#icon-human"></use>
+                        <use href="${sprite}#icon-human-ex"></use>
                         </svg>
                     </div>
                     <p class="card-title-text">${name}</p>
@@ -264,6 +269,13 @@ async function goToPage2(page) {
     });
     renderWorkoutCards(data.results);
   } catch (error) {
-    console.error(error);
+    showError();
   }
+}
+
+export function showError() {
+  Swal.fire({
+    text: 'Oops, it seems something went wrong.',
+    icon: 'error',
+  });
 }

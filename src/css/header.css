@@ -133,10 +133,10 @@ div.header-container {
   justify-content: center;
   align-items: center;
 
-  width: 44px;
-  height: 44px;
-  border: 1px solid rgba(246, 246, 246, 0.2);
+  width: 41px;
+  height: 41px;
   border-radius: 10px;
+  border: 1px solid rgba(246, 246, 246, 0.2);
 
   stroke: var(--soft-white-color);
   fill: var(--soft-white-color);
@@ -180,6 +180,8 @@ div.header-container {
   }
 
   .social-media-link {
+    width: 44px;
+    height: 44px;
     border: 1px solid rgba(126, 132, 127, 0.2);
 
     stroke: var(--light-gray-color);

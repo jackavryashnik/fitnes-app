@@ -1,4 +1,5 @@
 <div class="rating-modal" id="rating-contact-modal">
+<!-- <<<<<<< HEAD
     <div class="rating-modal-overlay"></div>
     <div class="rating-modal-window">
       <div class="rating-modal-header">
@@ -95,4 +96,101 @@
         </form>
       </div>
     </div>
+  </div> -->
+  <div class="rating-modal-overlay"></div>
+  <div class="rating-modal-window">
+    <div class="rating-modal-header">
+      <div class="rating-close-modal" id="close-modal">
+        <svg class="rating-close-icon" width="28" height="28">
+          <use href="./images/sprite.svg#icon-close"></use>
+        </svg>
+      </div>
+    </div>
+    <div class="rating-modal-content">
+      <form
+        class="rating-form"
+        action="https://energyflow.b.goit.study/api/subscription"
+        method="post"
+      >
+        <div class="rating-txt">Rating</div>
+        <div class="rate-wrapper">
+          <div class="rating-value" id="rating-value">0.0</div>
+          <div class="rate">
+            <input
+              type="radio"
+              id="star1"
+              name="rate"
+              value="1"
+              class="rating-button"
+            />
+            <label for="star1" title="text" class="rating-label">
+              <svg class="rating-star1-icon" width="20" height="19">
+                <use href="./images/sprite.svg#icon-Star-1"></use>
+              </svg>
+            </label>
+            <input
+              type="radio"
+              id="star2"
+              name="rate"
+              value="2"
+              class="rating-button"
+            />
+            <label for="star2" title="text" class="rating-label">
+              <svg class="rating-star1-icon" width="20" height="19">
+                <use href="./images/sprite.svg#icon-Star-1"></use>
+              </svg>
+            </label>
+            <input
+              type="radio"
+              id="star3"
+              name="rate"
+              value="3"
+              class="rating-button"
+            />
+            <label for="star3" title="text" class="rating-label">
+              <svg class="rating-star1-icon" width="20" height="19">
+                <use href="./images/sprite.svg#icon-Star-1"></use>
+              </svg>
+            </label>
+            <input
+              type="radio"
+              id="star4"
+              name="rate"
+              value="4"
+              class="rating-button"
+            />
+            <label for="star4" title="text" class="rating-label">
+              <svg class="rating-star1-icon" width="20" height="19">
+                <use href="./images/sprite.svg#icon-Star-1"></use>
+              </svg>
+            </label>
+            <input
+              type="radio"
+              id="star5"
+              name="rate"
+              value="5"
+              class="rating-button"
+            />
+            <label for="star5" title="text" class="rating-label">
+              <svg class="rating-star1-icon" width="20" height="19">
+                <use href="./images/sprite.svg#icon-Star-1"></use>
+              </svg>
+            </label>
+          </div>
+        </div>
+        <input
+          type="email"
+          class="rating-email-field"
+          placeholder="Email"
+          required
+          pattern="^[\w\-]+(\.[\w\-]+)*@([\w\-]+\.)+[a-zA-Z]{2,7}$"
+        />
+        <textarea
+          class="rating-text-field"
+          placeholder="Your comment"
+        ></textarea>
+        <button type="submit" class="rating-send-button">Send</button>
+      </form>
+    </div>
   </div>
+</div>

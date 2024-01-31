@@ -107,29 +107,29 @@
 }
 
 .rate {
-    display: flex;
-    gap: 5px;
+  display: flex;
+  gap: 5px;
 }
 
 .rating-button {
-    display: none;
+  display: none;
 }
 
 .rating-label:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .rating-value {
-    color: #1B1B1B;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 18px;
-    padding-right: 5px;
+  color: #1b1b1b;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  padding-right: 5px;
 }
 
 .rating-button.active + label svg path {
-    fill: #EEA10C;
-    fill-opacity: 1;
+  fill: #eea10c;
+  fill-opacity: 1;
 }
