@@ -1,4 +1,5 @@
 import {fetchData} from "./api";
+import { patchRating } from './ratingModal';
  
 const fullUrl = window.location.pathname;
 const lastSlashIndex = fullUrl.lastIndexOf('/');
@@ -15,6 +16,10 @@ if (!storageItem) {
 } else {
     storageItem = JSON.parse(storageItem);
 }
+
+const ratingForm = document.querySelector('.rating-form');
+const rateStars = document.querySelector('.rate-wrapper');
+
 
 
 const closeButtonRating = document.querySelector('.rating-close-modal');
@@ -105,17 +110,21 @@ document.addEventListener('keydown',event=> {
     else if (ratingModal.classList.contains('active')){
       ratingModal.classList.remove('active');
       exModal.classList.add('is-open');
+      ratingForm.removeEventListener("submit", patchRating);
     }
   }
 });
 addRatingButton.addEventListener("click", ()=>{
   ratingModal.classList.add('active');
+  patchRating(id);
   exModal.classList.remove('is-open');
+
 })
 
 closeButtonRating.addEventListener("click", ()=>{
   ratingModal.classList.remove('active');
   exModal.classList.add('is-open');
+  ratingForm.removeEventListener("submit", patchRating);
 })
 
 }
