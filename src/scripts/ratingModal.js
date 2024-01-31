@@ -1,29 +1,6 @@
 import { patchData } from './api';
 import Swal from 'sweetalert2';
 
-// export function togleRationgModal() {
-//   const ratingModal = document.querySelector('.rating-modal');
-//   ratingModal.classList.toggle('active');
-
-//   const closeBtn = document.getElementById('close-modal');
-//   const ratingForm = document.querySelector('.rating-form');
-
-//   const toggle = () => {
-//     ratingModal.classList.toggle('active');
-//   };
-
-//   ratingForm.addEventListener('submit', () => {
-//     toggle();
-//     ratingForm.removeEventListener('submit', toggle);
-//     closeBtn.removeEventListener('click', toggle);
-//   });
-//   closeBtn.addEventListener('click', () => {
-//     toggle();
-//     ratingForm.removeEventListener('submit', toggle);
-//     closeBtn.removeEventListener('click', toggle);
-//   });
-// }
-
 export function patchRating() {
   const ratingButtons = document.querySelectorAll('.rating-button');
   const selectedRatingDiv = document.getElementById('rating-value');
@@ -45,7 +22,6 @@ export function patchRating() {
         button.classList.remove('active');
       }
     });
-    rateStars.removeEventListener('click', colorStars);
   };
 
   ratingForm.addEventListener('submit', sendRequest);
@@ -78,5 +54,6 @@ export function patchRating() {
 
     ratingForm.reset();
     ratingForm.removeEventListener('submit', sendRequest);
+    rateStars.removeEventListener('click', colorStars);
   };
 }
