@@ -87,10 +87,12 @@
     font-weight: 400;
     border: none;
     outline: none;
+    cursor: pointer;
 }
 
-.rating-send-button:hover {
-    cursor: pointer;
+.rating-send-button:hover,
+.rating-send-button:focus {
+    background-color: var(--gray-color);
 }
 
 .rate-wrapper {
