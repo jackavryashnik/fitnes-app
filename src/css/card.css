@@ -152,6 +152,12 @@
   .btn-start-workout {
     font-size: 16px;
     line-height: 1.5;
+    transition: box-shadow 250ms ease-in-out;
+  }
+
+  .btn-start-workout:hover,
+  .btn-start-workout:focus {
+    box-shadow: 4px 4px #61646232;
   }
 
   .card-workout-title {
