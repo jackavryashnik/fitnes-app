@@ -1,6 +1,4 @@
-import iziToast from "izitoast";
 import {fetchData} from "./api";
-
 
 const activeColor = '#eea10c';
 const noActiveColor = '#e8e8e8';
@@ -84,11 +82,7 @@ favorites.addEventListener("click", element=>{
     const index = storageItem.findIndex(item =>item.id == id);
     storageItem.splice(index, 1);
     localStorage.setItem(storage, JSON.stringify(storageItem));
-    favorites.textContent = "Add to favorities"
-     return iziToast.success({
-      message:"Was deleted",
-      position:"topRight"
-    })
+    favorites.textContent = "Add to favorities";
   }
 })
 exModal.addEventListener("click", elem => {
