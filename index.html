@@ -1,33 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/fitnes-app/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Energy Flow</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
-      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    
-    
-    <script type="module" crossorigin src="/fitnes-app/assets/vendor-9a5feb6b.js"></script>
-    <script type="module" crossorigin src="/fitnes-app/assets/addToFavorites-9def7c61.js"></script>
-    <link rel="stylesheet" href="/fitnes-app/assets/addToFavorites-2851c45b.css">
-    <link rel="stylesheet" href="/fitnes-app/assets/vendor-db400b5b.css">
-  </head>
-  <body>
-    <header>
-      <div class="header-wrapper">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/fitnes-app/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Energy Flow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+    integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  
+  <script type="module" crossorigin src="/fitnes-app/assets/vendor-9a5feb6b.js"></script>
+  <script type="module" crossorigin src="/fitnes-app/assets/tags-2ee4d002.js"></script>
+  <link rel="stylesheet" href="/fitnes-app/assets/tags-8d16d3bc.css">
+  <link rel="stylesheet" href="/fitnes-app/assets/vendor-db400b5b.css">
+</head>
+
+<body>
+  <header>
+    <div class="header-wrapper">
   <div class="header-container container">
     <a class="logo" href="./index.html" aria-label="Main page">energy.flow</a>
 
@@ -179,18 +175,23 @@
   </div>
 </div>
 
-    </header>
+  </header>
 
-    <main>
-      <section class="section hero">
+  <main>
+    <section class="section hero">
     <div class="container hero-container">
         <div class="hero-img-container">
             <ul class="hero-list">
-                <li class="hero-list-item">#Sport</li>
-                <li class="hero-list-item">#Healthy</li>
-                <li class="hero-list-item">#Workout</li>
-                <li class="hero-list-item">#Diet</li>
+                <li class="hero-list-item" id="li1" area-label="briefly about sport">#Sport</li>
+                <li class="hero-list-item" id="li2" area-label="briefly about healthy">#Healthy</li>
+                <li class="hero-list-item" id="li3" area-label="briefly about workout">#Workout</li>
+                <li class="hero-list-item" id="li4" area-label="briefly about diet">#Diet</li>
             </ul>
+            <div class="inf-wrapper is-hidden">
+                <span class="wrapper-span"></span>
+                <p class="wrapper-text">
+                </p>
+            </div>
         </div>
         <div class="hero-text-container">
             <h1 class="hero-title">Get <span>Body</span> in shape, Stay healthy</h1>
@@ -200,7 +201,7 @@
         </div>
     </div>
 </section>
-      <section class="section quote">
+    <section class="section quote">
   <div class="container">
     <div class="quote-container">
   <svg class="quote-container-svg-human">
@@ -216,7 +217,7 @@
     <div class="quote-image"></div>
   </div>
 </section>
-      <section class="exercises-page-section section">
+    <section class="exercises-page-section section">
   <div class="container">
     <div class="exercises-page-container">
       <div class="exercises-page-title-container">
@@ -299,7 +300,7 @@
   </div>
 </section>
 
-      <section class="section info-section">
+    <section class="section info-section">
   <div class="container info-container">
     <picture>
       <source
@@ -342,77 +343,47 @@
   </div>
 </section>
 
-      <button class="scroll-top-btn is-hidden" type="button">
+    <button class="scroll-top-btn is-hidden" type="button">
     <svg class="scroll-top-icon">
         <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-arrow"> </use>
     </svg>
 </button>
-      <div class="ex-backdrop">
+    <div class="ex-backdrop">
   <div class="ex-modal">
     <button class="ex-close-btn">
-      <svg
-        class="ex-close-btn-icon"
-        width="24"
-        height="24"
-        aria-label="close icon"
-      >
+      <svg class="ex-close-btn-icon" width="24" height="24" aria-label="close icon">
         <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-close"></use>
       </svg>
     </button>
     <div class="exercise-gif">
-      <img src="" class="gif-ex" width="295" height="258" alt="show exercise" />
+      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAeAB4AAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAECAScDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/KKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/9k=" class="gif-ex" width="295" height="258" alt="show exercise" />
     </div>
     <div class="ex-content-container">
       <h2 class="exercise-name">Air bake</h2>
       <p class="ex-current-rating">4.0</p>
       <ul class="ex-stars-list">
         <li>
-          <svg
-            class="ex-rate-icon"
-            width="18"
-            height="18"
-            aria-label="rating icon"
-          >
+          <svg class="ex-rate-icon" width="18" height="18" aria-label="rating icon">
             <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-Star-1"></use>
           </svg>
         </li>
         <li>
-          <svg
-            class="ex-rate-icon"
-            width="18"
-            height="18"
-            aria-label="rating icon"
-          >
+          <svg class="ex-rate-icon" width="18" height="18" aria-label="rating icon">
             <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-Star-1"></use>
           </svg>
         </li>
         <li>
-          <svg
-            class="ex-rate-icon"
-            width="18"
-            height="18"
-            aria-label="rating icon"
-          >
+          <svg class="ex-rate-icon" width="18" height="18" aria-label="rating icon">
             <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-Star-1"></use>
           </svg>
         </li>
         <li>
-          <svg
-            class="ex-rate-icon"
-            width="18"
-            height="18"
-            aria-label="rating icon"
-          >
+          <svg class="ex-rate-icon" width="18" height="18" aria-label="rating icon">
             <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-Star-1"></use>
           </svg>
         </li>
         <li>
-          <svg
-            class="ex-rate-icon"
-            width="18"
-            height="18"
-            aria-label="rating icon"
-          >
+          <svg class="ex-rate-icon" width="18" height="18" aria-label="rating icon">
             <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-Star-1"></use>
           </svg>
         </li>
@@ -454,12 +425,7 @@
         <div class="ex-buttons-container">
           <button class="ex-add-favorities">
             Add to favorities
-            <svg
-              class="heart-svg"
-              width="18"
-              height="18"
-              aria-label="favorites icon"
-            >
+            <svg class="heart-svg" width="18" height="18" aria-label="favorites icon">
               <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-heart"></use>
             </svg>
           </button>
@@ -470,109 +436,70 @@
     </div>
   </div>
 </div>
-
-      <div class="rating-modal" id="rating-contact-modal">
-    <div class="rating-modal-overlay"></div>
-    <div class="rating-modal-window">
-      <div class="rating-modal-header">
-        <button class="rating-close-modal" id="close-modal">
-          <svg class="rating-close-icon" width="28" height="28">
-            <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-close"></use>
-          </svg>
-        </button>
-      </div>
-      <div class="rating-modal-content">
-        <form
-          class="rating-form"
-        >
-          <div class="rating-txt">Rating</div>
-          <div class="rate-wrapper">
-            <div class="rating-value" id="rating-value">0.0</div>
-            <div class="rate">
-              <input
-                type="radio"
-                id="star1"
-                name="rate"
-                value="1"
-                class="rating-button"
-              />
-              <label for="star1" title="text" class="rating-label">
-                <svg class="rating-star1-icon" width="20" height="19">
-                  <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-Star-1"></use>
-                </svg>
-              </label>
-              <input
-                type="radio"
-                id="star2"
-                name="rate"
-                value="2"
-                class="rating-button"
-              />
-              <label for="star2" title="text" class="rating-label">
-                <svg class="rating-star1-icon" width="20" height="19">
-                  <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-Star-1"></use>
-                </svg>
-              </label>
-              <input
-                type="radio"
-                id="star3"
-                name="rate"
-                value="3"
-                class="rating-button"
-              />
-              <label for="star3" title="text" class="rating-label">
-                <svg class="rating-star1-icon" width="20" height="19">
-                  <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-Star-1"></use>
-                </svg>
-              </label>
-              <input
-                type="radio"
-                id="star4"
-                name="rate"
-                value="4"
-                class="rating-button"
-              />
-              <label for="star4" title="text" class="rating-label">
-                <svg class="rating-star1-icon" width="20" height="19">
-                  <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-Star-1"></use>
-                </svg>
-              </label>
-              <input
-                type="radio"
-                id="star5"
-                name="rate"
-                value="5"
-                class="rating-button"
-              />
-              <label for="star5" title="text" class="rating-label">
-                <svg class="rating-star1-icon" width="20" height="19">
-                  <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-Star-1"></use>
-                </svg>
-              </label>
-            </div>
+    <div class="rating-modal" id="rating-contact-modal">
+  <div class="rating-modal-overlay"></div>
+  <div class="rating-modal-window">
+    <div class="rating-modal-header">
+      <button class="rating-close-modal" id="close-modal">
+        <svg class="rating-close-icon" width="28" height="28">
+          <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-close"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="rating-modal-content">
+      <form class="rating-form">
+        <div class="rating-txt">Rating</div>
+        <div class="rate-wrapper">
+          <div class="rating-value" id="rating-value">0.0</div>
+          <div class="rate">
+            <input type="radio" id="star1" name="rate" value="1" class="rating-button" />
+            <label for="star1" title="text" class="rating-label">
+              <svg class="rating-star1-icon" width="20" height="19">
+                <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-Star-1"></use>
+              </svg>
+            </label>
+            <input type="radio" id="star2" name="rate" value="2" class="rating-button" />
+            <label for="star2" title="text" class="rating-label">
+              <svg class="rating-star1-icon" width="20" height="19">
+                <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-Star-1"></use>
+              </svg>
+            </label>
+            <input type="radio" id="star3" name="rate" value="3" class="rating-button" />
+            <label for="star3" title="text" class="rating-label">
+              <svg class="rating-star1-icon" width="20" height="19">
+                <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-Star-1"></use>
+              </svg>
+            </label>
+            <input type="radio" id="star4" name="rate" value="4" class="rating-button" />
+            <label for="star4" title="text" class="rating-label">
+              <svg class="rating-star1-icon" width="20" height="19">
+                <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-Star-1"></use>
+              </svg>
+            </label>
+            <input type="radio" id="star5" name="rate" value="5" class="rating-button" />
+            <label for="star5" title="text" class="rating-label">
+              <svg class="rating-star1-icon" width="20" height="19">
+                <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-Star-1"></use>
+              </svg>
+            </label>
           </div>
-          <input
-            type="email"
-            class="rating-email-field"
-            placeholder="Email"
-            required
-            pattern="^[\w\-]+(\.[\w\-]+)*@([\w\-]+\.)+[a-zA-Z]{2,7}$"
-          />
-          <textarea
-            class="rating-text-field"
-            placeholder="Your comment"
-          ></textarea>
-          <button type="submit" class="rating-send-button" aria-label="Send button">Send</button>
-        </form>
-      </div>
+        </div>
+        <input type="email" class="rating-email-field" placeholder="Email" required
+          pattern="^[\w\-]+(\.[\w\-]+)*@([\w\-]+\.)+[a-zA-Z]{2,7}$" />
+        <textarea class="rating-text-field" placeholder="Your comment"></textarea>
+        <button type="submit" class="rating-send-button">Send</button>
+      </form>
     </div>
   </div>
+</div>
+    <div class="loader-wrapper hidden">
+    <div class="loader">
+    </div>
+</div>
+  </main>
 
-
-    </main>
-
-    <footer>
-      <section class="section footer">
+  <footer>
+    <section class="section footer">
   <div class="container">
     <div class="footer-container">
       <div class="foter-link-and-social-div">
@@ -675,7 +602,7 @@
   </div>
 </section>
 
-      <div class="privacy-modal-overlay">
+    <div class="privacy-modal-overlay">
   <div class="privacy">
     <div class="privacy__header">
       <div class="privacy__header-text">Privacy Policy</div>
@@ -744,7 +671,7 @@
   </div>
 </div>
 
-      <div class="modal-overlay">
+    <div class="modal-overlay">
   <div class="privacy">
     <div class="privacy__header">
       <div class="privacy__header-text">Terms of Service</div>
@@ -790,133 +717,9 @@
   </div>
 </div>
 
-    </footer>
+  </footer>
 
-    <!-- <div class="ex-backdrop">
-  <div class="ex-modal">
-    <button class="ex-close-btn">
-      <svg
-        class="ex-close-btn-icon"
-        width="24"
-        height="24"
-        aria-label="close icon"
-      >
-        <use href="./images/sprite.svg#icon-close"></use>
-      </svg>
-    </button>
-    <div class="exercise-gif">
-      <img src="" class="gif-ex" width="295" height="258" alt="show exercise" />
-    </div>
-    <div class="ex-content-container">
-      <h2 class="exercise-name">Air bake</h2>
-      <p class="ex-current-rating">4.0</p>
-      <ul class="ex-stars-list">
-        <li>
-          <svg
-            class="ex-rate-icon"
-            width="18"
-            height="18"
-            aria-label="rating icon"
-          >
-            <use href="./images/sprite.svg#icon-Star-1"></use>
-          </svg>
-        </li>
-        <li>
-          <svg
-            class="ex-rate-icon"
-            width="18"
-            height="18"
-            aria-label="rating icon"
-          >
-            <use href="./images/sprite.svg#icon-Star-1"></use>
-          </svg>
-        </li>
-        <li>
-          <svg
-            class="ex-rate-icon"
-            width="18"
-            height="18"
-            aria-label="rating icon"
-          >
-            <use href="./images/sprite.svg#icon-Star-1"></use>
-          </svg>
-        </li>
-        <li>
-          <svg
-            class="ex-rate-icon"
-            width="18"
-            height="18"
-            aria-label="rating icon"
-          >
-            <use href="./images/sprite.svg#icon-Star-1"></use>
-          </svg>
-        </li>
-        <li>
-          <svg
-            class="ex-rate-icon"
-            width="18"
-            height="18"
-            aria-label="rating icon"
-          >
-            <use href="./images/sprite.svg#icon-Star-1"></use>
-          </svg>
-        </li>
-      </ul>
+  
+</body>
 
-      <hr class="decorate-line" />
-
-      <div class="ex-information">
-        <div class="ex-block">
-          <span class="ex-value">Targer</span>
-          <span class="ex-label ex-target">Abs</span>
-        </div>
-        <div class="ex-block">
-          <span class="ex-value">Body part</span>
-          <span class="ex-label ex-body-part">Waist</span>
-        </div>
-        <div class="ex-block">
-          <span class="ex-value">Equipment</span>
-          <span class="ex-label ex-equipment">Body weight</span>
-        </div>
-        <div class="ex-block">
-          <span class="ex-value">Popular</span>
-          <span class="ex-label ex-popular">150</span>
-        </div>
-        <div class="ex-block">
-          <span class="ex-value">Burned Calories</span>
-          <span class="ex-label ex-burned-calories">323/ 3min</span>
-        </div>
-
-        <hr class="decorate-line" />
-
-        <p class="ex-description">
-          This refers to your core muscles, which include the rectus abdominis,
-          obliques, and transverse abdominis. They're essential for maintaining
-          posture, stability, and generating force in many movements. Exercises
-          that target the abs include crunches, leg raises, and planks.
-        </p>
-
-        <div class="ex-buttons-container">
-          <button class="ex-add-favorities">
-            Add to favorities
-            <svg
-              class="heart-svg"
-              width="18"
-              height="18"
-              aria-label="favorites icon"
-            >
-              <use href="./images/sprite.svg#icon-heart"></use>
-            </svg>
-          </button>
-
-          <button class="ex-rating-button">Give a rating</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
- -->
-
-    
-  </body>
 </html>
