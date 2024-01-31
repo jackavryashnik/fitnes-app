@@ -68,7 +68,7 @@ if (result === '/page-2.html') {
       console.log(error.name);
       console.log(error.message);
     }
-  } else if (!storageItem || parsedItem == []) {
+  } else if (!storageItem || storageItem == []) {
     messageInfo.classList.add('is-open-message-info');
   }
 }
