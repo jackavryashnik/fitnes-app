@@ -105,4 +105,4 @@ background-repeat: no-repeat;">
                 </ul>
             </div>
         </li>`;e.insertAdjacentHTML("beforeend",s)})}catch(r){console.log(r.name),console.log(r.message)}else(!o||o==[])&&nt.classList.add("is-open-message-info")}
-//# sourceMappingURL=addToFavorites-6036001b.js.map
+//# sourceMappingURL=addToFavorites-a480ad56.js.map
