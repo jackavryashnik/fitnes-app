@@ -150,8 +150,17 @@
   }
 
   .btn-start-workout {
+    padding: 2px 8px;
     font-size: 16px;
     line-height: 1.5;
+    border-radius: 8px;
+    transition: box-shadow 250ms ease-in-out;
+  }
+
+  .btn-start-workout:hover,
+  .btn-start-workout:focus {
+    box-shadow: 4px 4px 8px 4px #61646232;
+    scale: 1.1;
   }
 
   .card-workout-title {

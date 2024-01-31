@@ -306,9 +306,11 @@
     font-weight: 400;
     line-height: 1.28;
     border: none;
-    padding: 0;
+    border-radius: 8px;
+    padding: 2px 8px;
     background: none;
     margin-left: 100px;
+    transition: box-shadow 250ms ease-in-out;
   }
 
   .favorites-list-button:hover,
@@ -448,7 +450,7 @@
   }
 
   .favorites-list-button {
-    margin-left: 220px;
+    margin-left: 204px;
   }
 }
 
