@@ -32,16 +32,14 @@ submitBtn.addEventListener("click", e => {
     e.preventDefault()
     if (!emailPattern.test(email.value)) return alert('Incorrect email value')
 
-    axios.post('https://energyflow.b.goit.study/api/Тут запитаєш конкретно який шлях', {
+    axios.post('https://energyflow.b.goit.study/api/', {
         rate: ratingInputs.value,
         email: email.value,
         review: texField.value
     })
         .then(r =>{
-            // Тут показуєш успіх
         })
         .catch(r => {
-            // Тут показуєш помилку
         })
 
 });
