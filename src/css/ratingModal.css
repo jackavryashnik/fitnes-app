@@ -68,6 +68,7 @@
     font-weight: 400;
     margin-bottom: 32px;
     min-height: 106px;
+    resize: none;
 }
 
 .rating-email-field:focus, .text_field:focus {
