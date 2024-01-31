@@ -32,7 +32,9 @@ export function patchRating() {
   const ratingForm = document.querySelector('.rating-form');
 
   const rateStars = document.querySelector('.rate-wrapper');
-  rateStars.addEventListener('click', event => {
+  rateStars.addEventListener('click', colorStars);
+
+  const colorStars = event => {
     const targetValue = event.target.value;
     selectedRatingDiv.textContent = targetValue + '.0';
 
@@ -43,9 +45,12 @@ export function patchRating() {
         button.classList.remove('active');
       }
     });
-  });
+    rateStars.removeEventListener('click', colorStars);
+  };
 
-  ratingForm.addEventListener('submit', event => {
+  ratingForm.addEventListener('submit', sendRequest);
+
+  const sendRequest = event => {
     event.preventDefault();
     ratingModal.classList.remove('active');
     const path = `exercises/${event.id}/rating`;
@@ -72,5 +77,6 @@ export function patchRating() {
       });
 
     ratingForm.reset();
-  });
+    ratingForm.removeEventListener('submit', sendRequest);
+  };
 }
