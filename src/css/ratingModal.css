@@ -93,7 +93,7 @@
     cursor: pointer;
 }
 
-.rating-rate-wrapper {
+.rate-wrapper {
     display: flex;
     align-items: center;
     margin-bottom: 8px;
@@ -133,7 +133,7 @@
   padding-right: 5px;
 }
 
-.rating-button.active + label svg path {
+.rating-button.active + label > svg {
   fill: #eea10c;
   fill-opacity: 1;
 }
