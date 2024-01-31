@@ -74,4 +74,3 @@ export function patchRating() {
     ratingForm.reset();
   });
 }
-patchRating();
