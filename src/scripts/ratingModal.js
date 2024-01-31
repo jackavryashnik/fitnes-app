@@ -45,32 +45,18 @@ export function patchRating() {
     });
   });
 
-  ratingForm.addEventListener('submit', event => {
-    event.preventDefault();
-    ratingModal.classList.remove('active');
-    const path = `exercises/${event.id}/rating`;
-    const params = {
-      rate: targetValue,
-      email: email.value,
-      review: texField.value,
-    };
+  // ratingForm.addEventListener('submit', e => {
+  //   e.preventDefault();
 
-    patchData(path, params)
-      .then(succsses => {
-        Swal.fire({
-          title: 'Success!',
-          text: 'Feedback sent successfully.',
-          icon: 'success',
-        });
-      })
-      .catch(error => {
-        Swal.fire({
-          title: 'Bad request',
-          text: error.body,
-          icon: 'error',
-        });
-      });
+  //   axios
+  //     .post('https://energyflow.b.goit.study/api/', {
+  //       rate: ratingInputs.value,
+  //       email: email.value,
+  //       review: texField.value,
+  //     })
+  //     .then(r => {})
+  //     .catch(r => {});
 
-    ratingForm.reset();
-  });
+  //     ratingForm.reset()
+  // });
 }
