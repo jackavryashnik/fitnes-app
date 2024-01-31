@@ -11,13 +11,13 @@ export function togleRationgModal() {
 
   ratingForm.addEventListener('submit', () => {
     toggle();
-    ratingForm.removeEventListener('submit', toggle);
-    closeBtn.removeEventListener('click', toggle);
+    ratingForm.removeEventListener(toggle);
+    closeBtn.removeEventListener(toggle);
   });
   closeBtn.addEventListener('click', () => {
     toggle();
-    ratingForm.removeEventListener('submit', toggle);
-    closeBtn.removeEventListener('click', toggle);
+    ratingForm.removeEventListener(toggle);
+    closeBtn.removeEventListener(toggle);
   });
 }
 
@@ -31,21 +31,13 @@ export function patchRating() {
 
   const rateStars = document.querySelector('.rate-wrapper');
   rateStars.addEventListener('click', event => {
-    const targetElementValue = event.targetElement.value;
-    console.log(targetElement);
-    selectedRatingDiv.textContent = button.value;
-    ratingButtons.forEach((button, index) => {
-      if (targetElementValue < index) {
-        button.classList.add('active');
-      } else {
-        button.classList.remove('active');
-      }
-    });
+    console.log(event.target);
   });
 
   // ratingButtons.forEach((button, index) => {
   //   button.addEventListener('change', function () {
   //     selectedRatingDiv.textContent = button.value;
+  //     console.log(button.value, 'star chosen');
   //     button.classList.add('active');
   //     for (let i = 0; i < index; i++) {
   //       ratingButtons[i].classList.add('active');
@@ -71,4 +63,3 @@ export function patchRating() {
   //     ratingForm.reset()
   // });
 }
-patchRating();

@@ -1,5 +1,5 @@
 import {fetchData} from "./api";
-
+ 
 const fullUrl = window.location.pathname;
 const lastSlashIndex = fullUrl.lastIndexOf('/');
 const result = fullUrl.substring(lastSlashIndex);
@@ -17,6 +17,9 @@ if (!storageItem) {
 }
 
 
+const closeButtonRating = document.querySelector('.rating-close-modal');
+const ratingModal = document.querySelector('.rating-modal');
+const addRatingButton = document.querySelector('.ex-rating-button');
 const stars = document.querySelectorAll('.ex-rate-icon');
 const favorites = document.querySelector(".ex-add-favorities");
 const list = document.querySelector(".cards-workout-list");
@@ -96,7 +99,25 @@ exModal.addEventListener("click", elem => {
 })
 document.addEventListener('keydown',event=> {
   if (event.key === 'Escape') {
+    if(exModal.classList.contains('is-open')){
       exModal.classList.remove('is-open');
+    }
+    else if (ratingModal.classList.contains('active')){
+      ratingModal.classList.remove('active');
+      exModal.classList.add('is-open');
+    }
   }
 });
+addRatingButton.addEventListener("click", ()=>{
+  ratingModal.classList.add('active');
+  exModal.classList.remove('is-open');
+})
+
+closeButtonRating.addEventListener("click", ()=>{
+  ratingModal.classList.remove('active');
+  exModal.classList.add('is-open');
+})
+
 }
+
+
