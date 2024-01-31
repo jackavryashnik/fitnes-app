@@ -1,6 +1,6 @@
-/* .rating-modal {
+.rating-modal {
     display: none;
-} */
+}
 
 .rating-modal.active {
     display: block;
