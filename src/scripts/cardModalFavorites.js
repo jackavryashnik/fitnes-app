@@ -1,24 +1,11 @@
-import {fetchData} from "./api";
 import { patchRating } from './ratingModal';
- 
+
 const fullUrl = window.location.pathname;
 const lastSlashIndex = fullUrl.lastIndexOf('/');
 const result = fullUrl.substring(lastSlashIndex);
 
-if (result === '/index.html' || result === '/') {
-const activeColor = '#eea10c';
-const noActiveColor = '#e8e8e8';
-let id, ratingStar;
-let storage = "favorites";
-let storageItem = localStorage.getItem(storage);
-if (!storageItem) {
-    storageItem = [];
-} else {
-    storageItem = JSON.parse(storageItem);
-}
 
-
-
+if (result === '/page-2.html') {
 
 const ratingForm = document.querySelector('.rating-form');
 const closeButtonRating = document.querySelector('.rating-close-modal');
@@ -26,7 +13,6 @@ const ratingModal = document.querySelector('.rating-modal');
 const addRatingButton = document.querySelector('.ex-rating-button');
 const stars = document.querySelectorAll('.ex-rate-icon');
 const favorites = document.querySelector(".ex-add-favorities");
-const list = document.querySelector(".cards-workout-list");
 const exModal = document.querySelector(".ex-backdrop");
 const gif = document.querySelector(".gif-ex");
 const name = document.querySelector(".exercise-name");
@@ -37,21 +23,32 @@ const equipment = document.querySelector(".ex-equipment");
 const popular = document.querySelector(".ex-popular");
 const burnedCalories = document.querySelector(".ex-burned-calories");
 const description = document.querySelector(".ex-description");
+const list = document.querySelector(".favorites-list");
 
-list.addEventListener("click", async event =>{
-  if(event.target.classList.contains("btn-start-workout") ||  event.target.classList.contains("card-workout-start-icon")){
-    id = event.target.closest('.card-workout-item').id;
-    await fetchData(`exercises/${id}`)
-    .then(result => {
-      gif.src = result.gifUrl;
-      name.textContent = result.name;
-      rating.textContent = result.rating;
-      target.textContent = result.target;
-      popular.textContent = result.popularity;
-      bodyPart.textContent = result.bodyPart;
-      equipment.textContent = result.equipment;
-      burnedCalories.textContent = `${result.burnedCalories} / ${result.time}min`;
-      description.textContent = result.description;
+const fullCards = document.querySelectorAll(".favorites-list-item");
+
+let id, ratingStar;
+const activeColor = '#eea10c';
+const noActiveColor = '#e8e8e8';
+let storage = 'favorites';
+let storageItem = localStorage.getItem(storage);
+let parsedItem = JSON.parse(storageItem);
+
+
+list.addEventListener("click", event =>{
+    if(event.target.classList.contains("favorites-list-button") ||  event.target.classList.contains("favorites-list-button-icon")){
+      id = event.target.dataset.id;
+      const index = parsedItem.findIndex(item =>item.id ==id);
+      let parsedItemElement = parsedItem[index];
+      gif.src = parsedItemElement.gifUrl;
+      name.textContent = parsedItemElement.name;
+      rating.textContent = parsedItemElement.rating;
+      target.textContent = parsedItemElement.target;
+      popular.textContent = parsedItemElement.popularity;
+      bodyPart.textContent = parsedItemElement.bodyPart;
+      equipment.textContent = parsedItemElement.equipment;
+      burnedCalories.textContent = parsedItemElement.burnedCalories;
+      description.textContent = parsedItemElement.description;
       ratingStar = Math.round(rating.textContent);
 
 
@@ -61,22 +58,21 @@ list.addEventListener("click", async event =>{
         } else {
             star.style.fill = noActiveColor; 
         }
-    });
     })
-    const existingItem = storageItem.find(item => item.id === id);
+    const existingItem = parsedItem.find(item => item.id === id);
     if (existingItem) {
-      favorites.textContent = "Delete from favorites"
+      favorites.textContent = `Delete from favorites`;
     }
     else{
-      favorites.textContent = "Add to favorities";
+      favorites.textContent = `Add to favorities`;
     }
-    exModal.classList.add("is-open")
+    exModal.classList.add("is-open");
   }
 })
 
 favorites.addEventListener("click", ()=>{
   if(favorites.textContent.trim()=="Add to favorities"){
-    storageItem.push( {
+    parsedItem.push( {
     id: id, 
     gifUrl:gif.src,
     name: name.textContent,
@@ -88,14 +84,19 @@ favorites.addEventListener("click", ()=>{
     burnedCalories : burnedCalories.textContent,
     description : description.textContent
   });
-    localStorage.setItem(storage, JSON.stringify(storageItem))
-    favorites.textContent = "Delete from favorites"
+    localStorage.setItem(storage, JSON.stringify(parsedItem))
+    favorites.textContent = `Delete from favorites`
   }
   else{
-    const index = storageItem.findIndex(item =>item.id == id);
-    storageItem.splice(index, 1);
-    localStorage.setItem(storage, JSON.stringify(storageItem));
-    favorites.textContent = "Add to favorities";
+    const index = parsedItem.findIndex(item =>item.id == id);
+    parsedItem.splice(index, 1);
+    localStorage.setItem(storage, JSON.stringify(parsedItem));
+    let cardForDelete;
+    favorites.textContent = `Add to favorities`;
+    fullCards.forEach(elem=>{
+      if(elem.id==id) cardForDelete=elem;
+    })
+    list.removeChild(cardForDelete);
   }
 })
 exModal.addEventListener("click", elem => {
@@ -126,7 +127,4 @@ closeButtonRating.addEventListener("click", ()=>{
   exModal.classList.add('is-open');
   ratingForm.removeEventListener("submit", patchRating);
 })
-
 }
-
-
