@@ -2,17 +2,18 @@ import { patchData } from './api';
 import Swal from 'sweetalert2';
 
 export function patchRating() {
+  const ratingModal = document.querySelector('.rating-modal');
   const ratingButtons = document.querySelectorAll('.rating-button');
   const selectedRatingDiv = document.getElementById('rating-value');
   const email = document.querySelector('.rating-email-field');
   const texField = document.querySelector('.rating-text-field');
   const ratingForm = document.querySelector('.rating-form');
-
   const rateStars = document.querySelector('.rate-wrapper');
-  
+  let targetValue;
+
   const colorStars = event => {
-    const targetValue = event.target.value;
-    if (!isNaN(targetValue))  selectedRatingDiv.textContent = targetValue + '.0';
+    targetValue = event.target.value;
+    if (!isNaN(targetValue)) selectedRatingDiv.textContent = targetValue + '.0';
 
     ratingButtons.forEach(button => {
       if (button.value <= targetValue) {
@@ -22,7 +23,7 @@ export function patchRating() {
       }
     });
   };
-  
+
   rateStars.addEventListener('click', colorStars);
 
   const sendRequest = event => {
@@ -55,6 +56,6 @@ export function patchRating() {
     ratingForm.removeEventListener('submit', sendRequest);
     rateStars.removeEventListener('click', colorStars);
   };
-  
+
   ratingForm.addEventListener('submit', sendRequest);
 }
