@@ -110,8 +110,7 @@ document.addEventListener('keydown',event=> {
     else if (ratingModal.classList.contains('active')){
       ratingModal.classList.remove('active');
       exModal.classList.add('is-open');
-      rateStars.removeEventListener("click");
-      ratingForm.removeEventListener("submit");
+      ratingForm.removeEventListener("submit", patchRating);
     }
   }
 });
@@ -125,8 +124,7 @@ addRatingButton.addEventListener("click", ()=>{
 closeButtonRating.addEventListener("click", ()=>{
   ratingModal.classList.remove('active');
   exModal.classList.add('is-open');
-  rateStars.removeEventListener("click");
-  ratingForm.removeEventListener("submit");
+  ratingForm.removeEventListener("submit", patchRating);
 })
 
 }
