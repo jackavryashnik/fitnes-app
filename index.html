@@ -21,9 +21,9 @@
     
     
     <script type="module" crossorigin src="/fitnes-app/assets/vendor-9a5feb6b.js"></script>
-    <script type="module" crossorigin src="/fitnes-app/assets/ratingModal-6f9ce264.js"></script>
+    <script type="module" crossorigin src="/fitnes-app/assets/cardModal-7c6a5a3f.js"></script>
     <link rel="stylesheet" href="/fitnes-app/assets/vendor-db400b5b.css">
-    <link rel="stylesheet" href="/fitnes-app/assets/ratingModal-e413e71c.css">
+    <link rel="stylesheet" href="/fitnes-app/assets/cardModal-76b5854d.css">
   </head>
   <body>
     <header>
@@ -412,6 +412,130 @@
         <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-arrow"> </use>
     </svg>
 </button>
+      <div class="ex-backdrop">
+  <div class="ex-modal">
+    <button class="ex-close-btn">
+      <svg
+        class="ex-close-btn-icon"
+        width="24"
+        height="24"
+        aria-label="close icon"
+      >
+        <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-close"></use>
+      </svg>
+    </button>
+    <div class="exercise-gif">
+      <img src="" class="gif-ex" width="295" height="258" alt="show exercise" />
+    </div>
+    <div class="ex-content-container">
+      <h2 class="exercise-name">Air bake</h2>
+      <p class="ex-current-rating">4.0</p>
+      <ul class="ex-stars-list">
+        <li>
+          <svg
+            class="ex-rate-icon"
+            width="18"
+            height="18"
+            aria-label="rating icon"
+          >
+            <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-Star-1"></use>
+          </svg>
+        </li>
+        <li>
+          <svg
+            class="ex-rate-icon"
+            width="18"
+            height="18"
+            aria-label="rating icon"
+          >
+            <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-Star-1"></use>
+          </svg>
+        </li>
+        <li>
+          <svg
+            class="ex-rate-icon"
+            width="18"
+            height="18"
+            aria-label="rating icon"
+          >
+            <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-Star-1"></use>
+          </svg>
+        </li>
+        <li>
+          <svg
+            class="ex-rate-icon"
+            width="18"
+            height="18"
+            aria-label="rating icon"
+          >
+            <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-Star-1"></use>
+          </svg>
+        </li>
+        <li>
+          <svg
+            class="ex-rate-icon"
+            width="18"
+            height="18"
+            aria-label="rating icon"
+          >
+            <use href="/fitnes-app/assets/sprite-31c6263f.svg#icon-Star-1"></use>
+          </svg>
+        </li>
+      </ul>
+
+      <hr class="decorate-line" />
+
+      <div class="ex-information">
+        <div class="ex-block">
+          <span class="ex-value">Targer</span>
+          <span class="ex-label ex-target">Abs</span>
+        </div>
+        <div class="ex-block">
+          <span class="ex-value">Body part</span>
+          <span class="ex-label ex-body-part">Waist</span>
+        </div>
+        <div class="ex-block">
+          <span class="ex-value">Equipment</span>
+          <span class="ex-label ex-equipment">Body weight</span>
+        </div>
+        <div class="ex-block">
+          <span class="ex-value">Popular</span>
+          <span class="ex-label ex-popular">150</span>
+        </div>
+        <div class="ex-block">
+          <span class="ex-value">Burned Calories</span>
+          <span class="ex-label ex-burned-calories">323/ 3min</span>
+        </div>
+
+        <hr class="decorate-line" />
+
+        <p class="ex-description">
+          This refers to your core muscles, which include the rectus abdominis,
+          obliques, and transverse abdominis. They're essential for maintaining
+          posture, stability, and generating force in many movements. Exercises
+          that target the abs include crunches, leg raises, and planks.
+        </p>
+
+        <div class="ex-buttons-container">
+          <button class="ex-add-favorities">
+            Add to favorities
+            <svg
+              class="heart-svg"
+              width="18"
+              height="18"
+              aria-label="favorites icon"
+            >
+              <use href="../images/sprite.svg#icon-heart"></use>
+            </svg>
+          </button>
+
+          <button class="ex-rating-button">Give a rating</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
       <div class="rating-modal" id="rating-contact-modal">
   <div class="rating-modal-overlay"></div>
   <div class="rating-modal-window">
@@ -715,11 +839,16 @@
 
     </footer>
 
-    <!-- <div class="ex-backdrop is-open">
+    <!-- <div class="ex-backdrop">
   <div class="ex-modal">
     <button class="ex-close-btn">
-      <svg class="ex-close-btn-icon" width="24" height="24" aria-label="close icon">
-        <use href="../images/sprite.svg#icon-close"></use>
+      <svg
+        class="ex-close-btn-icon"
+        width="24"
+        height="24"
+        aria-label="close icon"
+      >
+        <use href="./images/sprite.svg#icon-close"></use>
       </svg>
     </button>
     <div class="exercise-gif">
@@ -730,28 +859,53 @@
       <p class="ex-current-rating">4.0</p>
       <ul class="ex-stars-list">
         <li>
-          <svg class="ex-rate-icon" width="18" height="18" aria-label="rating icon">
-            <use href="../images/sprite.svg#icon-Star-1"></use>
+          <svg
+            class="ex-rate-icon"
+            width="18"
+            height="18"
+            aria-label="rating icon"
+          >
+            <use href="./images/sprite.svg#icon-Star-1"></use>
           </svg>
         </li>
         <li>
-          <svg class="ex-rate-icon" width="18" height="18" aria-label="rating icon">
-            <use href="../images/sprite.svg#icon-Star-1"></use>
+          <svg
+            class="ex-rate-icon"
+            width="18"
+            height="18"
+            aria-label="rating icon"
+          >
+            <use href="./images/sprite.svg#icon-Star-1"></use>
           </svg>
         </li>
         <li>
-          <svg class="ex-rate-icon" width="18" height="18" aria-label="rating icon">
-            <use href="../images/sprite.svg#icon-Star-1"></use>
+          <svg
+            class="ex-rate-icon"
+            width="18"
+            height="18"
+            aria-label="rating icon"
+          >
+            <use href="./images/sprite.svg#icon-Star-1"></use>
           </svg>
         </li>
         <li>
-          <svg class="ex-rate-icon" width="18" height="18" aria-label="rating icon">
-            <use href="../images/sprite.svg#icon-Star-1"></use>
+          <svg
+            class="ex-rate-icon"
+            width="18"
+            height="18"
+            aria-label="rating icon"
+          >
+            <use href="./images/sprite.svg#icon-Star-1"></use>
           </svg>
         </li>
         <li>
-          <svg class="ex-rate-icon" width="18" height="18" aria-label="rating icon">
-            <use href="../images/sprite.svg#icon-Star-1"></use>
+          <svg
+            class="ex-rate-icon"
+            width="18"
+            height="18"
+            aria-label="rating icon"
+          >
+            <use href="./images/sprite.svg#icon-Star-1"></use>
           </svg>
         </li>
       </ul>
@@ -761,48 +915,54 @@
       <div class="ex-information">
         <div class="ex-block">
           <span class="ex-value">Targer</span>
-          <span class="ex-label">Abs</span>
+          <span class="ex-label ex-target">Abs</span>
         </div>
         <div class="ex-block">
           <span class="ex-value">Body part</span>
-          <span class="ex-label">Waist</span>
+          <span class="ex-label ex-body-part">Waist</span>
         </div>
         <div class="ex-block">
           <span class="ex-value">Equipment</span>
-          <span class="ex-label">Body weight</span>
+          <span class="ex-label ex-equipment">Body weight</span>
         </div>
         <div class="ex-block">
           <span class="ex-value">Popular</span>
-          <span class="ex-label">150</span>
+          <span class="ex-label ex-popular">150</span>
         </div>
         <div class="ex-block">
           <span class="ex-value">Burned Calories</span>
-          <span class="ex-label">323/ 3min</span>
+          <span class="ex-label ex-burned-calories">323/ 3min</span>
         </div>
-      </div>
 
-      <hr class="decorate-line" />
+        <hr class="decorate-line" />
 
-      <p class="ex-description">
-        This refers to your core muscles, which include the rectus abdominis,
-        obliques, and transverse abdominis. They're essential for maintaining
-        posture, stability, and generating force in many movements. Exercises
-        that target the abs include crunches, leg raises, and planks.
-      </p>
+        <p class="ex-description">
+          This refers to your core muscles, which include the rectus abdominis,
+          obliques, and transverse abdominis. They're essential for maintaining
+          posture, stability, and generating force in many movements. Exercises
+          that target the abs include crunches, leg raises, and planks.
+        </p>
 
-      <div class="ex-buttons-container">
-        <button class="ex-add-favorities">
-          Add to favorities
-          <svg class="heart-svg" width="18" height="18" aria-label="favorites icon">
-            <use href="../images/sprite.svg#icon-heart"></use>
-          </svg>
-        </button>
+        <div class="ex-buttons-container">
+          <button class="ex-add-favorities">
+            Add to favorities
+            <svg
+              class="heart-svg"
+              width="18"
+              height="18"
+              aria-label="favorites icon"
+            >
+              <use href="../images/sprite.svg#icon-heart"></use>
+            </svg>
+          </button>
 
-        <button class="ex-rating-button">Give a rating</button>
+          <button class="ex-rating-button">Give a rating</button>
+        </div>
       </div>
     </div>
   </div>
-</div> -->
+</div>
+ -->
 
     
   </body>
