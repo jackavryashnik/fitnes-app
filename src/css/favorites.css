@@ -4,13 +4,10 @@
     min-height: 450px;
     border-radius: 30px;
     background: #e8e8e8;
-    background: #e8e8e8;
     padding: 40px 20px;
     margin: 0 auto;
   }
 
-  .favorites-title {
-    color: #1b1b1b;
   .favorites-title {
     color: #1b1b1b;
     font-size: 32px;
@@ -38,12 +35,9 @@
   }
 
   .favorites-list-item {
-  .favorites-list-item {
     width: 295px;
     height: 165px;
-    height: 165px;
     border-radius: 15px;
-    background: #fff;
     background: #fff;
     padding: 16px;
   }
@@ -57,14 +51,10 @@
     width: 75px;
     height: 25px;
     background-color: #7e847f;
-    width: 75px;
-    height: 25px;
-    background-color: #7e847f;
     border-radius: 15px;
   }
 
   .favorites-oval span {
-    color: #f6f6f6;
     color: #f6f6f6;
     font-size: 12px;
     font-weight: 500;
@@ -81,14 +71,12 @@
 
   .favorites-svg-text {
     fill: #f6f6f6;
-    fill: #f6f6f6;
     font-size: 12px;
     font-weight: 500;
   }
 
   .favorites-icon-svg {
     display: inline-block;
-    stroke: #1b1b1b;
     stroke: #1b1b1b;
     margin-left: 5px;
     border: none;
@@ -99,7 +87,6 @@
   }
 
   .favorites-list-button {
-    color: #1b1b1b;
     color: #1b1b1b;
     font-size: 14px;
     font-weight: 400;
@@ -113,13 +100,8 @@
   .favorites-list-button-icon {
     display: inline-block;
     margin-left: 8px;
-    margin-left: 8px;
   }
 
-  .favorites-list-container {
-    display: flex;
-    align-items: center;
-    margin-top: 25px;
   .favorites-list-container {
     display: flex;
     align-items: center;
@@ -128,15 +110,9 @@
 
   .favorite-list-svg {
     margin-right: 16px;
-    margin-right: 16px;
   }
 
   .favorites-list-text {
-    color: #1b1b1b;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 1;
     color: #1b1b1b;
     font-feature-settings: 'clig' off, 'liga' off;
     font-size: 20px;
