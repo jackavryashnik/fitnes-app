@@ -1,3 +1,10 @@
+@media (max-width: 375px) {
+  .favorites-section .favorites-card-container {
+    width: 100%;
+    max-width: calc(335px - 40px);
+  }
+}
+
 @media (max-width: 767px) {
   .favorites-card-container {
     width: 335px;
