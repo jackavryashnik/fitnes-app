@@ -117,7 +117,7 @@ if (result === '/index.html' || result === '/') {
   });
   addRatingButton.addEventListener('click', () => {
     ratingModal.classList.add('active');
-    patchRating();
+    patchRating(id);
     exModal.classList.remove('is-open');
   });
 

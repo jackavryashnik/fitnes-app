@@ -21,9 +21,9 @@ export async function fetchData(path, params = {}) {
 export async function patchData(path, params = {}) {
   loader.classList.remove('hidden');
   try {
-    const response = await axios.patch(`/${path}`, {
-      params,
-    });
+    const response = await axios.patch(`/${path}`,
+      params
+    );
     return response.data;
   } catch (error) {
     console.error(error);

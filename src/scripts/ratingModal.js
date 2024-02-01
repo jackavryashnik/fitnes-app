@@ -31,7 +31,7 @@ export function patchRating(id) {
     ratingModal.classList.remove('active');
     const path = `exercises/${id}/rating`;
     const params = {
-      rate: targetValue,
+      rate: Number(targetValue),
       email: email.value,
       review: texField.value,
     };
