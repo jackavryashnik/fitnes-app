@@ -40,7 +40,8 @@ if (result === '/index.html' || result === '/') {
   list.addEventListener('click', async event => {
     if (
       event.target.classList.contains('btn-start-workout') ||
-      event.target.classList.contains('card-workout-start-icon')
+      event.target.classList.contains('card-workout-start-icon')||
+      event.target.classList.contains('card-workout-start-icon-use')
     ) {
       id = event.target.closest('.card-workout-item').id;
       await fetchData(`exercises/${id}`).then(result => {
