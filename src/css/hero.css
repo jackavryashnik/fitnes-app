@@ -18,6 +18,16 @@
     background-image: url(../images/mobile/hero@2.jpg);
   }
 }
+@media (max-width: 375px){
+  .hero-container .hero-img-container,
+  .hero-container .hero-text-container {
+    width: calc(335px - 40px);
+  }
+  .hero-container .hero-text-container  {
+    padding: 0 20px;
+    justify-content: center;
+  }
+}
 @media (max-width: 767px) {
   .hero-img-container {
     margin-bottom: 20px;

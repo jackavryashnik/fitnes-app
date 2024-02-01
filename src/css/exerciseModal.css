@@ -61,10 +61,6 @@
     margin-bottom: 10px;
 }
 
-/* .ex-current-rating {
-    
-} */
-
 .ex-stars-list {
     display: flex;
     gap: 2px;
@@ -144,6 +140,15 @@
     stroke: var(--soft-white-color);
     fill: transparent;
     margin-left: 6px;
+}
+
+@media screen and (max-width:375px) {
+    .ex-modal {
+        overflow-y: scroll;
+        max-width: calc(100vw - 20px);
+        max-height: calc(100vh - 20px);
+        min-height: calc(100vh - 20px);
+    }
 }
 
 @media screen and (max-width:767px) {
@@ -230,7 +235,7 @@
     }
 }
 
-@media screen and (min-width: 1158px) {
+@media screen and (min-width: 1440px) {
     .ex-modal {
         width: 732px;
     }
