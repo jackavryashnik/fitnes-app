@@ -16,14 +16,14 @@ if (result === '/page-2.html') {
     try {
       const parsedItem = JSON.parse(storageItem);
       parsedItem.forEach(elem => {
-        const markup = `<li class="favorites-list-item id=${elem.id}">
+        const markup = `<li class="favorites-list-item" id="${elem.id}">
             <div class="favorites-card-header">
                 <div class="favorites-oval">
                     <span>WORKOUT</span>
                 </div>
                 <button class="favorites-icon-svg" aria-label="trash" type="button">
-                    <svg width="16" height="16" fill="none">
-                        <use href="${sprite}#icon-trash"></use>
+                    <svg class="favorites-icon-svg-delete" width="16" height="16" fill="none">
+                        <use class="favorites-icon-svg-delete-use" href="${sprite}#icon-trash"></use>
                     </svg>
                 </button>
                 <button
@@ -32,7 +32,7 @@ if (result === '/page-2.html') {
                     aria-label="start"
                     type="button">Start
                         <svg class="favorites-list-button-icon" width="14" height="14" stroke="#1B1B1B">
-                            <use href="${sprite}#icon-arrow"></use>
+                            <use class="favorites-list-button-icon-use" href="${sprite}#icon-arrow"></use>
                         </svg>
                 </button>
                 </div>
