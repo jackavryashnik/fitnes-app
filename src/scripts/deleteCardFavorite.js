@@ -11,7 +11,7 @@ if (result === '/page-2.html') {
   const ul = document.querySelector(".favorites-list");
   const deleteCards = document.querySelectorAll(".favorites-list-item");
   ul.addEventListener("click", event=>{
-    if(event.target.classList.contains("favorites-icon-svg") ||  event.target.classList.contains("favorites-icon-svg-delete")){
+    if(event.target.classList.contains("favorites-icon-svg") ||  event.target.classList.contains("favorites-icon-svg-delete")||  event.target.classList.contains("favorites-icon-svg-delete-use")){
       id = event.target.closest('.favorites-list-item').id;
       let cardForDelete;
       const index = parsedItem.findIndex(item =>item.id == id);

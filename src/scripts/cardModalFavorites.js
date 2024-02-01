@@ -25,7 +25,7 @@ const burnedCalories = document.querySelector(".ex-burned-calories");
 const description = document.querySelector(".ex-description");
 const list = document.querySelector(".favorites-list");
 
-const fullCards = document.querySelectorAll(".favorites-list-item");
+
 
 let id, ratingStar;
 const activeColor = '#eea10c';
@@ -36,7 +36,7 @@ let parsedItem = JSON.parse(storageItem);
 
 
 list.addEventListener("click", event =>{
-    if(event.target.classList.contains("favorites-list-button") ||  event.target.classList.contains("favorites-list-button-icon")){
+    if(event.target.classList.contains("favorites-list-button") ||  event.target.classList.contains("favorites-list-button-icon") || event.target.classList.contains("favorites-list-button-icon-use")){
       id = event.target.dataset.id;
       const index = parsedItem.findIndex(item =>item.id ==id);
       let parsedItemElement = parsedItem[index];
@@ -61,7 +61,7 @@ list.addEventListener("click", event =>{
     })
     const existingItem = parsedItem.find(item => item.id === id);
     if (existingItem) {
-      favorites.textContent = `Delete from favorites`;
+      favorites.textContent = `Delete from favorities`;
     }
     else{
       favorites.textContent = `Add to favorities`;
@@ -85,18 +85,21 @@ favorites.addEventListener("click", ()=>{
     description : description.textContent
   });
     localStorage.setItem(storage, JSON.stringify(parsedItem))
-    favorites.textContent = `Delete from favorites`
+    favorites.textContent = `Delete from favorities`
   }
   else{
     const index = parsedItem.findIndex(item =>item.id == id);
     parsedItem.splice(index, 1);
     localStorage.setItem(storage, JSON.stringify(parsedItem));
+    const fullCards = document.querySelectorAll(".favorites-list-item");
     let cardForDelete;
     favorites.textContent = `Add to favorities`;
+    if(document.querySelector(`.favorites-list-item[id="${id}"]`)){
     fullCards.forEach(elem=>{
       if(elem.id==id) cardForDelete=elem;
     })
     list.removeChild(cardForDelete);
+  }
   }
 })
 exModal.addEventListener("click", elem => {

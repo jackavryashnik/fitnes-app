@@ -65,7 +65,7 @@ if (result === '/index.html' || result === '/') {
       });
       const existingItem = storageItem.find(item => item.id === id);
       if (existingItem) {
-        favorites.textContent = 'Delete from favorites';
+        favorites.textContent = 'Delete from favorities';
       } else {
         favorites.textContent = 'Add to favorities';
       }
@@ -87,7 +87,7 @@ if (result === '/index.html' || result === '/') {
         description: description.textContent,
       });
       localStorage.setItem(storage, JSON.stringify(storageItem));
-      favorites.textContent = 'Delete from favorites';
+      favorites.textContent = 'Delete from favorities';
     } else {
       const index = storageItem.findIndex(item => item.id == id);
       storageItem.splice(index, 1);
