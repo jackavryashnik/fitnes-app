@@ -118,6 +118,9 @@
     font-size: 20px;
     font-weight: 400;
     line-height: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .favorites-card-text {
@@ -238,6 +241,7 @@
   }
 
   .favorites-list-item {
+    height: 165px;
     width: 313px;
     border-radius: 15px;
     background: #fff;
@@ -340,6 +344,9 @@
     font-size: 20px;
     font-weight: 400;
     line-height: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .favorites-card-text {
