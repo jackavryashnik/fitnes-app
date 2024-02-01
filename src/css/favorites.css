@@ -326,8 +326,9 @@
 
   .favorites-list-button:hover,
   .favorites-list-button:focus {
-    transform: scale(0.95);
+    transform: scale(1.1);
     transition: transform 0.25s var(--transition-animation);
+    box-shadow: 4px 4px 8px 4px #61646232;
   }
 
   .favorites-list-button-icon {
