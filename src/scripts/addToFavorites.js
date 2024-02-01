@@ -73,5 +73,4 @@ if (result === '/page-2.html') {
       console.log(error.message);
     }
   } 
-  console.log(parsedItem.length==0)
 }
