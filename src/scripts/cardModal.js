@@ -2,6 +2,7 @@ import { fetchData } from './api';
 import { patchRating } from './ratingModal';
 import sprite from '../images/sprite.svg';
 
+
 const heartIcon = `
 <svg class="favorites-list-heart-icon" width="14" height="14" stroke="#F6F6F6" fill="transparent">
     <use class="favorites-list-heart-icon-use" href="${sprite}#icon-heart"></use>
@@ -12,6 +13,7 @@ const lastSlashIndex = fullUrl.lastIndexOf('/');
 const result = fullUrl.substring(lastSlashIndex);
 
 if (result === '/index.html' || result === '/') {
+
   const activeColor = '#eea10c';
   const noActiveColor = '#e8e8e8';
   let id, ratingStar;
@@ -25,7 +27,7 @@ if (result === '/index.html' || result === '/') {
 
   const ratingForm = document.querySelector('.rating-form');
   const rateStars = document.querySelector('.rate-wrapper');
-  
+
   const closeButtonRating = document.querySelector('.rating-close-modal');
   const ratingModal = document.querySelector('.rating-modal');
   const addRatingButton = document.querySelector('.ex-rating-button');
@@ -46,8 +48,10 @@ if (result === '/index.html' || result === '/') {
   list.addEventListener('click', async event => {
     if (
       event.target.classList.contains('btn-start-workout') ||
-      event.target.classList.contains('card-workout-start-icon')
+      event.target.classList.contains('card-workout-start-icon') ||
+      event.target.classList.contains('card-workout-start-icon-use')
     ) {
+
       id = event.target.closest('.card-workout-item').id;
       await fetchData(`exercises/${id}`).then(result => {
         gif.src = result.gifUrl;
@@ -74,7 +78,9 @@ if (result === '/index.html' || result === '/') {
         favorites.textContent = 'Delete from favorities';
       } else {
         favorites.textContent = 'Add to favorities';
+        favorites.innerHTML = `Add to favorities ${heartIcon}`;
       }
+
       exModal.classList.add('is-open');
     }
   });
@@ -93,19 +99,22 @@ if (result === '/index.html' || result === '/') {
         description: description.textContent,
       });
       localStorage.setItem(storage, JSON.stringify(storageItem));
-      favorites.textContent = 'Delete from favorities';
+      favorites.textContent = `Delete from favorities`;
+      favorites.innerHTML = `Delete from favorities` ;
     } else {
       const index = storageItem.findIndex(item => item.id == id);
       storageItem.splice(index, 1);
       localStorage.setItem(storage, JSON.stringify(storageItem));
-      favorites.textContent = 'Add to favorities';
+      favorites.textContent = `Add to favorities `;
+      favorites.innerHTML = `Add to favorities ${heartIcon}`;
     }
   });
   exModal.addEventListener('click', elem => {
     if (
       elem.target == exModal ||
       elem.target.classList.contains('ex-close-btn-icon') ||
-      elem.target.classList.contains('ex-close-btn')
+      elem.target.classList.contains('ex-close-btn') ||
+      elem.target.classList.contains("ex-close-btn-icon-use")
     ) {
       exModal.classList.remove('is-open');
     }
@@ -126,7 +135,6 @@ if (result === '/index.html' || result === '/') {
     patchRating(id);
     exModal.classList.remove('is-open');
   });
-
   closeButtonRating.addEventListener('click', () => {
     ratingModal.classList.remove('active');
     exModal.classList.add('is-open');

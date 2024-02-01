@@ -9,7 +9,9 @@
   border-radius: 20px;
   height: auto;
 }
-
+.favorites-list-heart-icon{
+  margin-left: 8px;
+}
 .ex-backdrop {
   position: fixed;
   top: 0;

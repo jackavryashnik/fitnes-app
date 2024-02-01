@@ -11,10 +11,13 @@ if (result === '/page-2.html') {
 
   let storage = 'favorites';
   let storageItem = localStorage.getItem(storage);
-
-  if (storageItem) {
+  const parsedItem = JSON.parse(storageItem);
+  if (!storageItem || parsedItem.length==0) {
+    messageInfo.classList.add('is-open-message-info');
+  }
+  else if (storageItem) {
     try {
-      const parsedItem = JSON.parse(storageItem);
+
       parsedItem.forEach(elem => {
         const markup = `<li class="favorites-list-item" id="${elem.id}">
             <div class="favorites-card-header">
@@ -64,11 +67,10 @@ if (result === '/page-2.html') {
 
         favoritesList.insertAdjacentHTML('beforeend', markup);
       });
+
     } catch (error) {
       console.log(error.name);
       console.log(error.message);
     }
-  } else if (!storageItem || storageItem == []) {
-    messageInfo.classList.add('is-open-message-info');
-  }
+  } 
 }
