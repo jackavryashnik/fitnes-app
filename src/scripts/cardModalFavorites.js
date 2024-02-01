@@ -1,5 +1,11 @@
 import { patchRating } from './ratingModal';
+import sprite from '../images/sprite.svg';
 
+
+const heartIcon = `
+<svg class="favorites-list-heart-icon" width="14" height="14" stroke="#F6F6F6" fill="transparent">
+    <use class="favorites-list-heart-icon-use" href="${sprite}#icon-heart"></use>
+</svg>`;
 const fullUrl = window.location.pathname;
 const lastSlashIndex = fullUrl.lastIndexOf('/');
 const result = fullUrl.substring(lastSlashIndex);
@@ -44,7 +50,7 @@ list.addEventListener("click", event =>{
       name.textContent = parsedItemElement.name;
       rating.textContent = parsedItemElement.rating;
       target.textContent = parsedItemElement.target;
-      popular.textContent = parsedItemElement.popularity;
+      popular.textContent = parsedItemElement.popular;
       bodyPart.textContent = parsedItemElement.bodyPart;
       equipment.textContent = parsedItemElement.equipment;
       burnedCalories.textContent = parsedItemElement.burnedCalories;
@@ -66,6 +72,7 @@ list.addEventListener("click", event =>{
     else{
       favorites.textContent = `Add to favorities`;
     }
+    favorites.innerHTML = `Add to favorities ${heartIcon}`;
     exModal.classList.add("is-open");
   }
 })
@@ -86,6 +93,7 @@ favorites.addEventListener("click", ()=>{
   });
     localStorage.setItem(storage, JSON.stringify(parsedItem))
     favorites.textContent = `Delete from favorities`
+    favorites.innerHTML = `Delete from favorities` ;
   }
   else{
     const index = parsedItem.findIndex(item =>item.id == id);
@@ -94,6 +102,7 @@ favorites.addEventListener("click", ()=>{
     const fullCards = document.querySelectorAll(".favorites-list-item");
     let cardForDelete;
     favorites.textContent = `Add to favorities`;
+    favorites.innerHTML = `Add to favorities ${heartIcon}`;
     if(document.querySelector(`.favorites-list-item[id="${id}"]`)){
     fullCards.forEach(elem=>{
       if(elem.id==id) cardForDelete=elem;
