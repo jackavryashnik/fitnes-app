@@ -6,6 +6,9 @@
 }
 
 @media (max-width: 767px) {
+  .favorites-pagination-block.close{
+    display: none !important; 
+  }
   .favorites-card-container {
     width: 335px;
     min-height: 450px;
