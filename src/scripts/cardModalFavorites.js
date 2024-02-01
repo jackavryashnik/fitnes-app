@@ -109,7 +109,7 @@ favorites.addEventListener("click", ()=>{
       if(elem.id==id) cardForDelete=elem;
     })
     list.removeChild(cardForDelete);
-    if (!storageItem || storageItem == []) {
+    if (!storageItem || parsedItem.length == 0) {
       messageInfo.classList.add('is-open-message-info');
     }
   }

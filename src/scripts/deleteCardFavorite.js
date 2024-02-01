@@ -8,6 +8,7 @@ if (result === '/page-2.html') {
   let storageItem = localStorage.getItem(storage);
   let parsedItem = JSON.parse(storageItem);
   let id;
+  const messageInfo = document.querySelector('.message-info');
   const ul = document.querySelector(".favorites-list");
   const deleteCards = document.querySelectorAll(".favorites-list-item");
   ul.addEventListener("click", event=>{
@@ -21,6 +22,9 @@ if (result === '/page-2.html') {
         if(elem.id==id) cardForDelete=elem;
       })
       ul.removeChild(cardForDelete);
+      if (!storageItem || parsedItem.length == 0) {
+        messageInfo.classList.add('is-open-message-info');
+      }
     }
   })
 }
