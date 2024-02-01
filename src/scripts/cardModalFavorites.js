@@ -37,7 +37,7 @@ let parsedItem = JSON.parse(storageItem);
 
 list.addEventListener("click", event =>{
     if(event.target.classList.contains("favorites-list-button") ||  event.target.classList.contains("favorites-list-button-icon") || event.target.classList.contains("favorites-list-button-icon-use")){
-      id = event.target.dataset.id;
+      id = event.target.closest('.favorites-list-item').id; 
       const index = parsedItem.findIndex(item =>item.id ==id);
       let parsedItemElement = parsedItem[index];
       gif.src = parsedItemElement.gifUrl;
