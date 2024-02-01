@@ -1,5 +1,11 @@
 import { fetchData } from './api';
 import { patchRating } from './ratingModal';
+import sprite from '../images/sprite.svg';
+
+const heartIcon = `
+<svg class="favorites-list-heart-icon" width="14" height="14" stroke="#F6F6F6" fill="transparent">
+    <use class="favorites-list-heart-icon-use" href="${sprite}#icon-heart"></use>
+</svg>`;
 
 const fullUrl = window.location.pathname;
 const lastSlashIndex = fullUrl.lastIndexOf('/');
@@ -19,7 +25,7 @@ if (result === '/index.html' || result === '/') {
 
   const ratingForm = document.querySelector('.rating-form');
   const rateStars = document.querySelector('.rate-wrapper');
-
+  
   const closeButtonRating = document.querySelector('.rating-close-modal');
   const ratingModal = document.querySelector('.rating-modal');
   const addRatingButton = document.querySelector('.ex-rating-button');
