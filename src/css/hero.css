@@ -1,6 +1,6 @@
 .hero-img-container {
   position: relative;
-  max-width: 335px;
+  width: 335px;
   height: 387px;
   display: flex;
   align-items: end;
@@ -41,7 +41,7 @@
   line-height: 1.2;
 }
 .hero-text-container {
-  max-width: 335px;
+  width: 335px;
   height: 365px;
   display: flex;
   flex-direction: column;
@@ -98,6 +98,16 @@
   font-weight: 500;
   line-height: 1.4;
   color: var(--soft-white-color);
+}
+@media (max-width: 375px) {
+  .hero-img-container,
+  .hero-text-container {
+    width: clamp(280px, 100%, 375px);
+    background-size: auto;
+  }
+  .hero-text-container {
+    height: auto;
+  }
 }
 @media (min-width: 768px) {
   .hero-container {
