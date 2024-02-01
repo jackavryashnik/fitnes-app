@@ -30,7 +30,7 @@ const popular = document.querySelector(".ex-popular");
 const burnedCalories = document.querySelector(".ex-burned-calories");
 const description = document.querySelector(".ex-description");
 const list = document.querySelector(".favorites-list");
-
+const messageInfo = document.querySelector('.message-info');
 
 
 let id, ratingStar;
@@ -71,8 +71,9 @@ list.addEventListener("click", event =>{
     }
     else{
       favorites.textContent = `Add to favorities`;
+      favorites.innerHTML = `Add to favorities ${heartIcon}`;
     }
-    favorites.innerHTML = `Add to favorities ${heartIcon}`;
+
     exModal.classList.add("is-open");
   }
 })
@@ -108,6 +109,9 @@ favorites.addEventListener("click", ()=>{
       if(elem.id==id) cardForDelete=elem;
     })
     list.removeChild(cardForDelete);
+    if (!storageItem || storageItem == []) {
+      messageInfo.classList.add('is-open-message-info');
+    }
   }
   }
 })

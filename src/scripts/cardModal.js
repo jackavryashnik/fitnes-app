@@ -78,8 +78,9 @@ if (result === '/index.html' || result === '/') {
         favorites.textContent = 'Delete from favorities';
       } else {
         favorites.textContent = 'Add to favorities';
+        favorites.innerHTML = `Add to favorities ${heartIcon}`;
       }
-      favorites.innerHTML = `Add to favorities ${heartIcon}`;
+
       exModal.classList.add('is-open');
     }
   });
