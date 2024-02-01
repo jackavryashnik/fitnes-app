@@ -20,7 +20,7 @@ if (result === '/page-2.html') {
 
       // Check if current page is '/page-2.html' and screen width is less than or equal to 767px
       if (
-        currentPage === '/page-2.html' &&
+        currentPage === '/fitnes-app/page-2.html' &&
         window.innerWidth <= 767 &&
         isFavoritesListVisible()
       ) {
