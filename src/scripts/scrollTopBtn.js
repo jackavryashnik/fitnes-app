@@ -1,6 +1,6 @@
 const scrollBtn = document.querySelector('.scroll-top-btn');
 
-function showScrollBtn() {
+export function showScrollBtn() {
   if (window.scrollY > 700) {
     scrollBtn.classList.remove('is-hidden');
   } else if (window.scrollY < 700) {

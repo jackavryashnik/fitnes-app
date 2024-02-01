@@ -12,3 +12,4 @@ export function hideElements(elements = []) {
 export function showElements(elements = []) {
   elements.forEach(elem => elem.classList.remove('is-hidden'));
 }
+export const loader = document.querySelector('.loader-wrapper');

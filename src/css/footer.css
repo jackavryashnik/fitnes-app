@@ -1,6 +1,5 @@
 .footer-container {
   width: 280px;
-  /* margin-bottom: 20px; */
   padding-top: 40px;
   padding-left: 20px;
   padding-right: 20px;
@@ -154,6 +153,13 @@
 
 /* =====================375============================ */
 
+@media (max-width: 768px) {
+  .section.footer,
+  .section.favorites-section {
+    padding-bottom: 20px;
+  }
+}
+
 @media (min-width: 375px) {
   .footer-container {
     width: 335px;
@@ -194,7 +200,6 @@
     padding-left: 48px;
     padding-right: 41px;
     padding-bottom: 32px;
-    /* margin-bottom: 0; */
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;

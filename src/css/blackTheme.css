@@ -90,7 +90,7 @@ body {
 /*  */
 #mobile-theme-toggle {
   visibility: hidden;
-  width: 25px;
+  width: 0;
 }
 
 #mobile-theme-toggle + label {

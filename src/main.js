@@ -9,3 +9,6 @@ import './scripts/scrollTopBtn';
 import './scripts/ratingModal';
 import './scripts/cardModal';
 import './scripts/addToFavorites';
+import './scripts/tags';
+import './scripts/cardModalFavorites';
+import './scripts/deleteCardFavorite';

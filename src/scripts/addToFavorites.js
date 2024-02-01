@@ -11,19 +11,22 @@ if (result === '/page-2.html') {
 
   let storage = 'favorites';
   let storageItem = localStorage.getItem(storage);
-
-  if (storageItem) {
+  const parsedItem = JSON.parse(storageItem);
+  if (!storageItem || parsedItem.length==0) {
+    messageInfo.classList.add('is-open-message-info');
+  }
+  else if (storageItem) {
     try {
-      const parsedItem = JSON.parse(storageItem);
+
       parsedItem.forEach(elem => {
-        const markup = `<li class="favorites-list-item id=${elem.id}">
+        const markup = `<li class="favorites-list-item" id="${elem.id}">
             <div class="favorites-card-header">
                 <div class="favorites-oval">
                     <span>WORKOUT</span>
                 </div>
                 <button class="favorites-icon-svg" aria-label="trash" type="button">
-                    <svg width="16" height="16" fill="none">
-                        <use href="${sprite}#icon-trash"></use>
+                    <svg class="favorites-icon-svg-delete" width="16" height="16" fill="none">
+                        <use class="favorites-icon-svg-delete-use" href="${sprite}#icon-trash"></use>
                     </svg>
                 </button>
                 <button
@@ -32,7 +35,7 @@ if (result === '/page-2.html') {
                     aria-label="start"
                     type="button">Start
                         <svg class="favorites-list-button-icon" width="14" height="14" stroke="#1B1B1B">
-                            <use href="${sprite}#icon-arrow"></use>
+                            <use class="favorites-list-button-icon-use" href="${sprite}#icon-arrow"></use>
                         </svg>
                 </button>
                 </div>
@@ -64,11 +67,10 @@ if (result === '/page-2.html') {
 
         favoritesList.insertAdjacentHTML('beforeend', markup);
       });
+
     } catch (error) {
       console.log(error.name);
       console.log(error.message);
     }
-  } else if (!storageItem || parsedItem == []) {
-    messageInfo.classList.add('is-open-message-info');
-  }
+  } 
 }

@@ -118,6 +118,9 @@
     font-size: 20px;
     font-weight: 400;
     line-height: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .favorites-card-text {
@@ -238,6 +241,7 @@
   }
 
   .favorites-list-item {
+    height: 165px;
     width: 313px;
     border-radius: 15px;
     background: #fff;
@@ -306,9 +310,11 @@
     font-weight: 400;
     line-height: 1.28;
     border: none;
-    padding: 0;
+    border-radius: 8px;
+    padding: 2px 8px;
     background: none;
     margin-left: 100px;
+    transition: box-shadow 250ms ease-in-out;
   }
 
   .favorites-list-button:hover,
@@ -338,6 +344,9 @@
     font-size: 20px;
     font-weight: 400;
     line-height: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .favorites-card-text {
@@ -448,7 +457,7 @@
   }
 
   .favorites-list-button {
-    margin-left: 220px;
+    margin-left: 204px;
   }
 }
 
