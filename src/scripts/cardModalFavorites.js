@@ -31,6 +31,7 @@ const burnedCalories = document.querySelector(".ex-burned-calories");
 const description = document.querySelector(".ex-description");
 const list = document.querySelector(".favorites-list");
 const messageInfo = document.querySelector('.message-info');
+const paginationBlock = document.querySelector('.favorites-pagination-block');
 
 
 let id, ratingStar;
@@ -111,6 +112,7 @@ favorites.addEventListener("click", ()=>{
     list.removeChild(cardForDelete);
     if (!storageItem || parsedItem.length == 0) {
       messageInfo.classList.add('is-open-message-info');
+      paginationBlock.classList.add("close")
     }
   }
   }

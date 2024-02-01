@@ -5,7 +5,7 @@ const lastSlashIndex = fullUrl.lastIndexOf('/');
 const result = fullUrl.substring(lastSlashIndex);
 
 const messageInfo = document.querySelector('.message-info');
-
+const paginationBlock = document.querySelector('.favorites-pagination-block');
 if (result === '/page-2.html') {
   const favoritesList = document.querySelector('.favorites-list');
 
@@ -14,6 +14,7 @@ if (result === '/page-2.html') {
   const parsedItem = JSON.parse(storageItem);
   if (!storageItem || parsedItem.length==0) {
     messageInfo.classList.add('is-open-message-info');
+    paginationBlock.classList.add("close")
   }
   else if (storageItem) {
     try {
