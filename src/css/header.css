@@ -8,11 +8,9 @@
   margin: 0 auto;
 }
 
-.container {
-  width: 320px;
-}
-
 .header-container {
+  width: 320px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;

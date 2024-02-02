@@ -109,10 +109,10 @@
   line-height: 1.4;
   color: var(--soft-white-color);
 }
-@media (max-width: 375px) {
+@media (max-width: 374px) {
   .hero-img-container,
   .hero-text-container {
-    width: clamp(280px, 100%, 375px);
+    width: clamp(280px, 100%, 374px);
     background-size: auto;
   }
   .hero-text-container {
