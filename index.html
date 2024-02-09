@@ -16,8 +16,8 @@
   
   
   <script type="module" crossorigin src="/fitnes-app/assets/vendor-9a5feb6b.js"></script>
-  <script type="module" crossorigin src="/fitnes-app/assets/deleteCardFavorite-6d29a163.js"></script>
-  <link rel="stylesheet" href="/fitnes-app/assets/deleteCardFavorite-c3ea5c9f.css">
+  <script type="module" crossorigin src="/fitnes-app/assets/deleteCardFavorite-d0ca2732.js"></script>
+  <link rel="stylesheet" href="/fitnes-app/assets/deleteCardFavorite-5e366112.css">
   <link rel="stylesheet" href="/fitnes-app/assets/vendor-db400b5b.css">
 </head>
 
@@ -44,9 +44,53 @@
 
     <ul class="social-media-list">
       <li>
-        <div class="togle-container">
-          <input type="checkbox" class="theme-toggle" id="theme-toggle" />
-          <label for="theme-toggle"></label>
+        <div class="toggle-wrapper">
+          <button
+            class="toggle"
+            title="Toggle Dark & Light Theme"
+            aria-lable="auto"
+            aria-live="polite"
+            value="auto"
+          >
+            <svg
+              class="toggle-icon"
+              fill="currnetColor"
+              height="24"
+              width="24"
+              viewBox="0 0 24 24"
+            >
+              <circle
+                class="sun"
+                cx="12"
+                cy="12"
+                r="6"
+                fill="currnetColor"
+                mask="url(#moon)"
+              ></circle>
+
+              <g class="sun-beams" stroke="currentColor" stroke-linecap="round">
+                <line x1="12" x2="12" y1="1" y2="3"></line>
+                <line x1="12" x2="12" y1="21" y2="23"></line>
+                <line x1="4.22" x2="5.64" y1="4.22" y2="5.64"></line>
+                <line x1="18.36" x2="19.78" y1="18.36" y2="19.78"></line>
+                <line x1="1" x2="3" y1="12" y2="12"></line>
+                <line x1="21" x2="23" y1="12" y2="12"></line>
+                <line x1="4.22" x2="5.64" y1="19.78" y2="18.36"></line>
+                <line x1="18.36" x2="19.78" y1="5.64" y2="4.22"></line>
+              </g>
+
+              <mask class="moon" id="moon">
+                <rect
+                  x="0"
+                  y="0"
+                  width="100%"
+                  height="100%"
+                  fill="white"
+                ></rect>
+                <circle cx="24" cy="10" r="6" fill="black"></circle>
+              </mask>
+            </svg>
+          </button>
         </div>
       </li>
       <li>
@@ -130,9 +174,48 @@
         </li>
       </ul>
     </nav>
-    <div class="togle-container">
-      <input type="checkbox" class="theme-toggle" id="mobile-theme-toggle" />
-      <label for="mobile-theme-toggle"></label>
+    <div class="toggle-wrapper">
+      <button
+        class="toggle"
+        id="toggle"
+        title="Toggle Dark & Light Theme"
+        aria-lable="auto"
+        aria-live="polite"
+        value="auto"
+      >
+        <svg
+          class="toggle-icon"
+          fill="currnetColor"
+          height="24"
+          width="24"
+          viewBox="0 0 24 24"
+        >
+          <circle
+            class="sun"
+            cx="12"
+            cy="12"
+            r="6"
+            fill="currnetColor"
+            mask="url(#moon1)"
+          ></circle>
+
+          <g class="sun-beams" stroke="currentColor" stroke-linecap="round">
+            <line x1="12" x2="12" y1="1" y2="3"></line>
+            <line x1="12" x2="12" y1="21" y2="23"></line>
+            <line x1="4.22" x2="5.64" y1="4.22" y2="5.64"></line>
+            <line x1="18.36" x2="19.78" y1="18.36" y2="19.78"></line>
+            <line x1="1" x2="3" y1="12" y2="12"></line>
+            <line x1="21" x2="23" y1="12" y2="12"></line>
+            <line x1="4.22" x2="5.64" y1="19.78" y2="18.36"></line>
+            <line x1="18.36" x2="19.78" y1="5.64" y2="4.22"></line>
+          </g>
+
+          <mask class="moon" id="moon1">
+            <rect x="0" y="0" width="100%" height="100%" fill="white"></rect>
+            <circle cx="24" cy="10" r="6" fill="black"></circle>
+          </mask>
+        </svg>
+      </button>
     </div>
     <ul class="mobile-social-media-list">
       <li>
