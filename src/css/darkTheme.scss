@@ -1,0 +1,138 @@
+@use 'sass:math' as *;
+
+:root {
+  --hue: 140;
+  --bg-body: hsl(var(--hue), 70%, 96%);
+  --icon-fill: hsl(var(--hue), 70%, 50%);
+  --icon-fill-hover: hsl(var(--hue), 70%, 60%);
+
+  --ease-3: cubic-bezier(0.25, 0, 0.3, 1);
+  --ease-out-5: cubic-bezier(0, 0, 0, 1);
+  --ease-elastic-3: cubic-bezier(0.5, 1.25, 0.75, 1.25);
+  --ease-elastic-4: cubic-bezier(0.5, 1.5, 0.75, 1.25);
+
+  &[theme='dark'] {
+    --hue: 200;
+    --bg-body: hsl(var(--hue), 70%, 4%);
+  }
+}
+
+.toggle {
+  --size: 2rem;
+
+  background: none;
+  border: none;
+  padding: 0;
+  margin: auto;
+  inline-size: var(--size);
+  block-size: var(--size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  box-shadow: none;
+  outline-offset: 5px;
+}
+
+.toggle > svg {
+  inline-size: 100%;
+  block-size: 100%;
+  stroke-linecap: round;
+  margin: auto;
+}
+
+@media (hover: none) {
+  .toggle {
+    --size: 48px;
+  }
+}
+
+.toggle-icon > :is(.moon, .sun, .sun-beams) {
+  transform-origin: center center;
+  transition: 500ms ease-out;
+}
+
+.toggle-icon > .sun {
+  transition: transform 0.5s var(--ease-elastic-3);
+}
+
+.toggle-icon > .sun-beams {
+  stroke-width: 2px;
+  transition: transform 0.5s var(--ease-elastic-4), opacity 0.5s var(--ease-3);
+}
+
+.toggle-icon > :is(.moon, .sun, .sun-beams) {
+  fill: var(--gray-color);
+}
+
+.toggle-icon > :is(.sun-beams) {
+  stroke: var(--gray-color);
+}
+
+.toggle-icon:is(:hover, :focus-visible) > :is(.moon, .sun) {
+  fill: var(--light-gray-color);
+}
+
+.toggle-icon:is(:hover, :focus-visible) > :is(.sun-beams) {
+  stroke: var(--light-gray-color);
+}
+
+body[theme='dark'] .toggle-icon > :is(.moon, .sun, .sun-beams) {
+  fill: var(--soft-white-color);
+}
+
+body[theme='dark'] .toggle-icon:is(:hover, :focus-visible) > :is(.moon, .sun) {
+  opacity: 0.8;
+}
+
+body[theme='dark'] .toggle-icon:is(:hover, :focus-visible) > :is(.sun-beams) {
+  stroke: var(--light-gray-color);
+}
+
+.mobile-menu-wrapper .toggle-icon > :is(.moon, .sun, .sun-beams) {
+  fill: var(--gray-color);
+}
+
+.mobile-menu-wrapper .toggle-icon > :is(.sun-beams) {
+  stroke: var(--gray-color);
+}
+
+.mobile-menu-wrapper
+  .toggle-icon:is(:hover, :focus-visible)
+  > :is(.moon, .sun) {
+  opacity: 0.8;
+}
+
+.mobile-menu-wrapper .toggle-wrapper {
+  margin: 0 auto;
+}
+
+body[theme='dark'] .toggle-icon > .sun {
+  transform: scale(1.75);
+  transition-timing-function: var(--ease-3);
+  transition-duration: 0.25s;
+}
+
+body[theme='dark'] .toggle-icon > .sun-beams {
+  opacity: 0;
+  transition-duration: 0.15s;
+}
+
+[theme='dark'] .toggle-icon > .moon > circle {
+  transform: translateX(-7px);
+  transition: transform 0.25s var(--ease-out-5);
+}
+
+@supports (cx: 1) {
+  [theme='dark'] .toggle-icon > .moon > circle {
+    transform: translateX(0);
+    cx: 17;
+    transition: cx 0.25s var(--ease-out-5);
+  }
+}
+
+body[theme='dark'] .toggle-icon > .moon > circle {
+  transition-delay: 0.25s;
+  transition-duration: 0.5s;
+}
