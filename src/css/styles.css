@@ -19,6 +19,7 @@
 @import url('./blackTheme.css');
 @import url('./ratingModal.css');
 @import url('./loader.css');
+@import url('./darkTheme.scss');
 
 :root {
   font-family: 'DM Sans', sans-serif;
